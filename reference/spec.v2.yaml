@@ -9,13 +9,105 @@ info:
 servers:
   - url: 'http://cluster.local:8006/api2/json'
     description: local
-paths: {}
+paths:
+  /access/ticket:
+    post:
+      summary: createAccessTicket
+      operationId: createAccessTicket
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+      description: Create or verify authentication ticket.
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties: {}
+      security: []
+  /version:
+    get:
+      summary: getVersion
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Version'
+      operationId: getVersion
+      description: |-
+        Path: /version
+        API version details. The result also includes the global datacenter confguration.
 components:
-  schemas: {}
+  schemas:
+    Ticket:
+      title: Ticket
+      type: object
+      properties:
+        username:
+          type: string
+        CSRFPreventionToken:
+          type: string
+        clustername:
+          type: string
+        ticket:
+          type: string
+      required:
+        - username
+    TicketRequest:
+      title: TicketRequest
+      type: object
+      properties:
+        password:
+          type: string
+        username:
+          type: string
+        otp:
+          type: string
+        path:
+          type: string
+        privs:
+          type: string
+        realm:
+          type: string
+      required:
+        - password
+        - username
+    Version:
+      title: Version
+      type: object
+      properties:
+        release:
+          type: string
+        repoid:
+          type: string
+        version:
+          type: string
+      description: ''
   securitySchemes:
     PVEAuthCookie:
       type: apiKey
       in: cookie
       name: PVEAuthCookie
+  responses:
+    ticketresponse:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/components/schemas/Ticket'
+          examples: {}
 security:
   - PVEAuthCookie: []
