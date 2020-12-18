@@ -1,0 +1,21 @@
+openapi: 3.0.0
+info:
+  title: ProxMox VE API V2
+  version: '1.0'
+  description: ProxMox VE API
+  license:
+    name: Apache 2.0
+    url: 'https://raw.githubusercontent.com/LUMASERV/proxmox-ve-openapi/main/LICENSE'
+servers:
+  - url: 'http://cluster.local:8006/api2/json'
+    description: local
+paths: {}
+components:
+  schemas: {}
+  securitySchemes:
+    PVEAuthCookie:
+      type: apiKey
+      in: cookie
+      name: PVEAuthCookie
+security:
+  - PVEAuthCookie: []
