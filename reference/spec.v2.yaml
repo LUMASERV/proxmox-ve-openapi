@@ -367,24 +367,24 @@ paths:
         '200':
           $ref: '#/components/responses/GetClusterFirewallGroupsResponse'
     post:
-      operationId: createClusterFirewallGroups
-      summary: createClusterFirewallGroups
+      operationId: createClusterFirewallGroup
+      summary: createClusterFirewallGroup
       description: Create new security group.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterFirewallGroupsResponse'
+          $ref: '#/components/responses/CreateClusterFirewallGroupResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterFirewallGroupsRequest'
+              $ref: '#/components/schemas/CreateClusterFirewallGroupRequest'
   '/cluster/firewall/groups/{group}':
     delete:
-      operationId: deleteClusterFirewallGroupsSingle
-      summary: deleteClusterFirewallGroupsSingle
+      operationId: deleteClusterFirewallGroup
+      summary: deleteClusterFirewallGroup
       description: Delete security group.
       tags:
         - cluster
@@ -397,10 +397,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterFirewallGroupsSingleResponse'
+          $ref: '#/components/responses/DeleteClusterFirewallGroupResponse'
     get:
-      operationId: getClusterFirewallGroupsSingle
-      summary: getClusterFirewallGroupsSingle
+      operationId: getClusterFirewallGroupRules
+      summary: getClusterFirewallGroupRules
       description: List rules.
       tags:
         - cluster
@@ -413,10 +413,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallGroupsSingleResponse'
+          $ref: '#/components/responses/GetClusterFirewallGroupRulesResponse'
     post:
-      operationId: createClusterFirewallGroupsSingle
-      summary: createClusterFirewallGroupsSingle
+      operationId: addClusterFirewallGroupRule
+      summary: addClusterFirewallGroupRule
       description: Create new rule.
       tags:
         - cluster
@@ -429,16 +429,16 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterFirewallGroupsSingleResponse'
+          $ref: '#/components/responses/AddClusterFirewallGroupRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterFirewallGroupsSingleRequest'
+              $ref: '#/components/schemas/AddClusterFirewallGroupRuleRequest'
   '/cluster/firewall/groups/{group}/{pos}':
     delete:
-      operationId: deleteClusterFirewallGroupsSingleSingle
-      summary: deleteClusterFirewallGroupsSingleSingle
+      operationId: removeClusterFirewallGroupRule
+      summary: removeClusterFirewallGroupRule
       description: Delete rule.
       tags:
         - cluster
@@ -457,11 +457,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteClusterFirewallGroupsSingleSingleResponse
+          $ref: '#/components/responses/RemoveClusterFirewallGroupRuleResponse'
     get:
-      operationId: getClusterFirewallGroupsSingleSingle
-      summary: getClusterFirewallGroupsSingleSingle
+      operationId: getClusterFirewallGroupRule
+      summary: getClusterFirewallGroupRule
       description: Get single rule data.
       tags:
         - cluster
@@ -480,10 +479,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallGroupsSingleSingleResponse'
+          $ref: '#/components/responses/GetClusterFirewallGroupRuleResponse'
     put:
-      operationId: updateClusterFirewallGroupsSingleSingle
-      summary: updateClusterFirewallGroupsSingleSingle
+      operationId: updateClusterFirewallGroupRule
+      summary: updateClusterFirewallGroupRule
       description: Modify rule data.
       tags:
         - cluster
@@ -502,14 +501,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateClusterFirewallGroupsSingleSingleResponse
+          $ref: '#/components/responses/UpdateClusterFirewallGroupRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateClusterFirewallGroupsSingleSingleRequest
+              $ref: '#/components/schemas/UpdateClusterFirewallGroupRuleRequest'
   /cluster/firewall/rules:
     get:
       operationId: getClusterFirewallRules
@@ -522,24 +519,24 @@ paths:
         '200':
           $ref: '#/components/responses/GetClusterFirewallRulesResponse'
     post:
-      operationId: createClusterFirewallRules
-      summary: createClusterFirewallRules
+      operationId: addClusterFirewallRule
+      summary: addClusterFirewallRule
       description: Create new rule.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterFirewallRulesResponse'
+          $ref: '#/components/responses/AddClusterFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterFirewallRulesRequest'
+              $ref: '#/components/schemas/AddClusterFirewallRuleRequest'
   '/cluster/firewall/rules/{pos}':
     delete:
-      operationId: deleteClusterFirewallRulesSingle
-      summary: deleteClusterFirewallRulesSingle
+      operationId: removeClusterFirewallRule
+      summary: removeClusterFirewallRule
       description: Delete rule.
       tags:
         - cluster
@@ -552,10 +549,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterFirewallRulesSingleResponse'
+          $ref: '#/components/responses/RemoveClusterFirewallRuleResponse'
     get:
-      operationId: getClusterFirewallRulesSingle
-      summary: getClusterFirewallRulesSingle
+      operationId: getClusterFirewallRule
+      summary: getClusterFirewallRule
       description: Get single rule data.
       tags:
         - cluster
@@ -568,10 +565,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallRulesSingleResponse'
+          $ref: '#/components/responses/GetClusterFirewallRuleResponse'
     put:
-      operationId: updateClusterFirewallRulesSingle
-      summary: updateClusterFirewallRulesSingle
+      operationId: updateClusterFirewallRule
+      summary: updateClusterFirewallRule
       description: Modify rule data.
       tags:
         - cluster
@@ -584,42 +581,42 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/UpdateClusterFirewallRulesSingleResponse'
+          $ref: '#/components/responses/UpdateClusterFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateClusterFirewallRulesSingleRequest'
+              $ref: '#/components/schemas/UpdateClusterFirewallRuleRequest'
   /cluster/firewall/ipset:
     get:
-      operationId: getClusterFirewallIpset
-      summary: getClusterFirewallIpset
+      operationId: getClusterFirewallIPSets
+      summary: getClusterFirewallIPSets
       description: List IPSets
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallIpsetResponse'
+          $ref: '#/components/responses/GetClusterFirewallIPSetsResponse'
     post:
-      operationId: createClusterFirewallIpset
-      summary: createClusterFirewallIpset
+      operationId: createClusterFirewallIPSet
+      summary: createClusterFirewallIPSet
       description: Create new IPSet
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterFirewallIpsetResponse'
+          $ref: '#/components/responses/CreateClusterFirewallIPSetResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterFirewallIpsetRequest'
+              $ref: '#/components/schemas/CreateClusterFirewallIPSetRequest'
   '/cluster/firewall/ipset/{name}':
     delete:
-      operationId: deleteClusterFirewallIpsetSingle
-      summary: deleteClusterFirewallIpsetSingle
+      operationId: deleteClusterFirewallIPSet
+      summary: deleteClusterFirewallIPSet
       description: Delete IPSet
       tags:
         - cluster
@@ -632,10 +629,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterFirewallIpsetSingleResponse'
+          $ref: '#/components/responses/DeleteClusterFirewallIPSetResponse'
     get:
-      operationId: getClusterFirewallIpsetSingle
-      summary: getClusterFirewallIpsetSingle
+      operationId: getClusterFirewallIPSet
+      summary: getClusterFirewallIPSet
       description: List IPSet content
       tags:
         - cluster
@@ -648,10 +645,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallIpsetSingleResponse'
+          $ref: '#/components/responses/GetClusterFirewallIPSetResponse'
     post:
-      operationId: createClusterFirewallIpsetSingle
-      summary: createClusterFirewallIpsetSingle
+      operationId: addClusterFirewallIPSetIP
+      summary: addClusterFirewallIPSetIP
       description: Add IP or Network to IPSet.
       tags:
         - cluster
@@ -664,16 +661,16 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterFirewallIpsetSingleResponse'
+          $ref: '#/components/responses/AddClusterFirewallIPSetIPResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterFirewallIpsetSingleRequest'
+              $ref: '#/components/schemas/AddClusterFirewallIPSetIPRequest'
   '/cluster/firewall/ipset/{name}/{cidr}':
     delete:
-      operationId: deleteClusterFirewallIpsetSingleSingle
-      summary: deleteClusterFirewallIpsetSingleSingle
+      operationId: removeClusterFirewallIPSetIP
+      summary: removeClusterFirewallIPSetIP
       description: Remove IP or Network from IPSet.
       tags:
         - cluster
@@ -692,11 +689,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteClusterFirewallIpsetSingleSingleResponse
+          $ref: '#/components/responses/RemoveClusterFirewallIPSetIPResponse'
     get:
-      operationId: getClusterFirewallIpsetSingleSingle
-      summary: getClusterFirewallIpsetSingleSingle
+      operationId: getClusterFirewallIPSetIP
+      summary: getClusterFirewallIPSetIP
       description: Read IP or Network settings from IPSet.
       tags:
         - cluster
@@ -715,10 +711,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterFirewallIpsetSingleSingleResponse'
+          $ref: '#/components/responses/GetClusterFirewallIPSetIPResponse'
     put:
-      operationId: updateClusterFirewallIpsetSingleSingle
-      summary: updateClusterFirewallIpsetSingleSingle
+      operationId: updateClusterFirewallIPSetIP
+      summary: updateClusterFirewallIPSetIP
       description: Update IP or Network settings
       tags:
         - cluster
@@ -737,14 +733,12 @@ paths:
             type: string
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateClusterFirewallIpsetSingleSingleResponse
+          $ref: '#/components/responses/UpdateClusterFirewallIPSetIPResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateClusterFirewallIpsetSingleSingleRequest
+              $ref: '#/components/schemas/UpdateClusterFirewallIPSetIPRequest'
   /cluster/firewall/aliases:
     get:
       operationId: getClusterFirewallAliases
@@ -1555,60 +1549,60 @@ paths:
               $ref: '#/components/schemas/UpdateClusterCephFlagsSingleRequest'
   /cluster/sdn:
     get:
-      operationId: getClusterSdn
-      summary: getClusterSdn
+      operationId: getClusterSDN
+      summary: getClusterSDN
       description: Directory index.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnResponse'
+          $ref: '#/components/responses/GetClusterSDNResponse'
     put:
-      operationId: updateClusterSdn
-      summary: updateClusterSdn
+      operationId: updateClusterSDN
+      summary: updateClusterSDN
       description: Apply sdn controller changes && reload.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/UpdateClusterSdnResponse'
+          $ref: '#/components/responses/UpdateClusterSDNResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateClusterSdnRequest'
+              $ref: '#/components/schemas/UpdateClusterSDNRequest'
   /cluster/sdn/vnets:
     get:
-      operationId: getClusterSdnVnets
-      summary: getClusterSdnVnets
+      operationId: getClusterSDNVnets
+      summary: getClusterSDNVnets
       description: SDN vnets index.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnVnetsResponse'
+          $ref: '#/components/responses/GetClusterSDNVnetsResponse'
     post:
-      operationId: createClusterSdnVnets
-      summary: createClusterSdnVnets
+      operationId: createClusterSDNVnet
+      summary: createClusterSDNVnet
       description: Create a new sdn vnet object.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterSdnVnetsResponse'
+          $ref: '#/components/responses/CreateClusterSDNVnetResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterSdnVnetsRequest'
+              $ref: '#/components/schemas/CreateClusterSDNVnetRequest'
   '/cluster/sdn/vnets/{vnet}':
     delete:
-      operationId: deleteClusterSdnVnetsSingle
-      summary: deleteClusterSdnVnetsSingle
+      operationId: deleteClusterSDNVnet
+      summary: deleteClusterSDNVnet
       description: Delete sdn vnet object configuration.
       tags:
         - cluster
@@ -1621,10 +1615,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterSdnVnetsSingleResponse'
+          $ref: '#/components/responses/DeleteClusterSDNVnetResponse'
     get:
-      operationId: getClusterSdnVnetsSingle
-      summary: getClusterSdnVnetsSingle
+      operationId: getClusterSDNVnet
+      summary: getClusterSDNVnet
       description: Read sdn vnet configuration.
       tags:
         - cluster
@@ -1637,10 +1631,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnVnetsSingleResponse'
+          $ref: '#/components/responses/GetClusterSDNVnetResponse'
     put:
-      operationId: updateClusterSdnVnetsSingle
-      summary: updateClusterSdnVnetsSingle
+      operationId: updateClusterSDNVnet
+      summary: updateClusterSDNVnet
       description: Update sdn vnet object configuration.
       tags:
         - cluster
@@ -1653,42 +1647,42 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/UpdateClusterSdnVnetsSingleResponse'
+          $ref: '#/components/responses/UpdateClusterSDNVnetResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateClusterSdnVnetsSingleRequest'
+              $ref: '#/components/schemas/UpdateClusterSDNVnetRequest'
   /cluster/sdn/zones:
     get:
-      operationId: getClusterSdnZones
-      summary: getClusterSdnZones
+      operationId: getClusterSDNZones
+      summary: getClusterSDNZones
       description: SDN zones index.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnZonesResponse'
+          $ref: '#/components/responses/GetClusterSDNZonesResponse'
     post:
-      operationId: createClusterSdnZones
-      summary: createClusterSdnZones
+      operationId: createClusterSDNZone
+      summary: createClusterSDNZone
       description: Create a new sdn zone object.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterSdnZonesResponse'
+          $ref: '#/components/responses/CreateClusterSDNZoneResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterSdnZonesRequest'
+              $ref: '#/components/schemas/CreateClusterSDNZoneRequest'
   '/cluster/sdn/zones/{zone}':
     delete:
-      operationId: deleteClusterSdnZonesSingle
-      summary: deleteClusterSdnZonesSingle
+      operationId: deleteClusterSDNZone
+      summary: deleteClusterSDNZone
       description: Delete sdn zone object configuration.
       tags:
         - cluster
@@ -1701,10 +1695,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterSdnZonesSingleResponse'
+          $ref: '#/components/responses/DeleteClusterSDNZoneResponse'
     get:
-      operationId: getClusterSdnZonesSingle
-      summary: getClusterSdnZonesSingle
+      operationId: getClusterSDNZone
+      summary: getClusterSDNZone
       description: Read sdn zone configuration.
       tags:
         - cluster
@@ -1717,10 +1711,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnZonesSingleResponse'
+          $ref: '#/components/responses/GetClusterSDNZoneResponse'
     put:
-      operationId: updateClusterSdnZonesSingle
-      summary: updateClusterSdnZonesSingle
+      operationId: updateClusterSDNZone
+      summary: updateClusterSDNZone
       description: Update sdn zone object configuration.
       tags:
         - cluster
@@ -1733,42 +1727,42 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/UpdateClusterSdnZonesSingleResponse'
+          $ref: '#/components/responses/UpdateClusterSDNZoneResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateClusterSdnZonesSingleRequest'
+              $ref: '#/components/schemas/UpdateClusterSDNZoneRequest'
   /cluster/sdn/controllers:
     get:
-      operationId: getClusterSdnControllers
-      summary: getClusterSdnControllers
+      operationId: getClusterSDNControllers
+      summary: getClusterSDNControllers
       description: SDN controllers index.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnControllersResponse'
+          $ref: '#/components/responses/GetClusterSDNControllersResponse'
     post:
-      operationId: createClusterSdnControllers
-      summary: createClusterSdnControllers
+      operationId: createClusterSDNController
+      summary: createClusterSDNController
       description: Create a new sdn controller object.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreateClusterSdnControllersResponse'
+          $ref: '#/components/responses/CreateClusterSDNControllerResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateClusterSdnControllersRequest'
+              $ref: '#/components/schemas/CreateClusterSDNControllerRequest'
   '/cluster/sdn/controllers/{controller}':
     delete:
-      operationId: deleteClusterSdnControllersSingle
-      summary: deleteClusterSdnControllersSingle
+      operationId: deleteClusterSDNController
+      summary: deleteClusterSDNController
       description: Delete sdn controller object configuration.
       tags:
         - cluster
@@ -1781,10 +1775,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeleteClusterSdnControllersSingleResponse'
+          $ref: '#/components/responses/DeleteClusterSDNControllerResponse'
     get:
-      operationId: getClusterSdnControllersSingle
-      summary: getClusterSdnControllersSingle
+      operationId: getClusterSDNController
+      summary: getClusterSDNController
       description: Read sdn controller configuration.
       tags:
         - cluster
@@ -1797,10 +1791,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterSdnControllersSingleResponse'
+          $ref: '#/components/responses/GetClusterSDNControllerResponse'
     put:
-      operationId: updateClusterSdnControllersSingle
-      summary: updateClusterSdnControllersSingle
+      operationId: updateClusterSDNController
+      summary: updateClusterSDNController
       description: Update sdn controller object configuration.
       tags:
         - cluster
@@ -1813,12 +1807,12 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/UpdateClusterSdnControllersSingleResponse'
+          $ref: '#/components/responses/UpdateClusterSDNControllerResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateClusterSdnControllersSingleRequest'
+              $ref: '#/components/schemas/UpdateClusterSDNControllerRequest'
   /cluster/log:
     get:
       operationId: getClusterLog
@@ -1915,8 +1909,8 @@ paths:
           $ref: '#/components/responses/GetNodesResponse'
   '/nodes/{node}':
     get:
-      operationId: getNodesSingle
-      summary: getNodesSingle
+      operationId: getNode
+      summary: getNode
       description: Node index.
       tags:
         - nodes
@@ -1929,11 +1923,11 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleResponse'
+          $ref: '#/components/responses/GetNodeResponse'
   '/nodes/{node}/qemu':
     get:
-      operationId: getNodesSingleQemu
-      summary: getNodesSingleQemu
+      operationId: getVMs
+      summary: getVMs
       description: Virtual machine index (per node).
       tags:
         - nodes
@@ -1946,10 +1940,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuResponse'
+          $ref: '#/components/responses/GetVMsResponse'
     post:
-      operationId: createNodesSingleQemu
-      summary: createNodesSingleQemu
+      operationId: createVM
+      summary: createVM
       description: Create or restore a virtual machine.
       tags:
         - nodes
@@ -1962,16 +1956,16 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuResponse'
+          $ref: '#/components/responses/CreateVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleQemuRequest'
+              $ref: '#/components/schemas/CreateVMRequest'
   '/nodes/{node}/qemu/{vmid}':
     delete:
-      operationId: deleteNodesSingleQemuSingle
-      summary: deleteNodesSingleQemuSingle
+      operationId: deleteVM
+      summary: deleteVM
       description: Destroy the vm (also delete all used/owned volumes).
       tags:
         - nodes
@@ -1990,10 +1984,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/DeleteNodesSingleQemuSingleResponse'
+          $ref: '#/components/responses/DeleteVMResponse'
     get:
-      operationId: getNodesSingleQemuSingle
-      summary: getNodesSingleQemuSingle
+      operationId: getVM
+      summary: getVM
       description: Directory index
       tags:
         - nodes
@@ -2012,11 +2006,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleResponse'
+          $ref: '#/components/responses/GetVMResponse'
   '/nodes/{node}/qemu/{vmid}/firewall':
     get:
-      operationId: getNodesSingleQemuSingleFirewall
-      summary: getNodesSingleQemuSingleFirewall
+      operationId: getVMFirewall
+      summary: getVMFirewall
       description: Directory index.
       tags:
         - nodes
@@ -2035,11 +2029,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleFirewallResponse'
+          $ref: '#/components/responses/GetVMFirewallResponse'
   '/nodes/{node}/qemu/{vmid}/firewall/rules':
     get:
-      operationId: getNodesSingleQemuSingleFirewallRules
-      summary: getNodesSingleQemuSingleFirewallRules
+      operationId: getVMFirewallRules
+      summary: getVMFirewallRules
       description: List rules.
       tags:
         - nodes
@@ -2058,10 +2052,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleFirewallRulesResponse'
+          $ref: '#/components/responses/GetVMFirewallRulesResponse'
     post:
-      operationId: createNodesSingleQemuSingleFirewallRules
-      summary: createNodesSingleQemuSingleFirewallRules
+      operationId: createVMFirewallRule
+      summary: createVMFirewallRule
       description: Create new rule.
       tags:
         - nodes
@@ -2080,18 +2074,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleFirewallRulesResponse
+          $ref: '#/components/responses/CreateVMFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleFirewallRulesRequest
+              $ref: '#/components/schemas/CreateVMFirewallRuleRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/rules/{pos}':
     delete:
-      operationId: deleteNodesSingleQemuSingleFirewallRulesSingle
-      summary: deleteNodesSingleQemuSingleFirewallRulesSingle
+      operationId: deleteVMFirewallRule
+      summary: deleteVMFirewallRule
       description: Delete rule.
       tags:
         - nodes
@@ -2116,11 +2108,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteNodesSingleQemuSingleFirewallRulesSingleResponse
+          $ref: '#/components/responses/DeleteVMFirewallRuleResponse'
     get:
-      operationId: getNodesSingleQemuSingleFirewallRulesSingle
-      summary: getNodesSingleQemuSingleFirewallRulesSingle
+      operationId: getVMFirewallRule
+      summary: getVMFirewallRule
       description: Get single rule data.
       tags:
         - nodes
@@ -2145,11 +2136,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleFirewallRulesSingleResponse
+          $ref: '#/components/responses/GetVMFirewallRuleResponse'
     put:
-      operationId: updateNodesSingleQemuSingleFirewallRulesSingle
-      summary: updateNodesSingleQemuSingleFirewallRulesSingle
+      operationId: updateVMFirewallRule
+      summary: updateVMFirewallRule
       description: Modify rule data.
       tags:
         - nodes
@@ -2174,14 +2164,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateNodesSingleQemuSingleFirewallRulesSingleResponse
+          $ref: '#/components/responses/UpdateVMFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateNodesSingleQemuSingleFirewallRulesSingleRequest
+              $ref: '#/components/schemas/UpdateVMFirewallRuleRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/aliases':
     get:
       operationId: getNodesSingleQemuSingleFirewallAliases
@@ -2331,8 +2319,8 @@ paths:
                 #/components/schemas/UpdateNodesSingleQemuSingleFirewallAliasesSingleRequest
   '/nodes/{node}/qemu/{vmid}/firewall/ipset':
     get:
-      operationId: getNodesSingleQemuSingleFirewallIpset
-      summary: getNodesSingleQemuSingleFirewallIpset
+      operationId: getVMFirewallIPSets
+      summary: getVMFirewallIPSets
       description: List IPSets
       tags:
         - nodes
@@ -2351,10 +2339,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleFirewallIpsetResponse'
+          $ref: '#/components/responses/GetVMFirewallIPSetsResponse'
     post:
-      operationId: createNodesSingleQemuSingleFirewallIpset
-      summary: createNodesSingleQemuSingleFirewallIpset
+      operationId: createVMFirewallIPSet
+      summary: createVMFirewallIPSet
       description: Create new IPSet
       tags:
         - nodes
@@ -2373,18 +2361,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleFirewallIpsetResponse
+          $ref: '#/components/responses/CreateVMFirewallIPSetResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleFirewallIpsetRequest
+              $ref: '#/components/schemas/CreateVMFirewallIPSetRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/ipset/{name}':
     delete:
-      operationId: deleteNodesSingleQemuSingleFirewallIpsetSingle
-      summary: deleteNodesSingleQemuSingleFirewallIpsetSingle
+      operationId: deleteVMFirewallIPSet
+      summary: deleteVMFirewallIPSet
       description: Delete IPSet
       tags:
         - nodes
@@ -2409,11 +2395,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteNodesSingleQemuSingleFirewallIpsetSingleResponse
+          $ref: '#/components/responses/DeleteVMFirewallIPSetResponse'
     get:
-      operationId: getNodesSingleQemuSingleFirewallIpsetSingle
-      summary: getNodesSingleQemuSingleFirewallIpsetSingle
+      operationId: getVMFirewallIPSet
+      summary: getVMFirewallIPSet
       description: List IPSet content
       tags:
         - nodes
@@ -2438,11 +2423,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleFirewallIpsetSingleResponse
+          $ref: '#/components/responses/GetVMFirewallIPSetResponse'
     post:
-      operationId: createNodesSingleQemuSingleFirewallIpsetSingle
-      summary: createNodesSingleQemuSingleFirewallIpsetSingle
+      operationId: addVMFirewallIPSetIP
+      summary: addVMFirewallIPSetIP
       description: Add IP or Network to IPSet.
       tags:
         - nodes
@@ -2467,18 +2451,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleFirewallIpsetSingleResponse
+          $ref: '#/components/responses/AddVMFirewallIPSetIPResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleFirewallIpsetSingleRequest
+              $ref: '#/components/schemas/AddVMFirewallIPSetIPRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/ipset/{name}/{cidr}':
     delete:
-      operationId: deleteNodesSingleQemuSingleFirewallIpsetSingleSingle
-      summary: deleteNodesSingleQemuSingleFirewallIpsetSingleSingle
+      operationId: removeVMFirewallIPSetIP
+      summary: removeVMFirewallIPSetIP
       description: Remove IP or Network from IPSet.
       tags:
         - nodes
@@ -2509,11 +2491,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+          $ref: '#/components/responses/RemoveVMFirewallIPSetIPResponse'
     get:
-      operationId: getNodesSingleQemuSingleFirewallIpsetSingleSingle
-      summary: getNodesSingleQemuSingleFirewallIpsetSingleSingle
+      operationId: getVMFirewallIPSetIP
+      summary: getVMFirewallIPSetIP
       description: Read IP or Network settings from IPSet.
       tags:
         - nodes
@@ -2544,11 +2525,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+          $ref: '#/components/responses/GetVMFirewallIPSetIPResponse'
     put:
-      operationId: updateNodesSingleQemuSingleFirewallIpsetSingleSingle
-      summary: updateNodesSingleQemuSingleFirewallIpsetSingleSingle
+      operationId: updateVMFirewallIPSetIP
+      summary: updateVMFirewallIPSetIP
       description: Update IP or Network settings
       tags:
         - nodes
@@ -2579,18 +2559,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+          $ref: '#/components/responses/UpdateVMFirewallIPSetIPResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleRequest
+              $ref: '#/components/schemas/UpdateVMFirewallIPSetIPRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/options':
     get:
-      operationId: getNodesSingleQemuSingleFirewallOptions
-      summary: getNodesSingleQemuSingleFirewallOptions
+      operationId: getVMFirewallOptions
+      summary: getVMFirewallOptions
       description: Get VM firewall options.
       tags:
         - nodes
@@ -2609,11 +2587,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleFirewallOptionsResponse
+          $ref: '#/components/responses/GetVMFirewallOptionsResponse'
     put:
-      operationId: updateNodesSingleQemuSingleFirewallOptions
-      summary: updateNodesSingleQemuSingleFirewallOptions
+      operationId: updateVMFirewallOptions
+      summary: updateVMFirewallOptions
       description: Set Firewall options.
       tags:
         - nodes
@@ -2632,14 +2609,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateNodesSingleQemuSingleFirewallOptionsResponse
+          $ref: '#/components/responses/UpdateVMFirewallOptionsResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateNodesSingleQemuSingleFirewallOptionsRequest
+              $ref: '#/components/schemas/UpdateVMFirewallOptionsRequest'
   '/nodes/{node}/qemu/{vmid}/firewall/log':
     get:
       operationId: getNodesSingleQemuSingleFirewallLog
@@ -3408,8 +3383,8 @@ paths:
                 #/components/schemas/CreateNodesSingleQemuSingleAgentFile-writeRequest
   '/nodes/{node}/qemu/{vmid}/rrd':
     get:
-      operationId: getNodesSingleQemuSingleRrd
-      summary: getNodesSingleQemuSingleRrd
+      operationId: getVMRRD
+      summary: getVMRRD
       description: Read VM RRD statistics (returns PNG)
       tags:
         - nodes
@@ -3428,11 +3403,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleRrdResponse'
+          $ref: '#/components/responses/GetVMRRDResponse'
   '/nodes/{node}/qemu/{vmid}/rrddata':
     get:
-      operationId: getNodesSingleQemuSingleRrddata
-      summary: getNodesSingleQemuSingleRrddata
+      operationId: getVMRRDData
+      summary: getVMRRDData
       description: Read VM RRD statistics
       tags:
         - nodes
@@ -3451,11 +3426,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleRrddataResponse'
+          $ref: '#/components/responses/GetVMRRDDataResponse'
   '/nodes/{node}/qemu/{vmid}/config':
     get:
-      operationId: getNodesSingleQemuSingleConfig
-      summary: getNodesSingleQemuSingleConfig
+      operationId: getVMConfig
+      summary: getVMConfig
       description: >-
         Get the virtual machine configuration with pending configuration changes
         applied. Set the 'current' parameter to get the current configuration
@@ -3477,10 +3452,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleConfigResponse'
+          $ref: '#/components/responses/GetVMConfigResponse'
     post:
-      operationId: createNodesSingleQemuSingleConfig
-      summary: createNodesSingleQemuSingleConfig
+      operationId: updateVMConfig
+      summary: updateVMConfig
       description: Set virtual machine options (asynchrounous API).
       tags:
         - nodes
@@ -3499,15 +3474,15 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuSingleConfigResponse'
+          $ref: '#/components/responses/UpdateVMConfigResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleQemuSingleConfigRequest'
+              $ref: '#/components/schemas/UpdateVMConfigRequest'
     put:
-      operationId: updateNodesSingleQemuSingleConfig
-      summary: updateNodesSingleQemuSingleConfig
+      operationId: updateVMConfigSync
+      summary: updateVMConfigSync
       description: >-
         Set virtual machine options (synchrounous API) - You should consider
         using the POST method instead for any actions involving hotplug or
@@ -3529,16 +3504,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/UpdateNodesSingleQemuSingleConfigResponse'
+          $ref: '#/components/responses/UpdateVMConfigSyncResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateNodesSingleQemuSingleConfigRequest'
+              $ref: '#/components/schemas/UpdateVMConfigSyncRequest'
   '/nodes/{node}/qemu/{vmid}/pending':
     get:
-      operationId: getNodesSingleQemuSinglePending
-      summary: getNodesSingleQemuSinglePending
+      operationId: getVMConfigPending
+      summary: getVMConfigPending
       description: >-
         Get the virtual machine configuration with both current and pending
         values.
@@ -3559,11 +3534,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSinglePendingResponse'
+          $ref: '#/components/responses/GetVMConfigPendingResponse'
   '/nodes/{node}/qemu/{vmid}/unlink':
     put:
-      operationId: updateNodesSingleQemuSingleUnlink
-      summary: updateNodesSingleQemuSingleUnlink
+      operationId: unlinkVMDiskImages
+      summary: unlinkVMDiskImages
       description: Unlink/delete disk images.
       tags:
         - nodes
@@ -3582,12 +3557,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/UpdateNodesSingleQemuSingleUnlinkResponse'
+          $ref: '#/components/responses/UnlinkVMDiskImagesResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateNodesSingleQemuSingleUnlinkRequest'
+              $ref: '#/components/schemas/UnlinkVMDiskImagesRequest'
   '/nodes/{node}/qemu/{vmid}/vncproxy':
     post:
       operationId: createNodesSingleQemuSingleVncproxy
@@ -3698,8 +3673,8 @@ paths:
                 #/components/schemas/CreateNodesSingleQemuSingleSpiceproxyRequest
   '/nodes/{node}/qemu/{vmid}/status':
     get:
-      operationId: getNodesSingleQemuSingleStatus
-      summary: getNodesSingleQemuSingleStatus
+      operationId: getVMStatus
+      summary: getVMStatus
       description: Directory index
       tags:
         - nodes
@@ -3718,11 +3693,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleStatusResponse'
+          $ref: '#/components/responses/GetVMStatusResponse'
   '/nodes/{node}/qemu/{vmid}/status/current':
     get:
-      operationId: getNodesSingleQemuSingleStatusCurrent
-      summary: getNodesSingleQemuSingleStatusCurrent
+      operationId: getCurrentVMStatus
+      summary: getCurrentVMStatus
       description: Get virtual machine status.
       tags:
         - nodes
@@ -3741,11 +3716,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleStatusCurrentResponse'
+          $ref: '#/components/responses/GetCurrentVMStatusResponse'
   '/nodes/{node}/qemu/{vmid}/status/start':
     post:
-      operationId: createNodesSingleQemuSingleStatusStart
-      summary: createNodesSingleQemuSingleStatusStart
+      operationId: startVM
+      summary: startVM
       description: Start virtual machine.
       tags:
         - nodes
@@ -3764,18 +3739,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusStartResponse
+          $ref: '#/components/responses/StartVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusStartRequest
+              $ref: '#/components/schemas/StartVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/stop':
     post:
-      operationId: createNodesSingleQemuSingleStatusStop
-      summary: createNodesSingleQemuSingleStatusStop
+      operationId: stopVM
+      summary: stopVM
       description: >-
         Stop virtual machine. The qemu process will exit immediately. Thisis
         akin to pulling the power plug of a running computer and may damage the
@@ -3797,17 +3770,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuSingleStatusStopResponse'
+          $ref: '#/components/responses/StopVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusStopRequest
+              $ref: '#/components/schemas/StopVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/reset':
     post:
-      operationId: createNodesSingleQemuSingleStatusReset
-      summary: createNodesSingleQemuSingleStatusReset
+      operationId: resetVM
+      summary: resetVM
       description: Reset virtual machine.
       tags:
         - nodes
@@ -3826,18 +3798,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusResetResponse
+          $ref: '#/components/responses/ResetVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusResetRequest
+              $ref: '#/components/schemas/ResetVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/shutdown':
     post:
-      operationId: createNodesSingleQemuSingleStatusShutdown
-      summary: createNodesSingleQemuSingleStatusShutdown
+      operationId: shutdownVM
+      summary: shutdownVM
       description: >-
         Shutdown virtual machine. This is similar to pressing the power button
         on a physical machine.This will send an ACPI event for the guest OS,
@@ -3859,18 +3829,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusShutdownResponse
+          $ref: '#/components/responses/ShutdownVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusShutdownRequest
+              $ref: '#/components/schemas/ShutdownVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/reboot':
     post:
-      operationId: createNodesSingleQemuSingleStatusReboot
-      summary: createNodesSingleQemuSingleStatusReboot
+      operationId: rebootVM
+      summary: rebootVM
       description: >-
         Reboot the VM by shutting it down, and starting it again. Applies
         pending changes.
@@ -3891,18 +3859,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusRebootResponse
+          $ref: '#/components/responses/RebootVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusRebootRequest
+              $ref: '#/components/schemas/RebootVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/suspend':
     post:
-      operationId: createNodesSingleQemuSingleStatusSuspend
-      summary: createNodesSingleQemuSingleStatusSuspend
+      operationId: suspendVM
+      summary: suspendVM
       description: Suspend virtual machine.
       tags:
         - nodes
@@ -3921,18 +3887,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusSuspendResponse
+          $ref: '#/components/responses/SuspendVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusSuspendRequest
+              $ref: '#/components/schemas/SuspendVMRequest'
   '/nodes/{node}/qemu/{vmid}/status/resume':
     post:
-      operationId: createNodesSingleQemuSingleStatusResume
-      summary: createNodesSingleQemuSingleStatusResume
+      operationId: resumeVM
+      summary: resumeVM
       description: Resume virtual machine.
       tags:
         - nodes
@@ -3951,14 +3915,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleStatusResumeResponse
+          $ref: '#/components/responses/ResumeVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleStatusResumeRequest
+              $ref: '#/components/schemas/ResumeVMRequest'
   '/nodes/{node}/qemu/{vmid}/sendkey':
     put:
       operationId: updateNodesSingleQemuSingleSendkey
@@ -4012,8 +3974,8 @@ paths:
           $ref: '#/components/responses/GetNodesSingleQemuSingleFeatureResponse'
   '/nodes/{node}/qemu/{vmid}/clone':
     post:
-      operationId: createNodesSingleQemuSingleClone
-      summary: createNodesSingleQemuSingleClone
+      operationId: cloneVM
+      summary: cloneVM
       description: Create a copy of virtual machine/template.
       tags:
         - nodes
@@ -4032,12 +3994,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuSingleCloneResponse'
+          $ref: '#/components/responses/CloneVMResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleQemuSingleCloneRequest'
+              $ref: '#/components/schemas/CloneVMRequest'
   '/nodes/{node}/qemu/{vmid}/move_disk':
     post:
       operationId: createNodesSingleQemuSingleMove_disk
@@ -4068,8 +4030,8 @@ paths:
               $ref: '#/components/schemas/CreateNodesSingleQemuSingleMove_diskRequest'
   '/nodes/{node}/qemu/{vmid}/migrate':
     get:
-      operationId: getNodesSingleQemuSingleMigrate
-      summary: getNodesSingleQemuSingleMigrate
+      operationId: migrateVM
+      summary: migrateVM
       description: Get preconditions for migration.
       tags:
         - nodes
@@ -4088,7 +4050,7 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleMigrateResponse'
+          $ref: '#/components/responses/MigrateVMResponse'
     post:
       operationId: createNodesSingleQemuSingleMigrate
       summary: createNodesSingleQemuSingleMigrate
@@ -4174,8 +4136,8 @@ paths:
               $ref: '#/components/schemas/UpdateNodesSingleQemuSingleResizeRequest'
   '/nodes/{node}/qemu/{vmid}/snapshot':
     get:
-      operationId: getNodesSingleQemuSingleSnapshot
-      summary: getNodesSingleQemuSingleSnapshot
+      operationId: getVMSnapshots
+      summary: getVMSnapshots
       description: List all snapshots.
       tags:
         - nodes
@@ -4194,10 +4156,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleSnapshotResponse'
+          $ref: '#/components/responses/GetVMSnapshotsResponse'
     post:
-      operationId: createNodesSingleQemuSingleSnapshot
-      summary: createNodesSingleQemuSingleSnapshot
+      operationId: createVMSnapshot
+      summary: createVMSnapshot
       description: Snapshot a VM.
       tags:
         - nodes
@@ -4216,16 +4178,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuSingleSnapshotResponse'
+          $ref: '#/components/responses/CreateVMSnapshotResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleQemuSingleSnapshotRequest'
+              $ref: '#/components/schemas/CreateVMSnapshotRequest'
   '/nodes/{node}/qemu/{vmid}/snapshot/{snapname}':
     delete:
-      operationId: deleteNodesSingleQemuSingleSnapshotSingle
-      summary: deleteNodesSingleQemuSingleSnapshotSingle
+      operationId: deleteVMSnapshot
+      summary: deleteVMSnapshot
       description: Delete a VM snapshot.
       tags:
         - nodes
@@ -4250,12 +4212,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/DeleteNodesSingleQemuSingleSnapshotSingleResponse
+          $ref: '#/components/responses/DeleteVMSnapshotResponse'
     get:
-      operationId: getNodesSingleQemuSingleSnapshotSingle
-      summary: getNodesSingleQemuSingleSnapshotSingle
-      description: getNodesSingleQemuSingleSnapshotSingle
+      operationId: getVMSnapshot
+      summary: getVMSnapshot
+      description: getVMSnapshot
       tags:
         - nodes
       parameters:
@@ -4279,12 +4240,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleSnapshotSingleResponse
+          $ref: '#/components/responses/GetVMSnapshotResponse'
   '/nodes/{node}/qemu/{vmid}/snapshot/{snapname}/config':
     get:
-      operationId: getNodesSingleQemuSingleSnapshotSingleConfig
-      summary: getNodesSingleQemuSingleSnapshotSingleConfig
+      operationId: getVMSnapshotConfig
+      summary: getVMSnapshotConfig
       description: Get snapshot configuration
       tags:
         - nodes
@@ -4309,11 +4269,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleSnapshotSingleConfigResponse
+          $ref: '#/components/responses/GetVMSnapshotConfigResponse'
     put:
-      operationId: updateNodesSingleQemuSingleSnapshotSingleConfig
-      summary: updateNodesSingleQemuSingleSnapshotSingleConfig
+      operationId: updateVMSnapshotConfig
+      summary: updateVMSnapshotConfig
       description: Update snapshot metadata.
       tags:
         - nodes
@@ -4338,18 +4297,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/UpdateNodesSingleQemuSingleSnapshotSingleConfigResponse
+          $ref: '#/components/responses/UpdateVMSnapshotConfigResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/UpdateNodesSingleQemuSingleSnapshotSingleConfigRequest
+              $ref: '#/components/schemas/UpdateVMSnapshotConfigRequest'
   '/nodes/{node}/qemu/{vmid}/snapshot/{snapname}/rollback':
     post:
-      operationId: createNodesSingleQemuSingleSnapshotSingleRollback
-      summary: createNodesSingleQemuSingleSnapshotSingleRollback
+      operationId: rollbackVMSnapshot
+      summary: rollbackVMSnapshot
       description: Rollback VM state to specified snapshot.
       tags:
         - nodes
@@ -4374,14 +4331,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleSnapshotSingleRollbackResponse
+          $ref: '#/components/responses/RollbackVMSnapshotResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleSnapshotSingleRollbackRequest
+              $ref: '#/components/schemas/RollbackVMSnapshotRequest'
   '/nodes/{node}/qemu/{vmid}/template':
     post:
       operationId: createNodesSingleQemuSingleTemplate
@@ -8298,8 +8253,8 @@ paths:
           $ref: '#/components/responses/GetNodesSingleAptVersionsResponse'
   '/nodes/{node}/firewall':
     get:
-      operationId: getNodesSingleFirewall
-      summary: getNodesSingleFirewall
+      operationId: getNodeFirewall
+      summary: getNodeFirewall
       description: Directory index.
       tags:
         - nodes
@@ -8312,11 +8267,11 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleFirewallResponse'
+          $ref: '#/components/responses/GetNodeFirewallResponse'
   '/nodes/{node}/firewall/rules':
     get:
-      operationId: getNodesSingleFirewallRules
-      summary: getNodesSingleFirewallRules
+      operationId: getNodeFirewallRules
+      summary: getNodeFirewallRules
       description: List rules.
       tags:
         - nodes
@@ -8329,10 +8284,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleFirewallRulesResponse'
+          $ref: '#/components/responses/GetNodeFirewallRulesResponse'
     post:
-      operationId: createNodesSingleFirewallRules
-      summary: createNodesSingleFirewallRules
+      operationId: createNodeFirewallRule
+      summary: createNodeFirewallRule
       description: Create new rule.
       tags:
         - nodes
@@ -8345,16 +8300,16 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleFirewallRulesResponse'
+          $ref: '#/components/responses/CreateNodeFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleFirewallRulesRequest'
+              $ref: '#/components/schemas/CreateNodeFirewallRuleRequest'
   '/nodes/{node}/firewall/rules/{pos}':
     delete:
-      operationId: deleteNodesSingleFirewallRulesSingle
-      summary: deleteNodesSingleFirewallRulesSingle
+      operationId: deleteNodeFirewallRule
+      summary: deleteNodeFirewallRule
       description: Delete rule.
       tags:
         - nodes
@@ -8373,10 +8328,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/DeleteNodesSingleFirewallRulesSingleResponse'
+          $ref: '#/components/responses/DeleteNodeFirewallRuleResponse'
     get:
-      operationId: getNodesSingleFirewallRulesSingle
-      summary: getNodesSingleFirewallRulesSingle
+      operationId: getNodeFirewallRule
+      summary: getNodeFirewallRule
       description: Get single rule data.
       tags:
         - nodes
@@ -8395,10 +8350,10 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleFirewallRulesSingleResponse'
+          $ref: '#/components/responses/GetNodeFirewallRuleResponse'
     put:
-      operationId: updateNodesSingleFirewallRulesSingle
-      summary: updateNodesSingleFirewallRulesSingle
+      operationId: updateNodeFirewallRule
+      summary: updateNodeFirewallRule
       description: Modify rule data.
       tags:
         - nodes
@@ -8417,16 +8372,16 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/UpdateNodesSingleFirewallRulesSingleResponse'
+          $ref: '#/components/responses/UpdateNodeFirewallRuleResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateNodesSingleFirewallRulesSingleRequest'
+              $ref: '#/components/schemas/UpdateNodeFirewallRuleRequest'
   '/nodes/{node}/firewall/options':
     get:
-      operationId: getNodesSingleFirewallOptions
-      summary: getNodesSingleFirewallOptions
+      operationId: getNodeFirewallOptions
+      summary: getNodeFirewallOptions
       description: Get host firewall options.
       tags:
         - nodes
@@ -8439,10 +8394,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleFirewallOptionsResponse'
+          $ref: '#/components/responses/GetNodeFirewallOptionsResponse'
     put:
-      operationId: updateNodesSingleFirewallOptions
-      summary: updateNodesSingleFirewallOptions
+      operationId: updateNodeFirewallOptions
+      summary: updateNodeFirewallOptions
       description: Set Firewall options.
       tags:
         - nodes
@@ -8455,12 +8410,12 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/UpdateNodesSingleFirewallOptionsResponse'
+          $ref: '#/components/responses/UpdateNodeFirewallOptionsResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateNodesSingleFirewallOptionsRequest'
+              $ref: '#/components/schemas/UpdateNodeFirewallOptionsRequest'
   '/nodes/{node}/firewall/log':
     get:
       operationId: getNodesSingleFirewallLog
@@ -8787,8 +8742,8 @@ paths:
               $ref: '#/components/schemas/UpdateNodesSingleConfigRequest'
   '/nodes/{node}/sdn':
     get:
-      operationId: getNodesSingleSdn
-      summary: getNodesSingleSdn
+      operationId: getNodeSDN
+      summary: getNodeSDN
       description: SDN index.
       tags:
         - nodes
@@ -8801,11 +8756,11 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleSdnResponse'
+          $ref: '#/components/responses/GetNodeSDNResponse'
   '/nodes/{node}/sdn/zones':
     get:
-      operationId: getNodesSingleSdnZones
-      summary: getNodesSingleSdnZones
+      operationId: getNodeSDNZones
+      summary: getNodeSDNZones
       description: Get status for all zones.
       tags:
         - nodes
@@ -8818,12 +8773,12 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleSdnZonesResponse'
+          $ref: '#/components/responses/GetNodeSDNZonesResponse'
   '/nodes/{node}/sdn/zones/{zone}':
     get:
-      operationId: getNodesSingleSdnZonesSingle
-      summary: getNodesSingleSdnZonesSingle
-      description: getNodesSingleSdnZonesSingle
+      operationId: getNodeSDNZone
+      summary: getNodeSDNZone
+      description: getNodeSDNZone
       tags:
         - nodes
       parameters:
@@ -8841,11 +8796,11 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleSdnZonesSingleResponse'
+          $ref: '#/components/responses/GetNodeSDNZoneResponse'
   '/nodes/{node}/sdn/zones/{zone}/content':
     get:
-      operationId: getNodesSingleSdnZonesSingleContent
-      summary: getNodesSingleSdnZonesSingleContent
+      operationId: getNodeSDNZoneContent
+      summary: getNodeSDNZoneContent
       description: List zone content.
       tags:
         - nodes
@@ -8864,7 +8819,7 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleSdnZonesSingleContentResponse'
+          $ref: '#/components/responses/GetNodeSDNZoneContentResponse'
   '/nodes/{node}/version':
     get:
       operationId: getNodesSingleVersion
@@ -8983,8 +8938,8 @@ paths:
               $ref: '#/components/schemas/CreateNodesSingleWakeonlanRequest'
   '/nodes/{node}/rrd':
     get:
-      operationId: getNodesSingleRrd
-      summary: getNodesSingleRrd
+      operationId: getNodeRRD
+      summary: getNodeRRD
       description: Read node RRD statistics (returns PNG)
       tags:
         - nodes
@@ -8997,11 +8952,11 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleRrdResponse'
+          $ref: '#/components/responses/GetNodeRRDResponse'
   '/nodes/{node}/rrddata':
     get:
-      operationId: getNodesSingleRrddata
-      summary: getNodesSingleRrddata
+      operationId: getNodeRRDData
+      summary: getNodeRRDData
       description: Read node RRD statistics
       tags:
         - nodes
@@ -9014,7 +8969,7 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleRrddataResponse'
+          $ref: '#/components/responses/GetNodeRRDDataResponse'
   '/nodes/{node}/syslog':
     get:
       operationId: getNodesSingleSyslog
@@ -10062,24 +10017,24 @@ paths:
         '200':
           $ref: '#/components/responses/GetPoolsResponse'
     post:
-      operationId: createPools
-      summary: createPools
+      operationId: createPool
+      summary: createPool
       description: Create new pool.
       tags:
         - pools
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/CreatePoolsResponse'
+          $ref: '#/components/responses/CreatePoolResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreatePoolsRequest'
+              $ref: '#/components/schemas/CreatePoolRequest'
   '/pools/{poolid}':
     delete:
-      operationId: deletePoolsSingle
-      summary: deletePoolsSingle
+      operationId: deletePool
+      summary: deletePool
       description: Delete pool.
       tags:
         - pools
@@ -10092,10 +10047,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DeletePoolsSingleResponse'
+          $ref: '#/components/responses/DeletePoolResponse'
     get:
-      operationId: getPoolsSingle
-      summary: getPoolsSingle
+      operationId: getPool
+      summary: getPool
       description: Get pool configuration.
       tags:
         - pools
@@ -10108,10 +10063,10 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/GetPoolsSingleResponse'
+          $ref: '#/components/responses/GetPoolResponse'
     put:
-      operationId: updatePoolsSingle
-      summary: updatePoolsSingle
+      operationId: updatePool
+      summary: updatePool
       description: Update pool data.
       tags:
         - pools
@@ -10124,12 +10079,12 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/UpdatePoolsSingleResponse'
+          $ref: '#/components/responses/UpdatePoolResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdatePoolsSingleRequest'
+              $ref: '#/components/schemas/UpdatePoolRequest'
   /version:
     get:
       operationId: getVersion
@@ -10292,8 +10247,8 @@ components:
         - fingerprint
         - hostname
         - password
-    CreateClusterFirewallGroupsRequest:
-      title: CreateClusterFirewallGroupsRequest
+    CreateClusterFirewallGroupRequest:
+      title: CreateClusterFirewallGroupRequest
       type: object
       properties:
         comment:
@@ -10306,8 +10261,8 @@ components:
           type: string
       required:
         - group
-    CreateClusterFirewallGroupsSingleRequest:
-      title: CreateClusterFirewallGroupsSingleRequest
+    AddClusterFirewallGroupRuleRequest:
+      title: AddClusterFirewallGroupRuleRequest
       type: object
       properties:
         action:
@@ -10343,8 +10298,8 @@ components:
       required:
         - action
         - type
-    UpdateClusterFirewallGroupsSingleSingleRequest:
-      title: UpdateClusterFirewallGroupsSingleSingleRequest
+    UpdateClusterFirewallGroupRuleRequest:
+      title: UpdateClusterFirewallGroupRuleRequest
       type: object
       properties:
         action:
@@ -10379,8 +10334,8 @@ components:
           type: string
         type:
           type: string
-    CreateClusterFirewallRulesRequest:
-      title: CreateClusterFirewallRulesRequest
+    AddClusterFirewallRuleRequest:
+      title: AddClusterFirewallRuleRequest
       type: object
       properties:
         action:
@@ -10416,8 +10371,8 @@ components:
       required:
         - action
         - type
-    UpdateClusterFirewallRulesSingleRequest:
-      title: UpdateClusterFirewallRulesSingleRequest
+    UpdateClusterFirewallRuleRequest:
+      title: UpdateClusterFirewallRuleRequest
       type: object
       properties:
         action:
@@ -10452,8 +10407,8 @@ components:
           type: string
         type:
           type: string
-    CreateClusterFirewallIpsetRequest:
-      title: CreateClusterFirewallIpsetRequest
+    CreateClusterFirewallIPSetRequest:
+      title: CreateClusterFirewallIPSetRequest
       type: object
       properties:
         comment:
@@ -10466,8 +10421,8 @@ components:
           type: string
       required:
         - name
-    CreateClusterFirewallIpsetSingleRequest:
-      title: CreateClusterFirewallIpsetSingleRequest
+    AddClusterFirewallIPSetIPRequest:
+      title: AddClusterFirewallIPSetIPRequest
       type: object
       properties:
         cidr:
@@ -10478,8 +10433,8 @@ components:
           type: boolean
       required:
         - cidr
-    UpdateClusterFirewallIpsetSingleSingleRequest:
-      title: UpdateClusterFirewallIpsetSingleSingleRequest
+    UpdateClusterFirewallIPSetIPRequest:
+      title: UpdateClusterFirewallIPSetIPRequest
       type: object
       properties:
         comment:
@@ -10849,12 +10804,12 @@ components:
           type: boolean
       required:
         - value
-    UpdateClusterSdnRequest:
-      title: UpdateClusterSdnRequest
+    UpdateClusterSDNRequest:
+      title: UpdateClusterSDNRequest
       type: object
       properties: {}
-    CreateClusterSdnVnetsRequest:
-      title: CreateClusterSdnVnetsRequest
+    CreateClusterSDNVnetRequest:
+      title: CreateClusterSDNVnetRequest
       type: object
       properties:
         alias:
@@ -10878,8 +10833,8 @@ components:
       required:
         - vnet
         - zone
-    UpdateClusterSdnVnetsSingleRequest:
-      title: UpdateClusterSdnVnetsSingleRequest
+    UpdateClusterSDNVnetRequest:
+      title: UpdateClusterSDNVnetRequest
       type: object
       properties:
         alias:
@@ -10900,8 +10855,8 @@ components:
           type: boolean
         zone:
           type: string
-    CreateClusterSdnZonesRequest:
-      title: CreateClusterSdnZonesRequest
+    CreateClusterSDNZoneRequest:
+      title: CreateClusterSDNZoneRequest
       type: object
       properties:
         bridge:
@@ -10929,8 +10884,8 @@ components:
       required:
         - type
         - zone
-    UpdateClusterSdnZonesSingleRequest:
-      title: UpdateClusterSdnZonesSingleRequest
+    UpdateClusterSDNZoneRequest:
+      title: UpdateClusterSDNZoneRequest
       type: object
       properties:
         bridge:
@@ -10955,8 +10910,8 @@ components:
           type: string
         vrf-vxlan:
           type: integer
-    CreateClusterSdnControllersRequest:
-      title: CreateClusterSdnControllersRequest
+    CreateClusterSDNControllerRequest:
+      title: CreateClusterSDNControllerRequest
       type: object
       properties:
         asn:
@@ -10974,8 +10929,8 @@ components:
       required:
         - controller
         - type
-    UpdateClusterSdnControllersSingleRequest:
-      title: UpdateClusterSdnControllersSingleRequest
+    UpdateClusterSDNControllerRequest:
+      title: UpdateClusterSDNControllerRequest
       type: object
       properties:
         asn:
@@ -11022,8 +10977,8 @@ components:
           type: boolean
         u2f:
           type: string
-    CreateNodesSingleQemuRequest:
-      title: CreateNodesSingleQemuRequest
+    CreateVMRequest:
+      title: CreateVMRequest
       type: object
       properties:
         acpi:
@@ -11192,8 +11147,8 @@ components:
           type: string
       required:
         - vmid
-    CreateNodesSingleQemuSingleFirewallRulesRequest:
-      title: CreateNodesSingleQemuSingleFirewallRulesRequest
+    CreateVMFirewallRuleRequest:
+      title: CreateVMFirewallRuleRequest
       type: object
       properties:
         action:
@@ -11229,8 +11184,8 @@ components:
       required:
         - action
         - type
-    UpdateNodesSingleQemuSingleFirewallRulesSingleRequest:
-      title: UpdateNodesSingleQemuSingleFirewallRulesSingleRequest
+    UpdateVMFirewallRuleRequest:
+      title: UpdateVMFirewallRuleRequest
       type: object
       properties:
         action:
@@ -11292,8 +11247,8 @@ components:
           type: string
       required:
         - cidr
-    CreateNodesSingleQemuSingleFirewallIpsetRequest:
-      title: CreateNodesSingleQemuSingleFirewallIpsetRequest
+    CreateVMFirewallIPSetRequest:
+      title: CreateVMFirewallIPSetRequest
       type: object
       properties:
         comment:
@@ -11306,8 +11261,8 @@ components:
           type: string
       required:
         - name
-    CreateNodesSingleQemuSingleFirewallIpsetSingleRequest:
-      title: CreateNodesSingleQemuSingleFirewallIpsetSingleRequest
+    AddVMFirewallIPSetIPRequest:
+      title: AddVMFirewallIPSetIPRequest
       type: object
       properties:
         cidr:
@@ -11318,8 +11273,8 @@ components:
           type: boolean
       required:
         - cidr
-    UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleRequest:
-      title: UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleRequest
+    UpdateVMFirewallIPSetIPRequest:
+      title: UpdateVMFirewallIPSetIPRequest
       type: object
       properties:
         comment:
@@ -11328,8 +11283,8 @@ components:
           type: string
         nomatch:
           type: boolean
-    UpdateNodesSingleQemuSingleFirewallOptionsRequest:
-      title: UpdateNodesSingleQemuSingleFirewallOptionsRequest
+    UpdateVMFirewallOptionsRequest:
+      title: UpdateVMFirewallOptionsRequest
       type: object
       properties:
         delete:
@@ -11432,8 +11387,8 @@ components:
       required:
         - content
         - file
-    CreateNodesSingleQemuSingleConfigRequest:
-      title: CreateNodesSingleQemuSingleConfigRequest
+    UpdateVMConfigRequest:
+      title: UpdateVMConfigRequest
       type: object
       properties:
         acpi:
@@ -11596,8 +11551,8 @@ components:
           type: string
         watchdog:
           type: string
-    UpdateNodesSingleQemuSingleConfigRequest:
-      title: UpdateNodesSingleQemuSingleConfigRequest
+    UpdateVMConfigSyncRequest:
+      title: UpdateVMConfigSyncRequest
       type: object
       properties:
         acpi:
@@ -11758,8 +11713,8 @@ components:
           type: string
         watchdog:
           type: string
-    UpdateNodesSingleQemuSingleUnlinkRequest:
-      title: UpdateNodesSingleQemuSingleUnlinkRequest
+    UnlinkVMDiskImagesRequest:
+      title: UnlinkVMDiskImagesRequest
       type: object
       properties:
         force:
@@ -11788,8 +11743,8 @@ components:
       properties:
         proxy:
           type: string
-    CreateNodesSingleQemuSingleStatusStartRequest:
-      title: CreateNodesSingleQemuSingleStatusStartRequest
+    StartVMRequest:
+      title: StartVMRequest
       type: object
       properties:
         force-cpu:
@@ -11810,8 +11765,8 @@ components:
           type: string
         timeout:
           type: integer
-    CreateNodesSingleQemuSingleStatusStopRequest:
-      title: CreateNodesSingleQemuSingleStatusStopRequest
+    StopVMRequest:
+      title: StopVMRequest
       type: object
       properties:
         keepActive:
@@ -11822,14 +11777,14 @@ components:
           type: boolean
         timeout:
           type: integer
-    CreateNodesSingleQemuSingleStatusResetRequest:
-      title: CreateNodesSingleQemuSingleStatusResetRequest
+    ResetVMRequest:
+      title: ResetVMRequest
       type: object
       properties:
         skiplock:
           type: boolean
-    CreateNodesSingleQemuSingleStatusShutdownRequest:
-      title: CreateNodesSingleQemuSingleStatusShutdownRequest
+    ShutdownVMRequest:
+      title: ShutdownVMRequest
       type: object
       properties:
         forceStop:
@@ -11840,14 +11795,14 @@ components:
           type: boolean
         timeout:
           type: integer
-    CreateNodesSingleQemuSingleStatusRebootRequest:
-      title: CreateNodesSingleQemuSingleStatusRebootRequest
+    RebootVMRequest:
+      title: RebootVMRequest
       type: object
       properties:
         timeout:
           type: integer
-    CreateNodesSingleQemuSingleStatusSuspendRequest:
-      title: CreateNodesSingleQemuSingleStatusSuspendRequest
+    SuspendVMRequest:
+      title: SuspendVMRequest
       type: object
       properties:
         skiplock:
@@ -11856,8 +11811,8 @@ components:
           type: string
         todisk:
           type: boolean
-    CreateNodesSingleQemuSingleStatusResumeRequest:
-      title: CreateNodesSingleQemuSingleStatusResumeRequest
+    ResumeVMRequest:
+      title: ResumeVMRequest
       type: object
       properties:
         nocheck:
@@ -11874,8 +11829,8 @@ components:
           type: boolean
       required:
         - key
-    CreateNodesSingleQemuSingleCloneRequest:
-      title: CreateNodesSingleQemuSingleCloneRequest
+    CloneVMRequest:
+      title: CloneVMRequest
       type: object
       properties:
         bwlimit:
@@ -11964,8 +11919,8 @@ components:
       required:
         - disk
         - size
-    CreateNodesSingleQemuSingleSnapshotRequest:
-      title: CreateNodesSingleQemuSingleSnapshotRequest
+    CreateVMSnapshotRequest:
+      title: CreateVMSnapshotRequest
       type: object
       properties:
         description:
@@ -11976,14 +11931,14 @@ components:
           type: boolean
       required:
         - snapname
-    UpdateNodesSingleQemuSingleSnapshotSingleConfigRequest:
-      title: UpdateNodesSingleQemuSingleSnapshotSingleConfigRequest
+    UpdateVMSnapshotConfigRequest:
+      title: UpdateVMSnapshotConfigRequest
       type: object
       properties:
         description:
           type: string
-    CreateNodesSingleQemuSingleSnapshotSingleRollbackRequest:
-      title: CreateNodesSingleQemuSingleSnapshotSingleRollbackRequest
+    RollbackVMSnapshotRequest:
+      title: RollbackVMSnapshotRequest
       type: object
       properties: {}
     CreateNodesSingleQemuSingleTemplateRequest:
@@ -12936,8 +12891,8 @@ components:
           type: boolean
         quiet:
           type: boolean
-    CreateNodesSingleFirewallRulesRequest:
-      title: CreateNodesSingleFirewallRulesRequest
+    CreateNodeFirewallRuleRequest:
+      title: CreateNodeFirewallRuleRequest
       type: object
       properties:
         action:
@@ -12973,8 +12928,8 @@ components:
       required:
         - action
         - type
-    UpdateNodesSingleFirewallRulesSingleRequest:
-      title: UpdateNodesSingleFirewallRulesSingleRequest
+    UpdateNodeFirewallRuleRequest:
+      title: UpdateNodeFirewallRuleRequest
       type: object
       properties:
         action:
@@ -13009,8 +12964,8 @@ components:
           type: string
         type:
           type: string
-    UpdateNodesSingleFirewallOptionsRequest:
-      title: UpdateNodesSingleFirewallOptionsRequest
+    UpdateNodeFirewallOptionsRequest:
+      title: UpdateNodeFirewallOptionsRequest
       type: object
       properties:
         delete:
@@ -13743,8 +13698,8 @@ components:
       required:
         - action
         - userid
-    CreatePoolsRequest:
-      title: CreatePoolsRequest
+    CreatePoolRequest:
+      title: CreatePoolRequest
       type: object
       properties:
         comment:
@@ -13753,8 +13708,8 @@ components:
           type: string
       required:
         - poolid
-    UpdatePoolsSingleRequest:
-      title: UpdatePoolsSingleRequest
+    UpdatePoolRequest:
+      title: UpdatePoolRequest
       type: object
       properties:
         comment:
@@ -14046,22 +14001,22 @@ components:
                 group:
                   type: string
                   description: Security Group name.
-    CreateClusterFirewallGroupsResponse:
-      description: CreateClusterFirewallGroupsResponse
+    CreateClusterFirewallGroupResponse:
+      description: CreateClusterFirewallGroupResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterFirewallGroupsSingleResponse:
-      description: DeleteClusterFirewallGroupsSingleResponse
+    DeleteClusterFirewallGroupResponse:
+      description: DeleteClusterFirewallGroupResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallGroupsSingleResponse:
-      description: GetClusterFirewallGroupsSingleResponse
+    GetClusterFirewallGroupRulesResponse:
+      description: GetClusterFirewallGroupRulesResponse
       content:
         application/json:
           schema:
@@ -14074,22 +14029,22 @@ components:
                 pos:
                   type: integer
                   description: ''
-    CreateClusterFirewallGroupsSingleResponse:
-      description: CreateClusterFirewallGroupsSingleResponse
+    AddClusterFirewallGroupRuleResponse:
+      description: AddClusterFirewallGroupRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterFirewallGroupsSingleSingleResponse:
-      description: DeleteClusterFirewallGroupsSingleSingleResponse
+    RemoveClusterFirewallGroupRuleResponse:
+      description: RemoveClusterFirewallGroupRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallGroupsSingleSingleResponse:
-      description: GetClusterFirewallGroupsSingleSingleResponse
+    GetClusterFirewallGroupRuleResponse:
+      description: GetClusterFirewallGroupRuleResponse
       content:
         application/json:
           schema:
@@ -14141,8 +14096,8 @@ components:
               type:
                 type: string
                 description: ''
-    UpdateClusterFirewallGroupsSingleSingleResponse:
-      description: UpdateClusterFirewallGroupsSingleSingleResponse
+    UpdateClusterFirewallGroupRuleResponse:
+      description: UpdateClusterFirewallGroupRuleResponse
       content:
         application/json:
           schema:
@@ -14162,22 +14117,22 @@ components:
                 pos:
                   type: integer
                   description: ''
-    CreateClusterFirewallRulesResponse:
-      description: CreateClusterFirewallRulesResponse
+    AddClusterFirewallRuleResponse:
+      description: AddClusterFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterFirewallRulesSingleResponse:
-      description: DeleteClusterFirewallRulesSingleResponse
+    RemoveClusterFirewallRuleResponse:
+      description: RemoveClusterFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallRulesSingleResponse:
-      description: GetClusterFirewallRulesSingleResponse
+    GetClusterFirewallRuleResponse:
+      description: GetClusterFirewallRuleResponse
       content:
         application/json:
           schema:
@@ -14229,15 +14184,15 @@ components:
               type:
                 type: string
                 description: ''
-    UpdateClusterFirewallRulesSingleResponse:
-      description: UpdateClusterFirewallRulesSingleResponse
+    UpdateClusterFirewallRuleResponse:
+      description: UpdateClusterFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallIpsetResponse:
-      description: GetClusterFirewallIpsetResponse
+    GetClusterFirewallIPSetsResponse:
+      description: GetClusterFirewallIPSetsResponse
       content:
         application/json:
           schema:
@@ -14259,22 +14214,22 @@ components:
                 name:
                   type: string
                   description: IP set name.
-    CreateClusterFirewallIpsetResponse:
-      description: CreateClusterFirewallIpsetResponse
+    CreateClusterFirewallIPSetResponse:
+      description: CreateClusterFirewallIPSetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterFirewallIpsetSingleResponse:
-      description: DeleteClusterFirewallIpsetSingleResponse
+    DeleteClusterFirewallIPSetResponse:
+      description: DeleteClusterFirewallIPSetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallIpsetSingleResponse:
-      description: GetClusterFirewallIpsetSingleResponse
+    GetClusterFirewallIPSetResponse:
+      description: GetClusterFirewallIPSetResponse
       content:
         application/json:
           schema:
@@ -14299,29 +14254,29 @@ components:
                 nomatch:
                   type: boolean
                   description: ''
-    CreateClusterFirewallIpsetSingleResponse:
-      description: CreateClusterFirewallIpsetSingleResponse
+    AddClusterFirewallIPSetIPResponse:
+      description: AddClusterFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterFirewallIpsetSingleSingleResponse:
-      description: DeleteClusterFirewallIpsetSingleSingleResponse
+    RemoveClusterFirewallIPSetIPResponse:
+      description: RemoveClusterFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterFirewallIpsetSingleSingleResponse:
-      description: GetClusterFirewallIpsetSingleSingleResponse
+    GetClusterFirewallIPSetIPResponse:
+      description: GetClusterFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateClusterFirewallIpsetSingleSingleResponse:
-      description: UpdateClusterFirewallIpsetSingleSingleResponse
+    UpdateClusterFirewallIPSetIPResponse:
+      description: UpdateClusterFirewallIPSetIPResponse
       content:
         application/json:
           schema:
@@ -14955,8 +14910,8 @@ components:
           schema:
             type: string
             description: ''
-    GetClusterSdnResponse:
-      description: GetClusterSdnResponse
+    GetClusterSDNResponse:
+      description: GetClusterSDNResponse
       content:
         application/json:
           schema:
@@ -14969,15 +14924,15 @@ components:
                 id:
                   type: string
                   description: ''
-    UpdateClusterSdnResponse:
-      description: UpdateClusterSdnResponse
+    UpdateClusterSDNResponse:
+      description: UpdateClusterSDNResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnVnetsResponse:
-      description: GetClusterSdnVnetsResponse
+    GetClusterSDNVnetsResponse:
+      description: GetClusterSDNVnetsResponse
       content:
         application/json:
           schema:
@@ -14987,36 +14942,36 @@ components:
               type: object
               description: ''
               properties: {}
-    CreateClusterSdnVnetsResponse:
-      description: CreateClusterSdnVnetsResponse
+    CreateClusterSDNVnetResponse:
+      description: CreateClusterSDNVnetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterSdnVnetsSingleResponse:
-      description: DeleteClusterSdnVnetsSingleResponse
+    DeleteClusterSDNVnetResponse:
+      description: DeleteClusterSDNVnetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnVnetsSingleResponse:
-      description: GetClusterSdnVnetsSingleResponse
+    GetClusterSDNVnetResponse:
+      description: GetClusterSDNVnetResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateClusterSdnVnetsSingleResponse:
-      description: UpdateClusterSdnVnetsSingleResponse
+    UpdateClusterSDNVnetResponse:
+      description: UpdateClusterSDNVnetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnZonesResponse:
-      description: GetClusterSdnZonesResponse
+    GetClusterSDNZonesResponse:
+      description: GetClusterSDNZonesResponse
       content:
         application/json:
           schema:
@@ -15032,36 +14987,36 @@ components:
                 zone:
                   type: string
                   description: ''
-    CreateClusterSdnZonesResponse:
-      description: CreateClusterSdnZonesResponse
+    CreateClusterSDNZoneResponse:
+      description: CreateClusterSDNZoneResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterSdnZonesSingleResponse:
-      description: DeleteClusterSdnZonesSingleResponse
+    DeleteClusterSDNZoneResponse:
+      description: DeleteClusterSDNZoneResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnZonesSingleResponse:
-      description: GetClusterSdnZonesSingleResponse
+    GetClusterSDNZoneResponse:
+      description: GetClusterSDNZoneResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateClusterSdnZonesSingleResponse:
-      description: UpdateClusterSdnZonesSingleResponse
+    UpdateClusterSDNZoneResponse:
+      description: UpdateClusterSDNZoneResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnControllersResponse:
-      description: GetClusterSdnControllersResponse
+    GetClusterSDNControllersResponse:
+      description: GetClusterSDNControllersResponse
       content:
         application/json:
           schema:
@@ -15077,29 +15032,29 @@ components:
                 type:
                   type: string
                   description: ''
-    CreateClusterSdnControllersResponse:
-      description: CreateClusterSdnControllersResponse
+    CreateClusterSDNControllerResponse:
+      description: CreateClusterSDNControllerResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteClusterSdnControllersSingleResponse:
-      description: DeleteClusterSdnControllersSingleResponse
+    DeleteClusterSDNControllerResponse:
+      description: DeleteClusterSDNControllerResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetClusterSdnControllersSingleResponse:
-      description: GetClusterSdnControllersSingleResponse
+    GetClusterSDNControllerResponse:
+      description: GetClusterSDNControllerResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateClusterSdnControllersSingleResponse:
-      description: UpdateClusterSdnControllersSingleResponse
+    UpdateClusterSDNControllerResponse:
+      description: UpdateClusterSDNControllerResponse
       content:
         application/json:
           schema:
@@ -15308,8 +15263,8 @@ components:
                 uptime:
                   type: integer
                   description: Node uptime in seconds.
-    GetNodesSingleResponse:
-      description: GetNodesSingleResponse
+    GetNodeResponse:
+      description: GetNodeResponse
       content:
         application/json:
           schema:
@@ -15319,8 +15274,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleQemuResponse:
-      description: GetNodesSingleQemuResponse
+    GetVMsResponse:
+      description: GetVMsResponse
       content:
         application/json:
           schema:
@@ -15363,22 +15318,22 @@ components:
                 vmid:
                   type: integer
                   description: The (unique) ID of the VM.
-    CreateNodesSingleQemuResponse:
-      description: CreateNodesSingleQemuResponse
+    CreateVMResponse:
+      description: CreateVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteNodesSingleQemuSingleResponse:
-      description: DeleteNodesSingleQemuSingleResponse
+    DeleteVMResponse:
+      description: DeleteVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleResponse:
-      description: GetNodesSingleQemuSingleResponse
+    GetVMResponse:
+      description: GetVMResponse
       content:
         application/json:
           schema:
@@ -15391,8 +15346,8 @@ components:
                 subdir:
                   type: string
                   description: ''
-    GetNodesSingleQemuSingleFirewallResponse:
-      description: GetNodesSingleQemuSingleFirewallResponse
+    GetVMFirewallResponse:
+      description: GetVMFirewallResponse
       content:
         application/json:
           schema:
@@ -15402,8 +15357,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleQemuSingleFirewallRulesResponse:
-      description: GetNodesSingleQemuSingleFirewallRulesResponse
+    GetVMFirewallRulesResponse:
+      description: GetVMFirewallRulesResponse
       content:
         application/json:
           schema:
@@ -15416,22 +15371,22 @@ components:
                 pos:
                   type: integer
                   description: ''
-    CreateNodesSingleQemuSingleFirewallRulesResponse:
-      description: CreateNodesSingleQemuSingleFirewallRulesResponse
+    CreateVMFirewallRuleResponse:
+      description: CreateVMFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteNodesSingleQemuSingleFirewallRulesSingleResponse:
-      description: DeleteNodesSingleQemuSingleFirewallRulesSingleResponse
+    DeleteVMFirewallRuleResponse:
+      description: DeleteVMFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleFirewallRulesSingleResponse:
-      description: GetNodesSingleQemuSingleFirewallRulesSingleResponse
+    GetVMFirewallRuleResponse:
+      description: GetVMFirewallRuleResponse
       content:
         application/json:
           schema:
@@ -15483,8 +15438,8 @@ components:
               type:
                 type: string
                 description: ''
-    UpdateNodesSingleQemuSingleFirewallRulesSingleResponse:
-      description: UpdateNodesSingleQemuSingleFirewallRulesSingleResponse
+    UpdateVMFirewallRuleResponse:
+      description: UpdateVMFirewallRuleResponse
       content:
         application/json:
           schema:
@@ -15544,8 +15499,8 @@ components:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleFirewallIpsetResponse:
-      description: GetNodesSingleQemuSingleFirewallIpsetResponse
+    GetVMFirewallIPSetsResponse:
+      description: GetVMFirewallIPSetsResponse
       content:
         application/json:
           schema:
@@ -15567,22 +15522,22 @@ components:
                 name:
                   type: string
                   description: IP set name.
-    CreateNodesSingleQemuSingleFirewallIpsetResponse:
-      description: CreateNodesSingleQemuSingleFirewallIpsetResponse
+    CreateVMFirewallIPSetResponse:
+      description: CreateVMFirewallIPSetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteNodesSingleQemuSingleFirewallIpsetSingleResponse:
-      description: DeleteNodesSingleQemuSingleFirewallIpsetSingleResponse
+    DeleteVMFirewallIPSetResponse:
+      description: DeleteVMFirewallIPSetResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleFirewallIpsetSingleResponse:
-      description: GetNodesSingleQemuSingleFirewallIpsetSingleResponse
+    GetVMFirewallIPSetResponse:
+      description: GetVMFirewallIPSetResponse
       content:
         application/json:
           schema:
@@ -15607,36 +15562,36 @@ components:
                 nomatch:
                   type: boolean
                   description: ''
-    CreateNodesSingleQemuSingleFirewallIpsetSingleResponse:
-      description: CreateNodesSingleQemuSingleFirewallIpsetSingleResponse
+    AddVMFirewallIPSetIPResponse:
+      description: AddVMFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteNodesSingleQemuSingleFirewallIpsetSingleSingleResponse:
-      description: DeleteNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+    RemoveVMFirewallIPSetIPResponse:
+      description: RemoveVMFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleFirewallIpsetSingleSingleResponse:
-      description: GetNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+    GetVMFirewallIPSetIPResponse:
+      description: GetVMFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleResponse:
-      description: UpdateNodesSingleQemuSingleFirewallIpsetSingleSingleResponse
+    UpdateVMFirewallIPSetIPResponse:
+      description: UpdateVMFirewallIPSetIPResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleFirewallOptionsResponse:
-      description: GetNodesSingleQemuSingleFirewallOptionsResponse
+    GetVMFirewallOptionsResponse:
+      description: GetVMFirewallOptionsResponse
       content:
         application/json:
           schema:
@@ -15679,8 +15634,8 @@ components:
               radv:
                 type: boolean
                 description: Allow sending Router Advertisement.
-    UpdateNodesSingleQemuSingleFirewallOptionsResponse:
-      description: UpdateNodesSingleQemuSingleFirewallOptionsResponse
+    UpdateVMFirewallOptionsResponse:
+      description: UpdateVMFirewallOptionsResponse
       content:
         application/json:
           schema:
@@ -15951,8 +15906,8 @@ components:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleRrdResponse:
-      description: GetNodesSingleQemuSingleRrdResponse
+    GetVMRRDResponse:
+      description: GetVMRRDResponse
       content:
         application/json:
           schema:
@@ -15962,8 +15917,8 @@ components:
               filename:
                 type: string
                 description: ''
-    GetNodesSingleQemuSingleRrddataResponse:
-      description: GetNodesSingleQemuSingleRrddataResponse
+    GetVMRRDDataResponse:
+      description: GetVMRRDDataResponse
       content:
         application/json:
           schema:
@@ -15973,8 +15928,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleQemuSingleConfigResponse:
-      description: GetNodesSingleQemuSingleConfigResponse
+    GetVMConfigResponse:
+      description: GetVMConfigResponse
       content:
         application/json:
           schema:
@@ -16295,22 +16250,22 @@ components:
               watchdog:
                 type: string
                 description: Create a virtual hardware watchdog device.
-    CreateNodesSingleQemuSingleConfigResponse:
-      description: CreateNodesSingleQemuSingleConfigResponse
+    UpdateVMConfigResponse:
+      description: UpdateVMConfigResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    UpdateNodesSingleQemuSingleConfigResponse:
-      description: UpdateNodesSingleQemuSingleConfigResponse
+    UpdateVMConfigSyncResponse:
+      description: UpdateVMConfigSyncResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSinglePendingResponse:
-      description: GetNodesSingleQemuSinglePendingResponse
+    GetVMConfigPendingResponse:
+      description: GetVMConfigPendingResponse
       content:
         application/json:
           schema:
@@ -16334,8 +16289,8 @@ components:
                 value:
                   type: string
                   description: Current value.
-    UpdateNodesSingleQemuSingleUnlinkResponse:
-      description: UpdateNodesSingleQemuSingleUnlinkResponse
+    UnlinkVMDiskImagesResponse:
+      description: UnlinkVMDiskImagesResponse
       content:
         application/json:
           schema:
@@ -16375,8 +16330,8 @@ components:
             description: >-
               Returned values can be directly passed to the 'remote-viewer'
               application.
-    GetNodesSingleQemuSingleStatusResponse:
-      description: GetNodesSingleQemuSingleStatusResponse
+    GetVMStatusResponse:
+      description: GetVMStatusResponse
       content:
         application/json:
           schema:
@@ -16389,8 +16344,8 @@ components:
                 subdir:
                   type: string
                   description: ''
-    GetNodesSingleQemuSingleStatusCurrentResponse:
-      description: GetNodesSingleQemuSingleStatusCurrentResponse
+    GetCurrentVMStatusResponse:
+      description: GetCurrentVMStatusResponse
       content:
         application/json:
           schema:
@@ -16439,50 +16394,50 @@ components:
               vmid:
                 type: integer
                 description: The (unique) ID of the VM.
-    CreateNodesSingleQemuSingleStatusStartResponse:
-      description: CreateNodesSingleQemuSingleStatusStartResponse
+    StartVMResponse:
+      description: StartVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusStopResponse:
-      description: CreateNodesSingleQemuSingleStatusStopResponse
+    StopVMResponse:
+      description: StopVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusResetResponse:
-      description: CreateNodesSingleQemuSingleStatusResetResponse
+    ResetVMResponse:
+      description: ResetVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusShutdownResponse:
-      description: CreateNodesSingleQemuSingleStatusShutdownResponse
+    ShutdownVMResponse:
+      description: ShutdownVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusRebootResponse:
-      description: CreateNodesSingleQemuSingleStatusRebootResponse
+    RebootVMResponse:
+      description: RebootVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusSuspendResponse:
-      description: CreateNodesSingleQemuSingleStatusSuspendResponse
+    SuspendVMResponse:
+      description: SuspendVMResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleStatusResumeResponse:
-      description: CreateNodesSingleQemuSingleStatusResumeResponse
+    ResumeVMResponse:
+      description: ResumeVMResponse
       content:
         application/json:
           schema:
@@ -16512,8 +16467,8 @@ components:
                 items:
                   type: string
                   description: ''
-    CreateNodesSingleQemuSingleCloneResponse:
-      description: CreateNodesSingleQemuSingleCloneResponse
+    CloneVMResponse:
+      description: CloneVMResponse
       content:
         application/json:
           schema:
@@ -16526,8 +16481,8 @@ components:
           schema:
             type: string
             description: the task ID.
-    GetNodesSingleQemuSingleMigrateResponse:
-      description: GetNodesSingleQemuSingleMigrateResponse
+    MigrateVMResponse:
+      description: MigrateVMResponse
       content:
         application/json:
           schema:
@@ -16576,8 +16531,8 @@ components:
           schema:
             type: string
             description: ''
-    GetNodesSingleQemuSingleSnapshotResponse:
-      description: GetNodesSingleQemuSingleSnapshotResponse
+    GetVMSnapshotsResponse:
+      description: GetVMSnapshotsResponse
       content:
         application/json:
           schema:
@@ -16604,22 +16559,22 @@ components:
                 vmstate:
                   type: boolean
                   description: Snapshot includes RAM.
-    CreateNodesSingleQemuSingleSnapshotResponse:
-      description: CreateNodesSingleQemuSingleSnapshotResponse
+    CreateVMSnapshotResponse:
+      description: CreateVMSnapshotResponse
       content:
         application/json:
           schema:
             type: string
             description: the task ID.
-    DeleteNodesSingleQemuSingleSnapshotSingleResponse:
-      description: DeleteNodesSingleQemuSingleSnapshotSingleResponse
+    DeleteVMSnapshotResponse:
+      description: DeleteVMSnapshotResponse
       content:
         application/json:
           schema:
             type: string
             description: the task ID.
-    GetNodesSingleQemuSingleSnapshotSingleResponse:
-      description: GetNodesSingleQemuSingleSnapshotSingleResponse
+    GetVMSnapshotResponse:
+      description: GetVMSnapshotResponse
       content:
         application/json:
           schema:
@@ -16629,22 +16584,22 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleQemuSingleSnapshotSingleConfigResponse:
-      description: GetNodesSingleQemuSingleSnapshotSingleConfigResponse
+    GetVMSnapshotConfigResponse:
+      description: GetVMSnapshotConfigResponse
       content:
         application/json:
           schema:
             type: object
             description: ''
-    UpdateNodesSingleQemuSingleSnapshotSingleConfigResponse:
-      description: UpdateNodesSingleQemuSingleSnapshotSingleConfigResponse
+    UpdateVMSnapshotConfigResponse:
+      description: UpdateVMSnapshotConfigResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleSnapshotSingleRollbackResponse:
-      description: CreateNodesSingleQemuSingleSnapshotSingleRollbackResponse
+    RollbackVMSnapshotResponse:
+      description: RollbackVMSnapshotResponse
       content:
         application/json:
           schema:
@@ -19065,8 +19020,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleFirewallResponse:
-      description: GetNodesSingleFirewallResponse
+    GetNodeFirewallResponse:
+      description: GetNodeFirewallResponse
       content:
         application/json:
           schema:
@@ -19076,8 +19031,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleFirewallRulesResponse:
-      description: GetNodesSingleFirewallRulesResponse
+    GetNodeFirewallRulesResponse:
+      description: GetNodeFirewallRulesResponse
       content:
         application/json:
           schema:
@@ -19090,22 +19045,22 @@ components:
                 pos:
                   type: integer
                   description: ''
-    CreateNodesSingleFirewallRulesResponse:
-      description: CreateNodesSingleFirewallRulesResponse
+    CreateNodeFirewallRuleResponse:
+      description: CreateNodeFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeleteNodesSingleFirewallRulesSingleResponse:
-      description: DeleteNodesSingleFirewallRulesSingleResponse
+    DeleteNodeFirewallRuleResponse:
+      description: DeleteNodeFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleFirewallRulesSingleResponse:
-      description: GetNodesSingleFirewallRulesSingleResponse
+    GetNodeFirewallRuleResponse:
+      description: GetNodeFirewallRuleResponse
       content:
         application/json:
           schema:
@@ -19157,15 +19112,15 @@ components:
               type:
                 type: string
                 description: ''
-    UpdateNodesSingleFirewallRulesSingleResponse:
-      description: UpdateNodesSingleFirewallRulesSingleResponse
+    UpdateNodeFirewallRuleResponse:
+      description: UpdateNodeFirewallRuleResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetNodesSingleFirewallOptionsResponse:
-      description: GetNodesSingleFirewallOptionsResponse
+    GetNodeFirewallOptionsResponse:
+      description: GetNodeFirewallOptionsResponse
       content:
         application/json:
           schema:
@@ -19220,8 +19175,8 @@ components:
               tcpflags:
                 type: boolean
                 description: Filter illegal combinations of TCP flags.
-    UpdateNodesSingleFirewallOptionsResponse:
-      description: UpdateNodesSingleFirewallOptionsResponse
+    UpdateNodeFirewallOptionsResponse:
+      description: UpdateNodeFirewallOptionsResponse
       content:
         application/json:
           schema:
@@ -19449,8 +19404,8 @@ components:
           schema:
             type: string
             description: ''
-    GetNodesSingleSdnResponse:
-      description: GetNodesSingleSdnResponse
+    GetNodeSDNResponse:
+      description: GetNodeSDNResponse
       content:
         application/json:
           schema:
@@ -19460,8 +19415,8 @@ components:
               type: object
               description: ''
               properties: {}
-    GetNodesSingleSdnZonesResponse:
-      description: GetNodesSingleSdnZonesResponse
+    GetNodeSDNZonesResponse:
+      description: GetNodeSDNZonesResponse
       content:
         application/json:
           schema:
@@ -19477,8 +19432,8 @@ components:
                 zone:
                   type: string
                   description: The SDN zone object identifier.
-    GetNodesSingleSdnZonesSingleResponse:
-      description: GetNodesSingleSdnZonesSingleResponse
+    GetNodeSDNZoneResponse:
+      description: GetNodeSDNZoneResponse
       content:
         application/json:
           schema:
@@ -19491,8 +19446,8 @@ components:
                 subdir:
                   type: string
                   description: ''
-    GetNodesSingleSdnZonesSingleContentResponse:
-      description: GetNodesSingleSdnZonesSingleContentResponse
+    GetNodeSDNZoneContentResponse:
+      description: GetNodeSDNZoneContentResponse
       content:
         application/json:
           schema:
@@ -19567,8 +19522,8 @@ components:
           schema:
             type: string
             description: MAC address used to assemble the WoL magic packet.
-    GetNodesSingleRrdResponse:
-      description: GetNodesSingleRrdResponse
+    GetNodeRRDResponse:
+      description: GetNodeRRDResponse
       content:
         application/json:
           schema:
@@ -19578,8 +19533,8 @@ components:
               filename:
                 type: string
                 description: ''
-    GetNodesSingleRrddataResponse:
-      description: GetNodesSingleRrddataResponse
+    GetNodeRRDDataResponse:
+      description: GetNodeRRDDataResponse
       content:
         application/json:
           schema:
@@ -20483,22 +20438,22 @@ components:
                 poolid:
                   type: string
                   description: ''
-    CreatePoolsResponse:
-      description: CreatePoolsResponse
+    CreatePoolResponse:
+      description: CreatePoolResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    DeletePoolsSingleResponse:
-      description: DeletePoolsSingleResponse
+    DeletePoolResponse:
+      description: DeletePoolResponse
       content:
         application/json:
           schema:
             type: string
             description: ''
-    GetPoolsSingleResponse:
-      description: GetPoolsSingleResponse
+    GetPoolResponse:
+      description: GetPoolResponse
       content:
         application/json:
           schema:
@@ -20530,8 +20485,8 @@ components:
                     vmid:
                       type: integer
                       description: ''
-    UpdatePoolsSingleResponse:
-      description: UpdatePoolsSingleResponse
+    UpdatePoolResponse:
+      description: UpdatePoolResponse
       content:
         application/json:
           schema:
