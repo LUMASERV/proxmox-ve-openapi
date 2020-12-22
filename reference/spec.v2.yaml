@@ -951,8 +951,8 @@ paths:
               $ref: '#/components/schemas/UpdateClusterBackupSingleRequest'
   '/cluster/backup/{id}/included_volumes':
     get:
-      operationId: getClusterBackupSingleIncluded_volumes
-      summary: getClusterBackupSingleIncluded_volumes
+      operationId: getClusterBackupSingleIncludedvolumes
+      summary: getClusterBackupSingleIncludedvolumes
       description: >-
         Returns included guests and the backup status of their disks. Optimized
         to be used in ExtJS tree views.
@@ -967,8 +967,7 @@ paths:
             type: string
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetClusterBackupSingleIncluded_volumesResponse
+          $ref: '#/components/responses/GetClusterBackupSingleIncludedvolumesResponse'
   /cluster/backupinfo:
     get:
       operationId: getClusterBackupinfo
@@ -982,15 +981,15 @@ paths:
           $ref: '#/components/responses/GetClusterBackupinfoResponse'
   /cluster/backupinfo/not_backed_up:
     get:
-      operationId: getClusterBackupinfoNot_backed_up
-      summary: getClusterBackupinfoNot_backed_up
+      operationId: getClusterBackupinfoNotbackedup
+      summary: getClusterBackupinfoNotbackedup
       description: Shows all guests which are not covered by any backup job.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterBackupinfoNot_backed_upResponse'
+          $ref: '#/components/responses/GetClusterBackupinfoNotbackedupResponse'
   /cluster/ha:
     get:
       operationId: getClusterHa
@@ -1235,15 +1234,15 @@ paths:
           $ref: '#/components/responses/GetClusterHaStatusCurrentResponse'
   /cluster/ha/status/manager_status:
     get:
-      operationId: getClusterHaStatusManager_status
-      summary: getClusterHaStatusManager_status
+      operationId: getClusterHaStatusManagerstatus
+      summary: getClusterHaStatusManagerstatus
       description: 'Get full HA manger status, including LRM status.'
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterHaStatusManager_statusResponse'
+          $ref: '#/components/responses/GetClusterHaStatusManagerstatusResponse'
   /cluster/acme:
     get:
       operationId: getClusterAcme
@@ -1441,15 +1440,15 @@ paths:
           $ref: '#/components/responses/GetClusterAcmeDirectoriesResponse'
   /cluster/acme/challenge-schema:
     get:
-      operationId: getClusterAcmeChallenge-schema
-      summary: getClusterAcmeChallenge-schema
+      operationId: getClusterAcmeChallengeschema
+      summary: getClusterAcmeChallengeschema
       description: Get schema of ACME challenge types.
       tags:
         - cluster
       parameters: []
       responses:
         '200':
-          $ref: '#/components/responses/GetClusterAcmeChallenge-schemaResponse'
+          $ref: '#/components/responses/GetClusterAcmeChallengeschemaResponse'
   /cluster/ceph:
     get:
       operationId: getClusterCeph
@@ -2715,8 +2714,8 @@ paths:
               $ref: '#/components/schemas/CreateNodesSingleQemuSingleAgentRequest'
   '/nodes/{node}/qemu/{vmid}/agent/fsfreeze-freeze':
     post:
-      operationId: createNodesSingleQemuSingleAgentFsfreeze-freeze
-      summary: createNodesSingleQemuSingleAgentFsfreeze-freeze
+      operationId: createNodesSingleQemuSingleAgentFsfreezefreeze
+      summary: createNodesSingleQemuSingleAgentFsfreezefreeze
       description: Execute fsfreeze-freeze.
       tags:
         - nodes
@@ -2736,17 +2735,17 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreeze-freezeResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreezefreezeResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreeze-freezeRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreezefreezeRequest
   '/nodes/{node}/qemu/{vmid}/agent/fsfreeze-status':
     post:
-      operationId: createNodesSingleQemuSingleAgentFsfreeze-status
-      summary: createNodesSingleQemuSingleAgentFsfreeze-status
+      operationId: createNodesSingleQemuSingleAgentFsfreezestatus
+      summary: createNodesSingleQemuSingleAgentFsfreezestatus
       description: Execute fsfreeze-status.
       tags:
         - nodes
@@ -2766,17 +2765,17 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreeze-statusResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreezestatusResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreeze-statusRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreezestatusRequest
   '/nodes/{node}/qemu/{vmid}/agent/fsfreeze-thaw':
     post:
-      operationId: createNodesSingleQemuSingleAgentFsfreeze-thaw
-      summary: createNodesSingleQemuSingleAgentFsfreeze-thaw
+      operationId: createNodesSingleQemuSingleAgentFsfreezethaw
+      summary: createNodesSingleQemuSingleAgentFsfreezethaw
       description: Execute fsfreeze-thaw.
       tags:
         - nodes
@@ -2796,13 +2795,13 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreeze-thawResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentFsfreezethawResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreeze-thawRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentFsfreezethawRequest
   '/nodes/{node}/qemu/{vmid}/agent/fstrim':
     post:
       operationId: createNodesSingleQemuSingleAgentFstrim
@@ -2835,8 +2834,8 @@ paths:
                 #/components/schemas/CreateNodesSingleQemuSingleAgentFstrimRequest
   '/nodes/{node}/qemu/{vmid}/agent/get-fsinfo':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-fsinfo
-      summary: getNodesSingleQemuSingleAgentGet-fsinfo
+      operationId: getNodesSingleQemuSingleAgentGetfsinfo
+      summary: getNodesSingleQemuSingleAgentGetfsinfo
       description: Execute get-fsinfo.
       tags:
         - nodes
@@ -2856,11 +2855,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-fsinfoResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGetfsinfoResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-host-name':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-host-name
-      summary: getNodesSingleQemuSingleAgentGet-host-name
+      operationId: getNodesSingleQemuSingleAgentGethostname
+      summary: getNodesSingleQemuSingleAgentGethostname
       description: Execute get-host-name.
       tags:
         - nodes
@@ -2880,11 +2879,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-host-nameResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGethostnameResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-memory-block-info':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-memory-block-info
-      summary: getNodesSingleQemuSingleAgentGet-memory-block-info
+      operationId: getNodesSingleQemuSingleAgentGetmemoryblockinfo
+      summary: getNodesSingleQemuSingleAgentGetmemoryblockinfo
       description: Execute get-memory-block-info.
       tags:
         - nodes
@@ -2904,11 +2903,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-memory-block-infoResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGetmemoryblockinfoResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-memory-blocks':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-memory-blocks
-      summary: getNodesSingleQemuSingleAgentGet-memory-blocks
+      operationId: getNodesSingleQemuSingleAgentGetmemoryblocks
+      summary: getNodesSingleQemuSingleAgentGetmemoryblocks
       description: Execute get-memory-blocks.
       tags:
         - nodes
@@ -2928,11 +2927,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-memory-blocksResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGetmemoryblocksResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-osinfo':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-osinfo
-      summary: getNodesSingleQemuSingleAgentGet-osinfo
+      operationId: getNodesSingleQemuSingleAgentGetosinfo
+      summary: getNodesSingleQemuSingleAgentGetosinfo
       description: Execute get-osinfo.
       tags:
         - nodes
@@ -2952,11 +2951,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-osinfoResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGetosinfoResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-time':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-time
-      summary: getNodesSingleQemuSingleAgentGet-time
+      operationId: getNodesSingleQemuSingleAgentGettime
+      summary: getNodesSingleQemuSingleAgentGettime
       description: Execute get-time.
       tags:
         - nodes
@@ -2975,11 +2974,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/GetNodesSingleQemuSingleAgentGet-timeResponse'
+          $ref: '#/components/responses/GetNodesSingleQemuSingleAgentGettimeResponse'
   '/nodes/{node}/qemu/{vmid}/agent/get-timezone':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-timezone
-      summary: getNodesSingleQemuSingleAgentGet-timezone
+      operationId: getNodesSingleQemuSingleAgentGettimezone
+      summary: getNodesSingleQemuSingleAgentGettimezone
       description: Execute get-timezone.
       tags:
         - nodes
@@ -2999,11 +2998,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-timezoneResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentGettimezoneResponse
   '/nodes/{node}/qemu/{vmid}/agent/get-users':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-users
-      summary: getNodesSingleQemuSingleAgentGet-users
+      operationId: getNodesSingleQemuSingleAgentGetusers
+      summary: getNodesSingleQemuSingleAgentGetusers
       description: Execute get-users.
       tags:
         - nodes
@@ -3022,12 +3021,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-usersResponse
+          $ref: '#/components/responses/GetNodesSingleQemuSingleAgentGetusersResponse'
   '/nodes/{node}/qemu/{vmid}/agent/get-vcpus':
     get:
-      operationId: getNodesSingleQemuSingleAgentGet-vcpus
-      summary: getNodesSingleQemuSingleAgentGet-vcpus
+      operationId: getNodesSingleQemuSingleAgentGetvcpus
+      summary: getNodesSingleQemuSingleAgentGetvcpus
       description: Execute get-vcpus.
       tags:
         - nodes
@@ -3046,8 +3044,7 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentGet-vcpusResponse
+          $ref: '#/components/responses/GetNodesSingleQemuSingleAgentGetvcpusResponse'
   '/nodes/{node}/qemu/{vmid}/agent/info':
     get:
       operationId: getNodesSingleQemuSingleAgentInfo
@@ -3073,8 +3070,8 @@ paths:
           $ref: '#/components/responses/GetNodesSingleQemuSingleAgentInfoResponse'
   '/nodes/{node}/qemu/{vmid}/agent/network-get-interfaces':
     get:
-      operationId: getNodesSingleQemuSingleAgentNetwork-get-interfaces
-      summary: getNodesSingleQemuSingleAgentNetwork-get-interfaces
+      operationId: getNodesSingleQemuSingleAgentNetworkgetinterfaces
+      summary: getNodesSingleQemuSingleAgentNetworkgetinterfaces
       description: Execute network-get-interfaces.
       tags:
         - nodes
@@ -3094,7 +3091,7 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentNetwork-get-interfacesResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentNetworkgetinterfacesResponse
   '/nodes/{node}/qemu/{vmid}/agent/ping':
     post:
       operationId: createNodesSingleQemuSingleAgentPing
@@ -3155,8 +3152,8 @@ paths:
                 #/components/schemas/CreateNodesSingleQemuSingleAgentShutdownRequest
   '/nodes/{node}/qemu/{vmid}/agent/suspend-disk':
     post:
-      operationId: createNodesSingleQemuSingleAgentSuspend-disk
-      summary: createNodesSingleQemuSingleAgentSuspend-disk
+      operationId: createNodesSingleQemuSingleAgentSuspenddisk
+      summary: createNodesSingleQemuSingleAgentSuspenddisk
       description: Execute suspend-disk.
       tags:
         - nodes
@@ -3176,17 +3173,17 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentSuspend-diskResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentSuspenddiskResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspend-diskRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspenddiskRequest
   '/nodes/{node}/qemu/{vmid}/agent/suspend-hybrid':
     post:
-      operationId: createNodesSingleQemuSingleAgentSuspend-hybrid
-      summary: createNodesSingleQemuSingleAgentSuspend-hybrid
+      operationId: createNodesSingleQemuSingleAgentSuspendhybrid
+      summary: createNodesSingleQemuSingleAgentSuspendhybrid
       description: Execute suspend-hybrid.
       tags:
         - nodes
@@ -3206,17 +3203,17 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentSuspend-hybridResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentSuspendhybridResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspend-hybridRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspendhybridRequest
   '/nodes/{node}/qemu/{vmid}/agent/suspend-ram':
     post:
-      operationId: createNodesSingleQemuSingleAgentSuspend-ram
-      summary: createNodesSingleQemuSingleAgentSuspend-ram
+      operationId: createNodesSingleQemuSingleAgentSuspendram
+      summary: createNodesSingleQemuSingleAgentSuspendram
       description: Execute suspend-ram.
       tags:
         - nodes
@@ -3236,17 +3233,17 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentSuspend-ramResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentSuspendramResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspend-ramRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentSuspendramRequest
   '/nodes/{node}/qemu/{vmid}/agent/set-user-password':
     post:
-      operationId: createNodesSingleQemuSingleAgentSet-user-password
-      summary: createNodesSingleQemuSingleAgentSet-user-password
+      operationId: createNodesSingleQemuSingleAgentSetuserpassword
+      summary: createNodesSingleQemuSingleAgentSetuserpassword
       description: Sets the password for the given user to the given password
       tags:
         - nodes
@@ -3266,13 +3263,13 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentSet-user-passwordResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentSetuserpasswordResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentSet-user-passwordRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentSetuserpasswordRequest
   '/nodes/{node}/qemu/{vmid}/agent/exec':
     post:
       operationId: createNodesSingleQemuSingleAgentExec
@@ -3305,8 +3302,8 @@ paths:
               $ref: '#/components/schemas/CreateNodesSingleQemuSingleAgentExecRequest'
   '/nodes/{node}/qemu/{vmid}/agent/exec-status':
     get:
-      operationId: getNodesSingleQemuSingleAgentExec-status
-      summary: getNodesSingleQemuSingleAgentExec-status
+      operationId: getNodesSingleQemuSingleAgentExecstatus
+      summary: getNodesSingleQemuSingleAgentExecstatus
       description: Gets the status of the given pid started by the guest-agent
       tags:
         - nodes
@@ -3326,11 +3323,11 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentExec-statusResponse
+            #/components/responses/GetNodesSingleQemuSingleAgentExecstatusResponse
   '/nodes/{node}/qemu/{vmid}/agent/file-read':
     get:
-      operationId: getNodesSingleQemuSingleAgentFile-read
-      summary: getNodesSingleQemuSingleAgentFile-read
+      operationId: getNodesSingleQemuSingleAgentFileread
+      summary: getNodesSingleQemuSingleAgentFileread
       description: Reads the given file via guest agent. Is limited to 16777216 bytes.
       tags:
         - nodes
@@ -3349,12 +3346,11 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: >-
-            #/components/responses/GetNodesSingleQemuSingleAgentFile-readResponse
+          $ref: '#/components/responses/GetNodesSingleQemuSingleAgentFilereadResponse'
   '/nodes/{node}/qemu/{vmid}/agent/file-write':
     post:
-      operationId: createNodesSingleQemuSingleAgentFile-write
-      summary: createNodesSingleQemuSingleAgentFile-write
+      operationId: createNodesSingleQemuSingleAgentFilewrite
+      summary: createNodesSingleQemuSingleAgentFilewrite
       description: Writes the given file via guest agent.
       tags:
         - nodes
@@ -3374,13 +3370,13 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleQemuSingleAgentFile-writeResponse
+            #/components/responses/CreateNodesSingleQemuSingleAgentFilewriteResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleQemuSingleAgentFile-writeRequest
+                #/components/schemas/CreateNodesSingleQemuSingleAgentFilewriteRequest
   '/nodes/{node}/qemu/{vmid}/rrd':
     get:
       operationId: getVMRRD
@@ -4002,8 +3998,8 @@ paths:
               $ref: '#/components/schemas/CloneVMRequest'
   '/nodes/{node}/qemu/{vmid}/move_disk':
     post:
-      operationId: createNodesSingleQemuSingleMove_disk
-      summary: createNodesSingleQemuSingleMove_disk
+      operationId: createNodesSingleQemuSingleMovedisk
+      summary: createNodesSingleQemuSingleMovedisk
       description: Move volume to different storage.
       tags:
         - nodes
@@ -4022,12 +4018,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleQemuSingleMove_diskResponse'
+          $ref: '#/components/responses/CreateNodesSingleQemuSingleMovediskResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/CreateNodesSingleQemuSingleMove_diskRequest'
+              $ref: '#/components/schemas/CreateNodesSingleQemuSingleMovediskRequest'
   '/nodes/{node}/qemu/{vmid}/migrate':
     get:
       operationId: migrateVM
@@ -5941,8 +5937,8 @@ paths:
               $ref: '#/components/schemas/UpdateNodesSingleLxcSingleResizeRequest'
   '/nodes/{node}/lxc/{vmid}/move_volume':
     post:
-      operationId: createNodesSingleLxcSingleMove_volume
-      summary: createNodesSingleLxcSingleMove_volume
+      operationId: createNodesSingleLxcSingleMovevolume
+      summary: createNodesSingleLxcSingleMovevolume
       description: Move a rootfs-/mp-volume to a different storage
       tags:
         - nodes
@@ -5961,13 +5957,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/CreateNodesSingleLxcSingleMove_volumeResponse'
+          $ref: '#/components/responses/CreateNodesSingleLxcSingleMovevolumeResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: >-
-                #/components/schemas/CreateNodesSingleLxcSingleMove_volumeRequest
+              $ref: '#/components/schemas/CreateNodesSingleLxcSingleMovevolumeRequest'
   '/nodes/{node}/lxc/{vmid}/pending':
     get:
       operationId: getNodesSingleLxcSinglePending
@@ -8521,8 +8516,8 @@ paths:
           $ref: '#/components/responses/GetNodesSingleReplicationSingleLogResponse'
   '/nodes/{node}/replication/{id}/schedule_now':
     post:
-      operationId: createNodesSingleReplicationSingleSchedule_now
-      summary: createNodesSingleReplicationSingleSchedule_now
+      operationId: createNodesSingleReplicationSingleSchedulenow
+      summary: createNodesSingleReplicationSingleSchedulenow
       description: Schedule replication job to start as soon as possible.
       tags:
         - nodes
@@ -8542,13 +8537,13 @@ paths:
       responses:
         '200':
           $ref: >-
-            #/components/responses/CreateNodesSingleReplicationSingleSchedule_nowResponse
+            #/components/responses/CreateNodesSingleReplicationSingleSchedulenowResponse
       requestBody:
         content:
           application/json:
             schema:
               $ref: >-
-                #/components/schemas/CreateNodesSingleReplicationSingleSchedule_nowRequest
+                #/components/schemas/CreateNodesSingleReplicationSingleSchedulenowRequest
   '/nodes/{node}/certificates':
     get:
       operationId: getNodesSingleCertificates
@@ -10201,8 +10196,8 @@ components:
       properties:
         clustername:
           type: string
-        'link[n]':
-          type: string
+        link:
+          type: array
         nodeid:
           type: integer
         votes:
@@ -10217,8 +10212,8 @@ components:
           type: integer
         force:
           type: boolean
-        'link[n]':
-          type: string
+        link:
+          type: array
         new_node_ip:
           type: string
         nodeid:
@@ -10235,8 +10230,8 @@ components:
           type: boolean
         hostname:
           type: string
-        'link[n]':
-          type: string
+        link:
+          type: array
         nodeid:
           type: integer
         password:
@@ -11033,16 +11028,16 @@ components:
           type: boolean
         hookscript:
           type: string
-        'hostpci[n]':
-          type: string
+        hostpci:
+          type: array
         hotplug:
           type: string
         hugepages:
           type: string
-        'ide[n]':
-          type: string
-        'ipconfig[n]':
-          type: string
+        ide:
+          type: array
+        ipconfig:
+          type: array
         ivshmem:
           type: string
         keephugepages:
@@ -11067,18 +11062,16 @@ components:
           type: string
         nameserver:
           type: string
-        'net[n]':
-          type: string
+        net:
+          type: array
         numa:
-          type: boolean
-        'numa[n]':
-          type: string
+          type: array
         onboot:
           type: boolean
         ostype:
           type: string
-        'parallel[n]':
-          type: string
+        parallel:
+          type: array
         pool:
           type: string
         protection:
@@ -11087,16 +11080,16 @@ components:
           type: boolean
         rng0:
           type: string
-        'sata[n]':
-          type: string
-        'scsi[n]':
-          type: string
+        sata:
+          type: array
+        scsi:
+          type: array
         scsihw:
           type: string
         searchdomain:
           type: string
-        'serial[n]':
-          type: string
+        serial:
+          type: array
         shares:
           type: integer
         smbios1:
@@ -11127,16 +11120,16 @@ components:
           type: boolean
         unique:
           type: boolean
-        'unused[n]':
-          type: string
-        'usb[n]':
-          type: string
+        unused:
+          type: array
+        usb:
+          type: array
         vcpus:
           type: integer
         vga:
           type: string
-        'virtio[n]':
-          type: string
+        virtio:
+          type: array
         vmgenid:
           type: string
         vmid:
@@ -11319,16 +11312,16 @@ components:
           type: string
       required:
         - command
-    CreateNodesSingleQemuSingleAgentFsfreeze-freezeRequest:
-      title: CreateNodesSingleQemuSingleAgentFsfreeze-freezeRequest
+    CreateNodesSingleQemuSingleAgentFsfreezefreezeRequest:
+      title: CreateNodesSingleQemuSingleAgentFsfreezefreezeRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentFsfreeze-statusRequest:
-      title: CreateNodesSingleQemuSingleAgentFsfreeze-statusRequest
+    CreateNodesSingleQemuSingleAgentFsfreezestatusRequest:
+      title: CreateNodesSingleQemuSingleAgentFsfreezestatusRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentFsfreeze-thawRequest:
-      title: CreateNodesSingleQemuSingleAgentFsfreeze-thawRequest
+    CreateNodesSingleQemuSingleAgentFsfreezethawRequest:
+      title: CreateNodesSingleQemuSingleAgentFsfreezethawRequest
       type: object
       properties: {}
     CreateNodesSingleQemuSingleAgentFstrimRequest:
@@ -11343,20 +11336,20 @@ components:
       title: CreateNodesSingleQemuSingleAgentShutdownRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentSuspend-diskRequest:
-      title: CreateNodesSingleQemuSingleAgentSuspend-diskRequest
+    CreateNodesSingleQemuSingleAgentSuspenddiskRequest:
+      title: CreateNodesSingleQemuSingleAgentSuspenddiskRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentSuspend-hybridRequest:
-      title: CreateNodesSingleQemuSingleAgentSuspend-hybridRequest
+    CreateNodesSingleQemuSingleAgentSuspendhybridRequest:
+      title: CreateNodesSingleQemuSingleAgentSuspendhybridRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentSuspend-ramRequest:
-      title: CreateNodesSingleQemuSingleAgentSuspend-ramRequest
+    CreateNodesSingleQemuSingleAgentSuspendramRequest:
+      title: CreateNodesSingleQemuSingleAgentSuspendramRequest
       type: object
       properties: {}
-    CreateNodesSingleQemuSingleAgentSet-user-passwordRequest:
-      title: CreateNodesSingleQemuSingleAgentSet-user-passwordRequest
+    CreateNodesSingleQemuSingleAgentSetuserpasswordRequest:
+      title: CreateNodesSingleQemuSingleAgentSetuserpasswordRequest
       type: object
       properties:
         crypted:
@@ -11376,8 +11369,8 @@ components:
           type: string
         input-data:
           type: string
-    CreateNodesSingleQemuSingleAgentFile-writeRequest:
-      title: CreateNodesSingleQemuSingleAgentFile-writeRequest
+    CreateNodesSingleQemuSingleAgentFilewriteRequest:
+      title: CreateNodesSingleQemuSingleAgentFilewriteRequest
       type: object
       properties:
         content:
@@ -11445,16 +11438,16 @@ components:
           type: boolean
         hookscript:
           type: string
-        'hostpci[n]':
-          type: string
+        hostpci:
+          type: array
         hotplug:
           type: string
         hugepages:
           type: string
-        'ide[n]':
-          type: string
-        'ipconfig[n]':
-          type: string
+        ide:
+          type: array
+        ipconfig:
+          type: array
         ivshmem:
           type: string
         keephugepages:
@@ -11479,18 +11472,16 @@ components:
           type: string
         nameserver:
           type: string
-        'net[n]':
-          type: string
+        net:
+          type: array
         numa:
-          type: boolean
-        'numa[n]':
-          type: string
+          type: array
         onboot:
           type: boolean
         ostype:
           type: string
-        'parallel[n]':
-          type: string
+        parallel:
+          type: array
         protection:
           type: boolean
         reboot:
@@ -11499,16 +11490,16 @@ components:
           type: string
         rng0:
           type: string
-        'sata[n]':
-          type: string
-        'scsi[n]':
-          type: string
+        sata:
+          type: array
+        scsi:
+          type: array
         scsihw:
           type: string
         searchdomain:
           type: string
-        'serial[n]':
-          type: string
+        serial:
+          type: array
         shares:
           type: integer
         skiplock:
@@ -11535,16 +11526,16 @@ components:
           type: boolean
         template:
           type: boolean
-        'unused[n]':
-          type: string
-        'usb[n]':
-          type: string
+        unused:
+          type: array
+        usb:
+          type: array
         vcpus:
           type: integer
         vga:
           type: string
-        'virtio[n]':
-          type: string
+        virtio:
+          type: array
         vmgenid:
           type: string
         vmstatestorage:
@@ -11607,16 +11598,16 @@ components:
           type: boolean
         hookscript:
           type: string
-        'hostpci[n]':
-          type: string
+        hostpci:
+          type: array
         hotplug:
           type: string
         hugepages:
           type: string
-        'ide[n]':
-          type: string
-        'ipconfig[n]':
-          type: string
+        ide:
+          type: array
+        ipconfig:
+          type: array
         ivshmem:
           type: string
         keephugepages:
@@ -11641,18 +11632,16 @@ components:
           type: string
         nameserver:
           type: string
-        'net[n]':
-          type: string
+        net:
+          type: array
         numa:
-          type: boolean
-        'numa[n]':
-          type: string
+          type: array
         onboot:
           type: boolean
         ostype:
           type: string
-        'parallel[n]':
-          type: string
+        parallel:
+          type: array
         protection:
           type: boolean
         reboot:
@@ -11661,16 +11650,16 @@ components:
           type: string
         rng0:
           type: string
-        'sata[n]':
-          type: string
-        'scsi[n]':
-          type: string
+        sata:
+          type: array
+        scsi:
+          type: array
         scsihw:
           type: string
         searchdomain:
           type: string
-        'serial[n]':
-          type: string
+        serial:
+          type: array
         shares:
           type: integer
         skiplock:
@@ -11697,16 +11686,16 @@ components:
           type: boolean
         template:
           type: boolean
-        'unused[n]':
-          type: string
-        'usb[n]':
-          type: string
+        unused:
+          type: array
+        usb:
+          type: array
         vcpus:
           type: integer
         vga:
           type: string
-        'virtio[n]':
-          type: string
+        virtio:
+          type: array
         vmgenid:
           type: string
         vmstatestorage:
@@ -11855,8 +11844,8 @@ components:
           type: string
       required:
         - newid
-    CreateNodesSingleQemuSingleMove_diskRequest:
-      title: CreateNodesSingleQemuSingleMove_diskRequest
+    CreateNodesSingleQemuSingleMovediskRequest:
+      title: CreateNodesSingleQemuSingleMovediskRequest
       type: object
       properties:
         bwlimit:
@@ -11983,12 +11972,12 @@ components:
           type: string
         memory:
           type: integer
-        'mp[n]':
-          type: string
+        mp:
+          type: array
         nameserver:
           type: string
-        'net[n]':
-          type: string
+        net:
+          type: array
         onboot:
           type: boolean
         ostemplate:
@@ -12029,8 +12018,8 @@ components:
           type: boolean
         unprivileged:
           type: boolean
-        'unused[n]':
-          type: string
+        unused:
+          type: array
         vmid:
           type: integer
       required:
@@ -12070,12 +12059,12 @@ components:
           type: string
         memory:
           type: integer
-        'mp[n]':
-          type: string
+        mp:
+          type: array
         nameserver:
           type: string
-        'net[n]':
-          type: string
+        net:
+          type: array
         onboot:
           type: boolean
         ostype:
@@ -12102,8 +12091,8 @@ components:
           type: integer
         unprivileged:
           type: boolean
-        'unused[n]':
-          type: string
+        unused:
+          type: array
     CreateNodesSingleLxcSingleStatusStartRequest:
       title: CreateNodesSingleLxcSingleStatusStartRequest
       type: object
@@ -12403,8 +12392,8 @@ components:
       required:
         - disk
         - size
-    CreateNodesSingleLxcSingleMove_volumeRequest:
-      title: CreateNodesSingleLxcSingleMove_volumeRequest
+    CreateNodesSingleLxcSingleMovevolumeRequest:
+      title: CreateNodesSingleLxcSingleMovevolumeRequest
       type: object
       properties:
         bwlimit:
@@ -13004,8 +12993,8 @@ components:
           type: string
         tcpflags:
           type: boolean
-    CreateNodesSingleReplicationSingleSchedule_nowRequest:
-      title: CreateNodesSingleReplicationSingleSchedule_nowRequest
+    CreateNodesSingleReplicationSingleSchedulenowRequest:
+      title: CreateNodesSingleReplicationSingleSchedulenowRequest
       type: object
       properties: {}
     CreateNodesSingleCertificatesAcmeCertificateRequest:
@@ -13040,8 +13029,8 @@ components:
       properties:
         acme:
           type: string
-        'acmedomain[n]':
-          type: string
+        acmedomain:
+          type: array
         delete:
           type: string
         description:
@@ -14448,8 +14437,8 @@ components:
           schema:
             type: string
             description: ''
-    GetClusterBackupSingleIncluded_volumesResponse:
-      description: GetClusterBackupSingleIncluded_volumesResponse
+    GetClusterBackupSingleIncludedvolumesResponse:
+      description: GetClusterBackupSingleIncludedvolumesResponse
       content:
         application/json:
           schema:
@@ -14508,8 +14497,8 @@ components:
           schema:
             type: string
             description: Shows stub message
-    GetClusterBackupinfoNot_backed_upResponse:
-      description: GetClusterBackupinfoNot_backed_upResponse
+    GetClusterBackupinfoNotbackedupResponse:
+      description: GetClusterBackupinfoNotbackedupResponse
       content:
         application/json:
           schema:
@@ -14691,8 +14680,8 @@ components:
           schema:
             type: array
             description: ''
-    GetClusterHaStatusManager_statusResponse:
-      description: GetClusterHaStatusManager_statusResponse
+    GetClusterHaStatusManagerstatusResponse:
+      description: GetClusterHaStatusManagerstatusResponse
       content:
         application/json:
           schema:
@@ -14827,8 +14816,8 @@ components:
                 url:
                   type: string
                   description: URL of ACME CA directory endpoint.
-    GetClusterAcmeChallenge-schemaResponse:
-      description: GetClusterAcmeChallenge-schemaResponse
+    GetClusterAcmeChallengeschemaResponse:
+      description: GetClusterAcmeChallengeschemaResponse
       content:
         application/json:
           schema:
@@ -15696,22 +15685,22 @@ components:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentFsfreeze-freezeResponse:
-      description: CreateNodesSingleQemuSingleAgentFsfreeze-freezeResponse
+    CreateNodesSingleQemuSingleAgentFsfreezefreezeResponse:
+      description: CreateNodesSingleQemuSingleAgentFsfreezefreezeResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentFsfreeze-statusResponse:
-      description: CreateNodesSingleQemuSingleAgentFsfreeze-statusResponse
+    CreateNodesSingleQemuSingleAgentFsfreezestatusResponse:
+      description: CreateNodesSingleQemuSingleAgentFsfreezestatusResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentFsfreeze-thawResponse:
-      description: CreateNodesSingleQemuSingleAgentFsfreeze-thawResponse
+    CreateNodesSingleQemuSingleAgentFsfreezethawResponse:
+      description: CreateNodesSingleQemuSingleAgentFsfreezethawResponse
       content:
         application/json:
           schema:
@@ -15724,64 +15713,64 @@ components:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-fsinfoResponse:
-      description: GetNodesSingleQemuSingleAgentGet-fsinfoResponse
+    GetNodesSingleQemuSingleAgentGetfsinfoResponse:
+      description: GetNodesSingleQemuSingleAgentGetfsinfoResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-host-nameResponse:
-      description: GetNodesSingleQemuSingleAgentGet-host-nameResponse
+    GetNodesSingleQemuSingleAgentGethostnameResponse:
+      description: GetNodesSingleQemuSingleAgentGethostnameResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-memory-block-infoResponse:
-      description: GetNodesSingleQemuSingleAgentGet-memory-block-infoResponse
+    GetNodesSingleQemuSingleAgentGetmemoryblockinfoResponse:
+      description: GetNodesSingleQemuSingleAgentGetmemoryblockinfoResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-memory-blocksResponse:
-      description: GetNodesSingleQemuSingleAgentGet-memory-blocksResponse
+    GetNodesSingleQemuSingleAgentGetmemoryblocksResponse:
+      description: GetNodesSingleQemuSingleAgentGetmemoryblocksResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-osinfoResponse:
-      description: GetNodesSingleQemuSingleAgentGet-osinfoResponse
+    GetNodesSingleQemuSingleAgentGetosinfoResponse:
+      description: GetNodesSingleQemuSingleAgentGetosinfoResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-timeResponse:
-      description: GetNodesSingleQemuSingleAgentGet-timeResponse
+    GetNodesSingleQemuSingleAgentGettimeResponse:
+      description: GetNodesSingleQemuSingleAgentGettimeResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-timezoneResponse:
-      description: GetNodesSingleQemuSingleAgentGet-timezoneResponse
+    GetNodesSingleQemuSingleAgentGettimezoneResponse:
+      description: GetNodesSingleQemuSingleAgentGettimezoneResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-usersResponse:
-      description: GetNodesSingleQemuSingleAgentGet-usersResponse
+    GetNodesSingleQemuSingleAgentGetusersResponse:
+      description: GetNodesSingleQemuSingleAgentGetusersResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentGet-vcpusResponse:
-      description: GetNodesSingleQemuSingleAgentGet-vcpusResponse
+    GetNodesSingleQemuSingleAgentGetvcpusResponse:
+      description: GetNodesSingleQemuSingleAgentGetvcpusResponse
       content:
         application/json:
           schema:
@@ -15794,8 +15783,8 @@ components:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    GetNodesSingleQemuSingleAgentNetwork-get-interfacesResponse:
-      description: GetNodesSingleQemuSingleAgentNetwork-get-interfacesResponse
+    GetNodesSingleQemuSingleAgentNetworkgetinterfacesResponse:
+      description: GetNodesSingleQemuSingleAgentNetworkgetinterfacesResponse
       content:
         application/json:
           schema:
@@ -15815,29 +15804,29 @@ components:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentSuspend-diskResponse:
-      description: CreateNodesSingleQemuSingleAgentSuspend-diskResponse
+    CreateNodesSingleQemuSingleAgentSuspenddiskResponse:
+      description: CreateNodesSingleQemuSingleAgentSuspenddiskResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentSuspend-hybridResponse:
-      description: CreateNodesSingleQemuSingleAgentSuspend-hybridResponse
+    CreateNodesSingleQemuSingleAgentSuspendhybridResponse:
+      description: CreateNodesSingleQemuSingleAgentSuspendhybridResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentSuspend-ramResponse:
-      description: CreateNodesSingleQemuSingleAgentSuspend-ramResponse
+    CreateNodesSingleQemuSingleAgentSuspendramResponse:
+      description: CreateNodesSingleQemuSingleAgentSuspendramResponse
       content:
         application/json:
           schema:
             type: object
             description: Returns an object with a single `result` property.
-    CreateNodesSingleQemuSingleAgentSet-user-passwordResponse:
-      description: CreateNodesSingleQemuSingleAgentSet-user-passwordResponse
+    CreateNodesSingleQemuSingleAgentSetuserpasswordResponse:
+      description: CreateNodesSingleQemuSingleAgentSetuserpasswordResponse
       content:
         application/json:
           schema:
@@ -15854,8 +15843,8 @@ components:
               pid:
                 type: integer
                 description: The PID of the process started by the guest-agent.
-    GetNodesSingleQemuSingleAgentExec-statusResponse:
-      description: GetNodesSingleQemuSingleAgentExec-statusResponse
+    GetNodesSingleQemuSingleAgentExecstatusResponse:
+      description: GetNodesSingleQemuSingleAgentExecstatusResponse
       content:
         application/json:
           schema:
@@ -15885,8 +15874,8 @@ components:
                 description: >-
                   signal number or exception code if the process was abnormally
                   terminated.
-    GetNodesSingleQemuSingleAgentFile-readResponse:
-      description: GetNodesSingleQemuSingleAgentFile-readResponse
+    GetNodesSingleQemuSingleAgentFilereadResponse:
+      description: GetNodesSingleQemuSingleAgentFilereadResponse
       content:
         application/json:
           schema:
@@ -15899,8 +15888,8 @@ components:
               truncated:
                 type: boolean
                 description: 'If set to 1, the output is truncated and not complete'
-    CreateNodesSingleQemuSingleAgentFile-writeResponse:
-      description: CreateNodesSingleQemuSingleAgentFile-writeResponse
+    CreateNodesSingleQemuSingleAgentFilewriteResponse:
+      description: CreateNodesSingleQemuSingleAgentFilewriteResponse
       content:
         application/json:
           schema:
@@ -16037,9 +16026,11 @@ components:
                 description: >-
                   Script that will be executed during various steps in the vms
                   lifetime.
-              'hostpci[n]':
-                type: string
-                description: Map host PCI devices into guest.
+              hostpci:
+                type: array
+                items:
+                  type: string
+                  description: Map host PCI devices into guest.
               hotplug:
                 type: string
                 description: >-
@@ -16050,33 +16041,37 @@ components:
               hugepages:
                 type: string
                 description: Enable/disable hugepages memory.
-              'ide[n]':
-                type: string
-                description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
-              'ipconfig[n]':
-                type: string
-                description: >
-                  cloud-init: Specify IP addresses and gateways for the
-                  corresponding interface.
+              ide:
+                type: array
+                items:
+                  type: string
+                  description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+              ipconfig:
+                type: array
+                items:
+                  type: string
+                  description: >
+                    cloud-init: Specify IP addresses and gateways for the
+                    corresponding interface.
 
 
-                  IP addresses use CIDR notation, gateways are optional but need
-                  an IP of the same type specified.
+                    IP addresses use CIDR notation, gateways are optional but
+                    need an IP of the same type specified.
 
 
-                  The special string 'dhcp' can be used for IP addresses to use
-                  DHCP, in which case no explicit
+                    The special string 'dhcp' can be used for IP addresses to
+                    use DHCP, in which case no explicit
 
-                  gateway should be provided.
+                    gateway should be provided.
 
-                  For IPv6 the special string 'auto' can be used to use
-                  stateless autoconfiguration.
+                    For IPv6 the special string 'auto' can be used to use
+                    stateless autoconfiguration.
 
 
-                  If cloud-init is enabled and neither an IPv4 nor an IPv6
-                  address is specified, it defaults to using
+                    If cloud-init is enabled and neither an IPv4 nor an IPv6
+                    address is specified, it defaults to using
 
-                  dhcp on IPv4.
+                    dhcp on IPv4.
               ivshmem:
                 type: string
                 description: >-
@@ -16129,24 +16124,27 @@ components:
               nameserver:
                 type: string
                 description: "cloud-init: Sets DNS server IP address for a container. Create will'\n\t    .' automatically use the setting from the host if neither searchdomain nor nameserver'\n\t    .' are set."
-              'net[n]':
-                type: string
-                description: Specify network devices.
+              net:
+                type: array
+                items:
+                  type: string
+                  description: Specify network devices.
               numa:
-                type: boolean
-                description: Enable/disable NUMA.
-              'numa[n]':
-                type: string
-                description: NUMA topology.
+                type: array
+                items:
+                  type: string
+                  description: NUMA topology.
               onboot:
                 type: boolean
                 description: Specifies whether a VM will be started during system bootup.
               ostype:
                 type: string
                 description: Specify guest operating system.
-              'parallel[n]':
-                type: string
-                description: Map host parallel devices (n is 0 to 2).
+              parallel:
+                type: array
+                items:
+                  type: string
+                  description: Map host parallel devices (n is 0 to 2).
               protection:
                 type: boolean
                 description: >-
@@ -16158,21 +16156,27 @@ components:
               rng0:
                 type: string
                 description: Configure a VirtIO-based Random Number Generator.
-              'sata[n]':
-                type: string
-                description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
-              'scsi[n]':
-                type: string
-                description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+              sata:
+                type: array
+                items:
+                  type: string
+                  description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+              scsi:
+                type: array
+                items:
+                  type: string
+                  description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
               scsihw:
                 type: string
                 description: SCSI controller model
               searchdomain:
                 type: string
                 description: "cloud-init: Sets DNS search domains for a container. Create will'\n\t    .' automatically use the setting from the host if neither searchdomain nor nameserver'\n\t    .' are set."
-              'serial[n]':
-                type: string
-                description: Create a serial device inside the VM (n is 0 to 3)
+              serial:
+                type: array
+                items:
+                  type: string
+                  description: Create a serial device inside the VM (n is 0 to 3)
               shares:
                 type: integer
                 description: >-
@@ -16222,23 +16226,29 @@ components:
               template:
                 type: boolean
                 description: Enable/disable Template.
-              'unused[n]':
-                type: string
-                description: >-
-                  Reference to unused volumes. This is used internally, and
-                  should not be modified manually.
-              'usb[n]':
-                type: string
-                description: Configure an USB device (n is 0 to 4).
+              unused:
+                type: array
+                items:
+                  type: string
+                  description: >-
+                    Reference to unused volumes. This is used internally, and
+                    should not be modified manually.
+              usb:
+                type: array
+                items:
+                  type: string
+                  description: Configure an USB device (n is 0 to 4).
               vcpus:
                 type: integer
                 description: Number of hotplugged vcpus.
               vga:
                 type: string
                 description: Configure the VGA hardware.
-              'virtio[n]':
-                type: string
-                description: Use volume as VIRTIO hard disk (n is 0 to 15).
+              virtio:
+                type: array
+                items:
+                  type: string
+                  description: Use volume as VIRTIO hard disk (n is 0 to 15).
               vmgenid:
                 type: string
                 description: >-
@@ -16474,8 +16484,8 @@ components:
           schema:
             type: string
             description: ''
-    CreateNodesSingleQemuSingleMove_diskResponse:
-      description: CreateNodesSingleQemuSingleMove_diskResponse
+    CreateNodesSingleQemuSingleMovediskResponse:
+      description: CreateNodesSingleQemuSingleMovediskResponse
       content:
         application/json:
           schema:
@@ -16801,18 +16811,22 @@ components:
               memory:
                 type: integer
                 description: Amount of RAM for the VM in MB.
-              'mp[n]':
-                type: string
-                description: Use volume as container mount point.
+              mp:
+                type: array
+                items:
+                  type: string
+                  description: Use volume as container mount point.
               nameserver:
                 type: string
                 description: >-
                   Sets DNS server IP address for a container. Create will
                   automatically use the setting from the host if you neither set
                   searchdomain nor nameserver.
-              'net[n]':
-                type: string
-                description: Specifies network interfaces for the container.
+              net:
+                type: array
+                items:
+                  type: string
+                  description: Specifies network interfaces for the container.
               onboot:
                 type: boolean
                 description: Specifies whether a VM will be started during system bootup.
@@ -16869,11 +16883,13 @@ components:
                 description: >-
                   Makes the container run as unprivileged user. (Should not be
                   modified manually.)
-              'unused[n]':
-                type: string
-                description: >-
-                  Reference to unused volumes. This is used internally, and
-                  should not be modified manually.
+              unused:
+                type: array
+                items:
+                  type: string
+                  description: >-
+                    Reference to unused volumes. This is used internally, and
+                    should not be modified manually.
     UpdateNodesSingleLxcSingleConfigResponse:
       description: UpdateNodesSingleLxcSingleConfigResponse
       content:
@@ -17476,8 +17492,8 @@ components:
           schema:
             type: string
             description: the task ID.
-    CreateNodesSingleLxcSingleMove_volumeResponse:
-      description: CreateNodesSingleLxcSingleMove_volumeResponse
+    CreateNodesSingleLxcSingleMovevolumeResponse:
+      description: CreateNodesSingleLxcSingleMovevolumeResponse
       content:
         application/json:
           schema:
@@ -19248,8 +19264,8 @@ components:
                 t:
                   type: string
                   description: Line text
-    CreateNodesSingleReplicationSingleSchedule_nowResponse:
-      description: CreateNodesSingleReplicationSingleSchedule_nowResponse
+    CreateNodesSingleReplicationSingleSchedulenowResponse:
+      description: CreateNodesSingleReplicationSingleSchedulenowResponse
       content:
         application/json:
           schema:

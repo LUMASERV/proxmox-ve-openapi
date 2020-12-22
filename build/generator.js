@@ -9,7 +9,7 @@ const tags = []
 const capitalizeFirst = (str) => str.charAt(0).toUpperCase() + str.slice(1)
 
 function generateOpId(method, path){
-    let operation = path.split("/").map(capitalizeFirst).join('')
+    let operation = path.split("/").map(capitalizeFirst).join('').replace(/[\-\_]/g, '')
 
     operation = operation.replace(/\{[a-z]*\}/g, 'Single')
 
@@ -39,7 +39,17 @@ function buildResponseSchema(source){
         schema.items = buildResponseSchema(source.items)
     if(source.type === 'object' && source.properties){
         schema.properties = {}
-        Object.keys(source.properties || {}).forEach(k => schema.properties[k] = buildResponseSchema(source.properties[k]))
+        Object.keys(source.properties || {}).forEach(k => {
+            if(k.endsWith('[n]')){
+                const nk = k.substr(0, k.length-3)
+                schema.properties[nk] = {
+                    type: 'array',
+                    items: buildResponseSchema(source.properties[k])
+                }
+            }else{
+                schema.properties[k] = buildResponseSchema(source.properties[k])
+            }
+        })
     }
     return schema
 }
@@ -48,6 +58,17 @@ function parseInfo(path, method, info){
     let id = generateOpId(method, path);
     id = mapping[id] || id
     const properties = (info.parameters && info.parameters.properties) ? Object.keys(info.parameters.properties).map(k => ({ name: k, ...info.parameters.properties[k] })) : []
+
+    properties.map(p => {
+        if(p.type === 'string' && p.name.endsWith('[n]')){
+            p.name = p.name.substr(0, p.name.length-3);
+            p.type = 'array';
+            p.items = {
+                type: 'string'
+            }
+        }
+        return p;
+    });
 
     const requestName = capitalizeFirst(id) + 'Request'
     const responseName = capitalizeFirst(id) + 'Response'
