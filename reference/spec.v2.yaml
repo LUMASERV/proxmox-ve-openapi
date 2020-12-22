@@ -10198,6 +10198,8 @@ components:
           type: string
         link:
           type: array
+          items:
+            type: string
         nodeid:
           type: integer
         votes:
@@ -10214,6 +10216,8 @@ components:
           type: boolean
         link:
           type: array
+          items:
+            type: string
         new_node_ip:
           type: string
         nodeid:
@@ -10232,6 +10236,8 @@ components:
           type: string
         link:
           type: array
+          items:
+            type: string
         nodeid:
           type: integer
         password:
@@ -11030,14 +11036,20 @@ components:
           type: string
         hostpci:
           type: array
+          items:
+            type: string
         hotplug:
           type: string
         hugepages:
           type: string
         ide:
           type: array
+          items:
+            type: string
         ipconfig:
           type: array
+          items:
+            type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11064,14 +11076,20 @@ components:
           type: string
         net:
           type: array
+          items:
+            type: string
         numa:
           type: array
+          items:
+            type: string
         onboot:
           type: boolean
         ostype:
           type: string
         parallel:
           type: array
+          items:
+            type: string
         pool:
           type: string
         protection:
@@ -11082,14 +11100,20 @@ components:
           type: string
         sata:
           type: array
+          items:
+            type: string
         scsi:
           type: array
+          items:
+            type: string
         scsihw:
           type: string
         searchdomain:
           type: string
         serial:
           type: array
+          items:
+            type: string
         shares:
           type: integer
         smbios1:
@@ -11122,14 +11146,20 @@ components:
           type: boolean
         unused:
           type: array
+          items:
+            type: string
         usb:
           type: array
+          items:
+            type: string
         vcpus:
           type: integer
         vga:
           type: string
         virtio:
           type: array
+          items:
+            type: string
         vmgenid:
           type: string
         vmid:
@@ -11440,14 +11470,20 @@ components:
           type: string
         hostpci:
           type: array
+          items:
+            type: string
         hotplug:
           type: string
         hugepages:
           type: string
         ide:
           type: array
+          items:
+            type: string
         ipconfig:
           type: array
+          items:
+            type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11474,14 +11510,20 @@ components:
           type: string
         net:
           type: array
+          items:
+            type: string
         numa:
           type: array
+          items:
+            type: string
         onboot:
           type: boolean
         ostype:
           type: string
         parallel:
           type: array
+          items:
+            type: string
         protection:
           type: boolean
         reboot:
@@ -11492,14 +11534,20 @@ components:
           type: string
         sata:
           type: array
+          items:
+            type: string
         scsi:
           type: array
+          items:
+            type: string
         scsihw:
           type: string
         searchdomain:
           type: string
         serial:
           type: array
+          items:
+            type: string
         shares:
           type: integer
         skiplock:
@@ -11528,14 +11576,20 @@ components:
           type: boolean
         unused:
           type: array
+          items:
+            type: string
         usb:
           type: array
+          items:
+            type: string
         vcpus:
           type: integer
         vga:
           type: string
         virtio:
           type: array
+          items:
+            type: string
         vmgenid:
           type: string
         vmstatestorage:
@@ -11600,14 +11654,20 @@ components:
           type: string
         hostpci:
           type: array
+          items:
+            type: string
         hotplug:
           type: string
         hugepages:
           type: string
         ide:
           type: array
+          items:
+            type: string
         ipconfig:
           type: array
+          items:
+            type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11634,14 +11694,20 @@ components:
           type: string
         net:
           type: array
+          items:
+            type: string
         numa:
           type: array
+          items:
+            type: string
         onboot:
           type: boolean
         ostype:
           type: string
         parallel:
           type: array
+          items:
+            type: string
         protection:
           type: boolean
         reboot:
@@ -11652,14 +11718,20 @@ components:
           type: string
         sata:
           type: array
+          items:
+            type: string
         scsi:
           type: array
+          items:
+            type: string
         scsihw:
           type: string
         searchdomain:
           type: string
         serial:
           type: array
+          items:
+            type: string
         shares:
           type: integer
         skiplock:
@@ -11688,14 +11760,20 @@ components:
           type: boolean
         unused:
           type: array
+          items:
+            type: string
         usb:
           type: array
+          items:
+            type: string
         vcpus:
           type: integer
         vga:
           type: string
         virtio:
           type: array
+          items:
+            type: string
         vmgenid:
           type: string
         vmstatestorage:
@@ -11974,10 +12052,14 @@ components:
           type: integer
         mp:
           type: array
+          items:
+            type: string
         nameserver:
           type: string
         net:
           type: array
+          items:
+            type: string
         onboot:
           type: boolean
         ostemplate:
@@ -12020,6 +12102,8 @@ components:
           type: boolean
         unused:
           type: array
+          items:
+            type: string
         vmid:
           type: integer
       required:
@@ -12061,10 +12145,14 @@ components:
           type: integer
         mp:
           type: array
+          items:
+            type: string
         nameserver:
           type: string
         net:
           type: array
+          items:
+            type: string
         onboot:
           type: boolean
         ostype:
@@ -12093,6 +12181,8 @@ components:
           type: boolean
         unused:
           type: array
+          items:
+            type: string
     CreateNodesSingleLxcSingleStatusStartRequest:
       title: CreateNodesSingleLxcSingleStatusStartRequest
       type: object
@@ -13031,6 +13121,8 @@ components:
           type: string
         acmedomain:
           type: array
+          items:
+            type: string
         delete:
           type: string
         description:

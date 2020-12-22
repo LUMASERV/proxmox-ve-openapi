@@ -31,6 +31,19 @@ function generateOpId(method, path){
 
 const mapping = require('./mapping')
 
+function filterSchema(p){
+    const schema = {
+        type: p.type
+    }
+    if(p.items)
+        schema.items = filterSchema(p.items)
+    if(p.properties){
+        schema.properties = {}
+        Object.keys(p.properties).forEach(name => schema.properties[name] = filterSchema(p.properties[name]))
+    }
+    return schema
+}
+
 function buildResponseSchema(source){
     const schema = { type: source.type || 'string', description: source.description || '' }
     if(schema.type === 'null')
@@ -57,15 +70,13 @@ function buildResponseSchema(source){
 function parseInfo(path, method, info){
     let id = generateOpId(method, path);
     id = mapping[id] || id
-    const properties = (info.parameters && info.parameters.properties) ? Object.keys(info.parameters.properties).map(k => ({ name: k, ...info.parameters.properties[k] })) : []
+    let properties = (info.parameters && info.parameters.properties) ? Object.keys(info.parameters.properties).map(k => ({ name: k, ...info.parameters.properties[k] })) : []
 
-    properties.map(p => {
+    properties = properties.map(p => {
         if(p.type === 'string' && p.name.endsWith('[n]')){
-            p.name = p.name.substr(0, p.name.length-3);
+            p.items = JSON.parse(JSON.stringify(p))
             p.type = 'array';
-            p.items = {
-                type: 'string'
-            }
+            p.name = p.name.substr(0, p.name.length-3);
         }
         return p;
     });
@@ -108,9 +119,7 @@ function parseInfo(path, method, info){
             required: []
         }
         properties.filter(p => !path.includes('{'+p.name+'}')).forEach(p => {
-            models[requestName].properties[p.name] = {
-                type: p.type
-            }
+            models[requestName].properties[p.name] = filterSchema(p)
             if(p.optional !== 1){
                 models[requestName].required.push(p.name)
             }
