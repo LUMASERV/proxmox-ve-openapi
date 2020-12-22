@@ -106,7 +106,18 @@ function parseInfo(path, method, info){
         description: responseName,
         content: {
             'application/json': {
-                schema: buildResponseSchema(info.returns)
+                schema: {
+                    type: 'object',
+                    properties: {
+                        errors: {
+                            type: 'array',
+                            items: {
+                                type: 'string'
+                            }
+                        },
+                        data: buildResponseSchema(info.returns)
+                    }
+                }
             }
         }
     }
