@@ -98,5 +98,10 @@ module.exports = {
     deleteClusterFirewallIpsetSingle: 'deleteClusterFirewallIPSet',
     getClusterFirewallIpsetSingleSingle: 'getClusterFirewallIPSetIP',
     updateClusterFirewallIpsetSingleSingle: 'updateClusterFirewallIPSetIP',
-    deleteClusterFirewallIpsetSingleSingle: 'removeClusterFirewallIPSetIP'
+    deleteClusterFirewallIpsetSingleSingle: 'removeClusterFirewallIPSetIP',
+    getNodesSingleTasks: 'getNodeTasks',
+    getNodesSingleTasksSingle: 'getNodeTask',
+    deleteNodesSingleTasksSingle: 'stopNodeTask',
+    getNodesSingleTasksSingleLog: 'getNodeTaskLog',
+    getNodesSingleTasksSingleStatus: 'getNodeTaskStatus'
 }
