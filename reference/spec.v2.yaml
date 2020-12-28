@@ -17389,11 +17389,96 @@ components:
                     description: >-
                       Script that will be executed during various steps in the
                       vms lifetime.
-                  hostpci:
-                    type: array
-                    items:
-                      type: string
-                      description: Map host PCI devices into guest.
+                  hostpci0:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci1:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci2:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci3:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci4:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci5:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci6:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci7:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci8:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci9:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci10:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci11:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci12:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci13:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci14:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci15:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci16:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci17:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci18:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci19:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci20:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci21:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci22:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci23:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci24:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci25:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci26:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci27:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci28:
+                    type: string
+                    description: Map host PCI devices into guest.
+                  hostpci29:
+                    type: string
+                    description: Map host PCI devices into guest.
                   hotplug:
                     type: string
                     description: >-
@@ -17405,37 +17490,816 @@ components:
                   hugepages:
                     type: string
                     description: Enable/disable hugepages memory.
-                  ide:
-                    type: array
-                    items:
-                      type: string
-                      description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
-                  ipconfig:
-                    type: array
-                    items:
-                      type: string
-                      description: >
-                        cloud-init: Specify IP addresses and gateways for the
-                        corresponding interface.
+                  ide0:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide1:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide2:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide3:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide4:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide5:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide6:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide7:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide8:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide9:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide10:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide11:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide12:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide13:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide14:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide15:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide16:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide17:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide18:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide19:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide20:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide21:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide22:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide23:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide24:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide25:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide26:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide27:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide28:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ide29:
+                    type: string
+                    description: Use volume as IDE hard disk or CD-ROM (n is 0 to 3).
+                  ipconfig0:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
 
 
-                        IP addresses use CIDR notation, gateways are optional
-                        but need an IP of the same type specified.
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
 
 
-                        The special string 'dhcp' can be used for IP addresses
-                        to use DHCP, in which case no explicit
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
 
-                        gateway should be provided.
+                      gateway should be provided.
 
-                        For IPv6 the special string 'auto' can be used to use
-                        stateless autoconfiguration.
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
 
 
-                        If cloud-init is enabled and neither an IPv4 nor an IPv6
-                        address is specified, it defaults to using
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
 
-                        dhcp on IPv4.
+                      dhcp on IPv4.
+                  ipconfig1:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig2:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig3:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig4:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig5:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig6:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig7:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig8:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig9:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig10:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig11:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig12:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig13:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig14:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig15:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig16:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig17:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig18:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig19:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig20:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig21:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig22:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig23:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig24:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig25:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig26:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig27:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig28:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
+                  ipconfig29:
+                    type: string
+                    description: >
+                      cloud-init: Specify IP addresses and gateways for the
+                      corresponding interface.
+
+
+                      IP addresses use CIDR notation, gateways are optional but
+                      need an IP of the same type specified.
+
+
+                      The special string 'dhcp' can be used for IP addresses to
+                      use DHCP, in which case no explicit
+
+                      gateway should be provided.
+
+                      For IPv6 the special string 'auto' can be used to use
+                      stateless autoconfiguration.
+
+
+                      If cloud-init is enabled and neither an IPv4 nor an IPv6
+                      address is specified, it defaults to using
+
+                      dhcp on IPv4.
                   ivshmem:
                     type: string
                     description: >-
@@ -17490,16 +18354,189 @@ components:
                   nameserver:
                     type: string
                     description: "cloud-init: Sets DNS server IP address for a container. Create will'\n\t    .' automatically use the setting from the host if neither searchdomain nor nameserver'\n\t    .' are set."
-                  net:
-                    type: array
-                    items:
-                      type: string
-                      description: Specify network devices.
+                  net0:
+                    type: string
+                    description: Specify network devices.
+                  net1:
+                    type: string
+                    description: Specify network devices.
+                  net2:
+                    type: string
+                    description: Specify network devices.
+                  net3:
+                    type: string
+                    description: Specify network devices.
+                  net4:
+                    type: string
+                    description: Specify network devices.
+                  net5:
+                    type: string
+                    description: Specify network devices.
+                  net6:
+                    type: string
+                    description: Specify network devices.
+                  net7:
+                    type: string
+                    description: Specify network devices.
+                  net8:
+                    type: string
+                    description: Specify network devices.
+                  net9:
+                    type: string
+                    description: Specify network devices.
+                  net10:
+                    type: string
+                    description: Specify network devices.
+                  net11:
+                    type: string
+                    description: Specify network devices.
+                  net12:
+                    type: string
+                    description: Specify network devices.
+                  net13:
+                    type: string
+                    description: Specify network devices.
+                  net14:
+                    type: string
+                    description: Specify network devices.
+                  net15:
+                    type: string
+                    description: Specify network devices.
+                  net16:
+                    type: string
+                    description: Specify network devices.
+                  net17:
+                    type: string
+                    description: Specify network devices.
+                  net18:
+                    type: string
+                    description: Specify network devices.
+                  net19:
+                    type: string
+                    description: Specify network devices.
+                  net20:
+                    type: string
+                    description: Specify network devices.
+                  net21:
+                    type: string
+                    description: Specify network devices.
+                  net22:
+                    type: string
+                    description: Specify network devices.
+                  net23:
+                    type: string
+                    description: Specify network devices.
+                  net24:
+                    type: string
+                    description: Specify network devices.
+                  net25:
+                    type: string
+                    description: Specify network devices.
+                  net26:
+                    type: string
+                    description: Specify network devices.
+                  net27:
+                    type: string
+                    description: Specify network devices.
+                  net28:
+                    type: string
+                    description: Specify network devices.
+                  net29:
+                    type: string
+                    description: Specify network devices.
                   numa:
-                    type: array
-                    items:
-                      type: string
-                      description: NUMA topology.
+                    type: boolean
+                    description: Enable/disable NUMA.
+                  numa0:
+                    type: string
+                    description: NUMA topology.
+                  numa1:
+                    type: string
+                    description: NUMA topology.
+                  numa2:
+                    type: string
+                    description: NUMA topology.
+                  numa3:
+                    type: string
+                    description: NUMA topology.
+                  numa4:
+                    type: string
+                    description: NUMA topology.
+                  numa5:
+                    type: string
+                    description: NUMA topology.
+                  numa6:
+                    type: string
+                    description: NUMA topology.
+                  numa7:
+                    type: string
+                    description: NUMA topology.
+                  numa8:
+                    type: string
+                    description: NUMA topology.
+                  numa9:
+                    type: string
+                    description: NUMA topology.
+                  numa10:
+                    type: string
+                    description: NUMA topology.
+                  numa11:
+                    type: string
+                    description: NUMA topology.
+                  numa12:
+                    type: string
+                    description: NUMA topology.
+                  numa13:
+                    type: string
+                    description: NUMA topology.
+                  numa14:
+                    type: string
+                    description: NUMA topology.
+                  numa15:
+                    type: string
+                    description: NUMA topology.
+                  numa16:
+                    type: string
+                    description: NUMA topology.
+                  numa17:
+                    type: string
+                    description: NUMA topology.
+                  numa18:
+                    type: string
+                    description: NUMA topology.
+                  numa19:
+                    type: string
+                    description: NUMA topology.
+                  numa20:
+                    type: string
+                    description: NUMA topology.
+                  numa21:
+                    type: string
+                    description: NUMA topology.
+                  numa22:
+                    type: string
+                    description: NUMA topology.
+                  numa23:
+                    type: string
+                    description: NUMA topology.
+                  numa24:
+                    type: string
+                    description: NUMA topology.
+                  numa25:
+                    type: string
+                    description: NUMA topology.
+                  numa26:
+                    type: string
+                    description: NUMA topology.
+                  numa27:
+                    type: string
+                    description: NUMA topology.
+                  numa28:
+                    type: string
+                    description: NUMA topology.
+                  numa29:
+                    type: string
+                    description: NUMA topology.
                   onboot:
                     type: boolean
                     description: >-
@@ -17508,11 +18545,96 @@ components:
                   ostype:
                     type: string
                     description: Specify guest operating system.
-                  parallel:
-                    type: array
-                    items:
-                      type: string
-                      description: Map host parallel devices (n is 0 to 2).
+                  parallel0:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel1:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel2:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel3:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel4:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel5:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel6:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel7:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel8:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel9:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel10:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel11:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel12:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel13:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel14:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel15:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel16:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel17:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel18:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel19:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel20:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel21:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel22:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel23:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel24:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel25:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel26:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel27:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel28:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
+                  parallel29:
+                    type: string
+                    description: Map host parallel devices (n is 0 to 2).
                   protection:
                     type: boolean
                     description: >-
@@ -17524,27 +18646,282 @@ components:
                   rng0:
                     type: string
                     description: Configure a VirtIO-based Random Number Generator.
-                  sata:
-                    type: array
-                    items:
-                      type: string
-                      description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
-                  scsi:
-                    type: array
-                    items:
-                      type: string
-                      description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  sata0:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata1:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata2:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata3:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata4:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata5:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata6:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata7:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata8:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata9:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata10:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata11:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata12:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata13:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata14:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata15:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata16:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata17:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata18:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata19:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata20:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata21:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata22:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata23:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata24:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata25:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata26:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata27:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata28:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  sata29:
+                    type: string
+                    description: Use volume as SATA hard disk or CD-ROM (n is 0 to 5).
+                  scsi0:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi1:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi2:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi3:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi4:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi5:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi6:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi7:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi8:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi9:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi10:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi11:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi12:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi13:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi14:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi15:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi16:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi17:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi18:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi19:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi20:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi21:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi22:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi23:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi24:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi25:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi26:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi27:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi28:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
+                  scsi29:
+                    type: string
+                    description: Use volume as SCSI hard disk or CD-ROM (n is 0 to 30).
                   scsihw:
                     type: string
                     description: SCSI controller model
                   searchdomain:
                     type: string
                     description: "cloud-init: Sets DNS search domains for a container. Create will'\n\t    .' automatically use the setting from the host if neither searchdomain nor nameserver'\n\t    .' are set."
-                  serial:
-                    type: array
-                    items:
-                      type: string
-                      description: Create a serial device inside the VM (n is 0 to 3)
+                  serial0:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial1:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial2:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial3:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial4:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial5:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial6:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial7:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial8:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial9:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial10:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial11:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial12:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial13:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial14:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial15:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial16:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial17:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial18:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial19:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial20:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial21:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial22:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial23:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial24:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial25:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial26:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial27:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial28:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
+                  serial29:
+                    type: string
+                    description: Create a serial device inside the VM (n is 0 to 3)
                   shares:
                     type: integer
                     description: >-
@@ -17596,29 +18973,342 @@ components:
                   template:
                     type: boolean
                     description: Enable/disable Template.
-                  unused:
-                    type: array
-                    items:
-                      type: string
-                      description: >-
-                        Reference to unused volumes. This is used internally,
-                        and should not be modified manually.
-                  usb:
-                    type: array
-                    items:
-                      type: string
-                      description: Configure an USB device (n is 0 to 4).
+                  unused0:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused1:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused2:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused3:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused4:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused5:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused6:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused7:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused8:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused9:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused10:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused11:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused12:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused13:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused14:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused15:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused16:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused17:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused18:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused19:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused20:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused21:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused22:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused23:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused24:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused25:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused26:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused27:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused28:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused29:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  usb0:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb1:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb2:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb3:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb4:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb5:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb6:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb7:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb8:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb9:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb10:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb11:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb12:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb13:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb14:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb15:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb16:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb17:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb18:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb19:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb20:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb21:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb22:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb23:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb24:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb25:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb26:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb27:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb28:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
+                  usb29:
+                    type: string
+                    description: Configure an USB device (n is 0 to 4).
                   vcpus:
                     type: integer
                     description: Number of hotplugged vcpus.
                   vga:
                     type: string
                     description: Configure the VGA hardware.
-                  virtio:
-                    type: array
-                    items:
-                      type: string
-                      description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio0:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio1:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio2:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio3:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio4:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio5:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio6:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio7:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio8:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio9:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio10:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio11:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio12:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio13:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio14:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio15:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio16:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio17:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio18:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio19:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio20:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio21:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio22:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio23:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio24:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio25:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio26:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio27:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio28:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
+                  virtio29:
+                    type: string
+                    description: Use volume as VIRTIO hard disk (n is 0 to 15).
                   vmgenid:
                     type: string
                     description: >-
@@ -18462,22 +20152,192 @@ components:
                   memory:
                     type: integer
                     description: Amount of RAM for the VM in MB.
-                  mp:
-                    type: array
-                    items:
-                      type: string
-                      description: Use volume as container mount point.
+                  mp0:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp1:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp2:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp3:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp4:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp5:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp6:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp7:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp8:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp9:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp10:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp11:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp12:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp13:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp14:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp15:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp16:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp17:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp18:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp19:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp20:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp21:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp22:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp23:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp24:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp25:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp26:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp27:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp28:
+                    type: string
+                    description: Use volume as container mount point.
+                  mp29:
+                    type: string
+                    description: Use volume as container mount point.
                   nameserver:
                     type: string
                     description: >-
                       Sets DNS server IP address for a container. Create will
                       automatically use the setting from the host if you neither
                       set searchdomain nor nameserver.
-                  net:
-                    type: array
-                    items:
-                      type: string
-                      description: Specifies network interfaces for the container.
+                  net0:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net1:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net2:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net3:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net4:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net5:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net6:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net7:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net8:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net9:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net10:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net11:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net12:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net13:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net14:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net15:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net16:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net17:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net18:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net19:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net20:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net21:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net22:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net23:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net24:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net25:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net26:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net27:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net28:
+                    type: string
+                    description: Specifies network interfaces for the container.
+                  net29:
+                    type: string
+                    description: Specifies network interfaces for the container.
                   onboot:
                     type: boolean
                     description: >-
@@ -18536,13 +20396,156 @@ components:
                     description: >-
                       Makes the container run as unprivileged user. (Should not
                       be modified manually.)
-                  unused:
-                    type: array
-                    items:
-                      type: string
-                      description: >-
-                        Reference to unused volumes. This is used internally,
-                        and should not be modified manually.
+                  unused0:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused1:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused2:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused3:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused4:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused5:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused6:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused7:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused8:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused9:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused10:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused11:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused12:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused13:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused14:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused15:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused16:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused17:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused18:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused19:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused20:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused21:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused22:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused23:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused24:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused25:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused26:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused27:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused28:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
+                  unused29:
+                    type: string
+                    description: >-
+                      Reference to unused volumes. This is used internally, and
+                      should not be modified manually.
     UpdateNodesSingleLxcSingleConfigResponse:
       description: UpdateNodesSingleLxcSingleConfigResponse
       content:

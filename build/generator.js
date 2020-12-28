@@ -55,9 +55,8 @@ function buildResponseSchema(source){
         Object.keys(source.properties || {}).forEach(k => {
             if(k.endsWith('[n]')){
                 const nk = k.substr(0, k.length-3)
-                schema.properties[nk] = {
-                    type: 'array',
-                    items: buildResponseSchema(source.properties[k])
+                for(let i=0; i<30; i++){
+                    schema.properties[nk+i] = buildResponseSchema(source.properties[k])
                 }
             }else{
                 schema.properties[k] = buildResponseSchema(source.properties[k])
