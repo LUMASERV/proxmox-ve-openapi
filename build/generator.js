@@ -69,15 +69,19 @@ function buildResponseSchema(source){
 function parseInfo(path, method, info){
     let id = generateOpId(method, path);
     id = mapping[id] || id
-    let properties = (info.parameters && info.parameters.properties) ? Object.keys(info.parameters.properties).map(k => ({ name: k, ...info.parameters.properties[k] })) : []
+    const sourceProperties = (info.parameters && info.parameters.properties) ? Object.keys(info.parameters.properties).map(k => ({ name: k, ...info.parameters.properties[k] })) : []
 
-    properties = properties.map(p => {
-        if(p.type === 'string' && p.name.endsWith('[n]')){
-            p.items = JSON.parse(JSON.stringify(p))
-            p.type = 'array';
-            p.name = p.name.substr(0, p.name.length-3);
+    const properties = []
+    
+    sourceProperties.forEach(p => {
+        if(p.name.endsWith('[n]')){
+            const nk = p.name.substr(0, p.name.length-3);
+            for(let i=0; i<30; i++){
+                properties.push({ ...JSON.parse(JSON.stringify(p)), name: nk+i })
+            }
+        }else{
+            properties.push(p)
         }
-        return p;
     });
 
     const requestName = capitalizeFirst(id) + 'Request'

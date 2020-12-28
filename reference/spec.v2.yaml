@@ -10196,10 +10196,66 @@ components:
       properties:
         clustername:
           type: string
-        link:
-          type: array
-          items:
-            type: string
+        link0:
+          type: string
+        link1:
+          type: string
+        link2:
+          type: string
+        link3:
+          type: string
+        link4:
+          type: string
+        link5:
+          type: string
+        link6:
+          type: string
+        link7:
+          type: string
+        link8:
+          type: string
+        link9:
+          type: string
+        link10:
+          type: string
+        link11:
+          type: string
+        link12:
+          type: string
+        link13:
+          type: string
+        link14:
+          type: string
+        link15:
+          type: string
+        link16:
+          type: string
+        link17:
+          type: string
+        link18:
+          type: string
+        link19:
+          type: string
+        link20:
+          type: string
+        link21:
+          type: string
+        link22:
+          type: string
+        link23:
+          type: string
+        link24:
+          type: string
+        link25:
+          type: string
+        link26:
+          type: string
+        link27:
+          type: string
+        link28:
+          type: string
+        link29:
+          type: string
         nodeid:
           type: integer
         votes:
@@ -10214,10 +10270,66 @@ components:
           type: integer
         force:
           type: boolean
-        link:
-          type: array
-          items:
-            type: string
+        link0:
+          type: string
+        link1:
+          type: string
+        link2:
+          type: string
+        link3:
+          type: string
+        link4:
+          type: string
+        link5:
+          type: string
+        link6:
+          type: string
+        link7:
+          type: string
+        link8:
+          type: string
+        link9:
+          type: string
+        link10:
+          type: string
+        link11:
+          type: string
+        link12:
+          type: string
+        link13:
+          type: string
+        link14:
+          type: string
+        link15:
+          type: string
+        link16:
+          type: string
+        link17:
+          type: string
+        link18:
+          type: string
+        link19:
+          type: string
+        link20:
+          type: string
+        link21:
+          type: string
+        link22:
+          type: string
+        link23:
+          type: string
+        link24:
+          type: string
+        link25:
+          type: string
+        link26:
+          type: string
+        link27:
+          type: string
+        link28:
+          type: string
+        link29:
+          type: string
         new_node_ip:
           type: string
         nodeid:
@@ -10234,10 +10346,66 @@ components:
           type: boolean
         hostname:
           type: string
-        link:
-          type: array
-          items:
-            type: string
+        link0:
+          type: string
+        link1:
+          type: string
+        link2:
+          type: string
+        link3:
+          type: string
+        link4:
+          type: string
+        link5:
+          type: string
+        link6:
+          type: string
+        link7:
+          type: string
+        link8:
+          type: string
+        link9:
+          type: string
+        link10:
+          type: string
+        link11:
+          type: string
+        link12:
+          type: string
+        link13:
+          type: string
+        link14:
+          type: string
+        link15:
+          type: string
+        link16:
+          type: string
+        link17:
+          type: string
+        link18:
+          type: string
+        link19:
+          type: string
+        link20:
+          type: string
+        link21:
+          type: string
+        link22:
+          type: string
+        link23:
+          type: string
+        link24:
+          type: string
+        link25:
+          type: string
+        link26:
+          type: string
+        link27:
+          type: string
+        link28:
+          type: string
+        link29:
+          type: string
         nodeid:
           type: integer
         password:
@@ -11034,22 +11202,190 @@ components:
           type: boolean
         hookscript:
           type: string
-        hostpci:
-          type: array
-          items:
-            type: string
+        hostpci0:
+          type: string
+        hostpci1:
+          type: string
+        hostpci2:
+          type: string
+        hostpci3:
+          type: string
+        hostpci4:
+          type: string
+        hostpci5:
+          type: string
+        hostpci6:
+          type: string
+        hostpci7:
+          type: string
+        hostpci8:
+          type: string
+        hostpci9:
+          type: string
+        hostpci10:
+          type: string
+        hostpci11:
+          type: string
+        hostpci12:
+          type: string
+        hostpci13:
+          type: string
+        hostpci14:
+          type: string
+        hostpci15:
+          type: string
+        hostpci16:
+          type: string
+        hostpci17:
+          type: string
+        hostpci18:
+          type: string
+        hostpci19:
+          type: string
+        hostpci20:
+          type: string
+        hostpci21:
+          type: string
+        hostpci22:
+          type: string
+        hostpci23:
+          type: string
+        hostpci24:
+          type: string
+        hostpci25:
+          type: string
+        hostpci26:
+          type: string
+        hostpci27:
+          type: string
+        hostpci28:
+          type: string
+        hostpci29:
+          type: string
         hotplug:
           type: string
         hugepages:
           type: string
-        ide:
-          type: array
-          items:
-            type: string
-        ipconfig:
-          type: array
-          items:
-            type: string
+        ide0:
+          type: string
+        ide1:
+          type: string
+        ide2:
+          type: string
+        ide3:
+          type: string
+        ide4:
+          type: string
+        ide5:
+          type: string
+        ide6:
+          type: string
+        ide7:
+          type: string
+        ide8:
+          type: string
+        ide9:
+          type: string
+        ide10:
+          type: string
+        ide11:
+          type: string
+        ide12:
+          type: string
+        ide13:
+          type: string
+        ide14:
+          type: string
+        ide15:
+          type: string
+        ide16:
+          type: string
+        ide17:
+          type: string
+        ide18:
+          type: string
+        ide19:
+          type: string
+        ide20:
+          type: string
+        ide21:
+          type: string
+        ide22:
+          type: string
+        ide23:
+          type: string
+        ide24:
+          type: string
+        ide25:
+          type: string
+        ide26:
+          type: string
+        ide27:
+          type: string
+        ide28:
+          type: string
+        ide29:
+          type: string
+        ipconfig0:
+          type: string
+        ipconfig1:
+          type: string
+        ipconfig2:
+          type: string
+        ipconfig3:
+          type: string
+        ipconfig4:
+          type: string
+        ipconfig5:
+          type: string
+        ipconfig6:
+          type: string
+        ipconfig7:
+          type: string
+        ipconfig8:
+          type: string
+        ipconfig9:
+          type: string
+        ipconfig10:
+          type: string
+        ipconfig11:
+          type: string
+        ipconfig12:
+          type: string
+        ipconfig13:
+          type: string
+        ipconfig14:
+          type: string
+        ipconfig15:
+          type: string
+        ipconfig16:
+          type: string
+        ipconfig17:
+          type: string
+        ipconfig18:
+          type: string
+        ipconfig19:
+          type: string
+        ipconfig20:
+          type: string
+        ipconfig21:
+          type: string
+        ipconfig22:
+          type: string
+        ipconfig23:
+          type: string
+        ipconfig24:
+          type: string
+        ipconfig25:
+          type: string
+        ipconfig26:
+          type: string
+        ipconfig27:
+          type: string
+        ipconfig28:
+          type: string
+        ipconfig29:
+          type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11074,22 +11410,192 @@ components:
           type: string
         nameserver:
           type: string
-        net:
-          type: array
-          items:
-            type: string
+        net0:
+          type: string
+        net1:
+          type: string
+        net2:
+          type: string
+        net3:
+          type: string
+        net4:
+          type: string
+        net5:
+          type: string
+        net6:
+          type: string
+        net7:
+          type: string
+        net8:
+          type: string
+        net9:
+          type: string
+        net10:
+          type: string
+        net11:
+          type: string
+        net12:
+          type: string
+        net13:
+          type: string
+        net14:
+          type: string
+        net15:
+          type: string
+        net16:
+          type: string
+        net17:
+          type: string
+        net18:
+          type: string
+        net19:
+          type: string
+        net20:
+          type: string
+        net21:
+          type: string
+        net22:
+          type: string
+        net23:
+          type: string
+        net24:
+          type: string
+        net25:
+          type: string
+        net26:
+          type: string
+        net27:
+          type: string
+        net28:
+          type: string
+        net29:
+          type: string
         numa:
-          type: array
-          items:
-            type: string
+          type: boolean
+        numa0:
+          type: string
+        numa1:
+          type: string
+        numa2:
+          type: string
+        numa3:
+          type: string
+        numa4:
+          type: string
+        numa5:
+          type: string
+        numa6:
+          type: string
+        numa7:
+          type: string
+        numa8:
+          type: string
+        numa9:
+          type: string
+        numa10:
+          type: string
+        numa11:
+          type: string
+        numa12:
+          type: string
+        numa13:
+          type: string
+        numa14:
+          type: string
+        numa15:
+          type: string
+        numa16:
+          type: string
+        numa17:
+          type: string
+        numa18:
+          type: string
+        numa19:
+          type: string
+        numa20:
+          type: string
+        numa21:
+          type: string
+        numa22:
+          type: string
+        numa23:
+          type: string
+        numa24:
+          type: string
+        numa25:
+          type: string
+        numa26:
+          type: string
+        numa27:
+          type: string
+        numa28:
+          type: string
+        numa29:
+          type: string
         onboot:
           type: boolean
         ostype:
           type: string
-        parallel:
-          type: array
-          items:
-            type: string
+        parallel0:
+          type: string
+        parallel1:
+          type: string
+        parallel2:
+          type: string
+        parallel3:
+          type: string
+        parallel4:
+          type: string
+        parallel5:
+          type: string
+        parallel6:
+          type: string
+        parallel7:
+          type: string
+        parallel8:
+          type: string
+        parallel9:
+          type: string
+        parallel10:
+          type: string
+        parallel11:
+          type: string
+        parallel12:
+          type: string
+        parallel13:
+          type: string
+        parallel14:
+          type: string
+        parallel15:
+          type: string
+        parallel16:
+          type: string
+        parallel17:
+          type: string
+        parallel18:
+          type: string
+        parallel19:
+          type: string
+        parallel20:
+          type: string
+        parallel21:
+          type: string
+        parallel22:
+          type: string
+        parallel23:
+          type: string
+        parallel24:
+          type: string
+        parallel25:
+          type: string
+        parallel26:
+          type: string
+        parallel27:
+          type: string
+        parallel28:
+          type: string
+        parallel29:
+          type: string
         pool:
           type: string
         protection:
@@ -11098,22 +11604,190 @@ components:
           type: boolean
         rng0:
           type: string
-        sata:
-          type: array
-          items:
-            type: string
-        scsi:
-          type: array
-          items:
-            type: string
+        sata0:
+          type: string
+        sata1:
+          type: string
+        sata2:
+          type: string
+        sata3:
+          type: string
+        sata4:
+          type: string
+        sata5:
+          type: string
+        sata6:
+          type: string
+        sata7:
+          type: string
+        sata8:
+          type: string
+        sata9:
+          type: string
+        sata10:
+          type: string
+        sata11:
+          type: string
+        sata12:
+          type: string
+        sata13:
+          type: string
+        sata14:
+          type: string
+        sata15:
+          type: string
+        sata16:
+          type: string
+        sata17:
+          type: string
+        sata18:
+          type: string
+        sata19:
+          type: string
+        sata20:
+          type: string
+        sata21:
+          type: string
+        sata22:
+          type: string
+        sata23:
+          type: string
+        sata24:
+          type: string
+        sata25:
+          type: string
+        sata26:
+          type: string
+        sata27:
+          type: string
+        sata28:
+          type: string
+        sata29:
+          type: string
+        scsi0:
+          type: string
+        scsi1:
+          type: string
+        scsi2:
+          type: string
+        scsi3:
+          type: string
+        scsi4:
+          type: string
+        scsi5:
+          type: string
+        scsi6:
+          type: string
+        scsi7:
+          type: string
+        scsi8:
+          type: string
+        scsi9:
+          type: string
+        scsi10:
+          type: string
+        scsi11:
+          type: string
+        scsi12:
+          type: string
+        scsi13:
+          type: string
+        scsi14:
+          type: string
+        scsi15:
+          type: string
+        scsi16:
+          type: string
+        scsi17:
+          type: string
+        scsi18:
+          type: string
+        scsi19:
+          type: string
+        scsi20:
+          type: string
+        scsi21:
+          type: string
+        scsi22:
+          type: string
+        scsi23:
+          type: string
+        scsi24:
+          type: string
+        scsi25:
+          type: string
+        scsi26:
+          type: string
+        scsi27:
+          type: string
+        scsi28:
+          type: string
+        scsi29:
+          type: string
         scsihw:
           type: string
         searchdomain:
           type: string
-        serial:
-          type: array
-          items:
-            type: string
+        serial0:
+          type: string
+        serial1:
+          type: string
+        serial2:
+          type: string
+        serial3:
+          type: string
+        serial4:
+          type: string
+        serial5:
+          type: string
+        serial6:
+          type: string
+        serial7:
+          type: string
+        serial8:
+          type: string
+        serial9:
+          type: string
+        serial10:
+          type: string
+        serial11:
+          type: string
+        serial12:
+          type: string
+        serial13:
+          type: string
+        serial14:
+          type: string
+        serial15:
+          type: string
+        serial16:
+          type: string
+        serial17:
+          type: string
+        serial18:
+          type: string
+        serial19:
+          type: string
+        serial20:
+          type: string
+        serial21:
+          type: string
+        serial22:
+          type: string
+        serial23:
+          type: string
+        serial24:
+          type: string
+        serial25:
+          type: string
+        serial26:
+          type: string
+        serial27:
+          type: string
+        serial28:
+          type: string
+        serial29:
+          type: string
         shares:
           type: integer
         smbios1:
@@ -11144,22 +11818,190 @@ components:
           type: boolean
         unique:
           type: boolean
-        unused:
-          type: array
-          items:
-            type: string
-        usb:
-          type: array
-          items:
-            type: string
+        unused0:
+          type: string
+        unused1:
+          type: string
+        unused2:
+          type: string
+        unused3:
+          type: string
+        unused4:
+          type: string
+        unused5:
+          type: string
+        unused6:
+          type: string
+        unused7:
+          type: string
+        unused8:
+          type: string
+        unused9:
+          type: string
+        unused10:
+          type: string
+        unused11:
+          type: string
+        unused12:
+          type: string
+        unused13:
+          type: string
+        unused14:
+          type: string
+        unused15:
+          type: string
+        unused16:
+          type: string
+        unused17:
+          type: string
+        unused18:
+          type: string
+        unused19:
+          type: string
+        unused20:
+          type: string
+        unused21:
+          type: string
+        unused22:
+          type: string
+        unused23:
+          type: string
+        unused24:
+          type: string
+        unused25:
+          type: string
+        unused26:
+          type: string
+        unused27:
+          type: string
+        unused28:
+          type: string
+        unused29:
+          type: string
+        usb0:
+          type: string
+        usb1:
+          type: string
+        usb2:
+          type: string
+        usb3:
+          type: string
+        usb4:
+          type: string
+        usb5:
+          type: string
+        usb6:
+          type: string
+        usb7:
+          type: string
+        usb8:
+          type: string
+        usb9:
+          type: string
+        usb10:
+          type: string
+        usb11:
+          type: string
+        usb12:
+          type: string
+        usb13:
+          type: string
+        usb14:
+          type: string
+        usb15:
+          type: string
+        usb16:
+          type: string
+        usb17:
+          type: string
+        usb18:
+          type: string
+        usb19:
+          type: string
+        usb20:
+          type: string
+        usb21:
+          type: string
+        usb22:
+          type: string
+        usb23:
+          type: string
+        usb24:
+          type: string
+        usb25:
+          type: string
+        usb26:
+          type: string
+        usb27:
+          type: string
+        usb28:
+          type: string
+        usb29:
+          type: string
         vcpus:
           type: integer
         vga:
           type: string
-        virtio:
-          type: array
-          items:
-            type: string
+        virtio0:
+          type: string
+        virtio1:
+          type: string
+        virtio2:
+          type: string
+        virtio3:
+          type: string
+        virtio4:
+          type: string
+        virtio5:
+          type: string
+        virtio6:
+          type: string
+        virtio7:
+          type: string
+        virtio8:
+          type: string
+        virtio9:
+          type: string
+        virtio10:
+          type: string
+        virtio11:
+          type: string
+        virtio12:
+          type: string
+        virtio13:
+          type: string
+        virtio14:
+          type: string
+        virtio15:
+          type: string
+        virtio16:
+          type: string
+        virtio17:
+          type: string
+        virtio18:
+          type: string
+        virtio19:
+          type: string
+        virtio20:
+          type: string
+        virtio21:
+          type: string
+        virtio22:
+          type: string
+        virtio23:
+          type: string
+        virtio24:
+          type: string
+        virtio25:
+          type: string
+        virtio26:
+          type: string
+        virtio27:
+          type: string
+        virtio28:
+          type: string
+        virtio29:
+          type: string
         vmgenid:
           type: string
         vmid:
@@ -11468,22 +12310,190 @@ components:
           type: boolean
         hookscript:
           type: string
-        hostpci:
-          type: array
-          items:
-            type: string
+        hostpci0:
+          type: string
+        hostpci1:
+          type: string
+        hostpci2:
+          type: string
+        hostpci3:
+          type: string
+        hostpci4:
+          type: string
+        hostpci5:
+          type: string
+        hostpci6:
+          type: string
+        hostpci7:
+          type: string
+        hostpci8:
+          type: string
+        hostpci9:
+          type: string
+        hostpci10:
+          type: string
+        hostpci11:
+          type: string
+        hostpci12:
+          type: string
+        hostpci13:
+          type: string
+        hostpci14:
+          type: string
+        hostpci15:
+          type: string
+        hostpci16:
+          type: string
+        hostpci17:
+          type: string
+        hostpci18:
+          type: string
+        hostpci19:
+          type: string
+        hostpci20:
+          type: string
+        hostpci21:
+          type: string
+        hostpci22:
+          type: string
+        hostpci23:
+          type: string
+        hostpci24:
+          type: string
+        hostpci25:
+          type: string
+        hostpci26:
+          type: string
+        hostpci27:
+          type: string
+        hostpci28:
+          type: string
+        hostpci29:
+          type: string
         hotplug:
           type: string
         hugepages:
           type: string
-        ide:
-          type: array
-          items:
-            type: string
-        ipconfig:
-          type: array
-          items:
-            type: string
+        ide0:
+          type: string
+        ide1:
+          type: string
+        ide2:
+          type: string
+        ide3:
+          type: string
+        ide4:
+          type: string
+        ide5:
+          type: string
+        ide6:
+          type: string
+        ide7:
+          type: string
+        ide8:
+          type: string
+        ide9:
+          type: string
+        ide10:
+          type: string
+        ide11:
+          type: string
+        ide12:
+          type: string
+        ide13:
+          type: string
+        ide14:
+          type: string
+        ide15:
+          type: string
+        ide16:
+          type: string
+        ide17:
+          type: string
+        ide18:
+          type: string
+        ide19:
+          type: string
+        ide20:
+          type: string
+        ide21:
+          type: string
+        ide22:
+          type: string
+        ide23:
+          type: string
+        ide24:
+          type: string
+        ide25:
+          type: string
+        ide26:
+          type: string
+        ide27:
+          type: string
+        ide28:
+          type: string
+        ide29:
+          type: string
+        ipconfig0:
+          type: string
+        ipconfig1:
+          type: string
+        ipconfig2:
+          type: string
+        ipconfig3:
+          type: string
+        ipconfig4:
+          type: string
+        ipconfig5:
+          type: string
+        ipconfig6:
+          type: string
+        ipconfig7:
+          type: string
+        ipconfig8:
+          type: string
+        ipconfig9:
+          type: string
+        ipconfig10:
+          type: string
+        ipconfig11:
+          type: string
+        ipconfig12:
+          type: string
+        ipconfig13:
+          type: string
+        ipconfig14:
+          type: string
+        ipconfig15:
+          type: string
+        ipconfig16:
+          type: string
+        ipconfig17:
+          type: string
+        ipconfig18:
+          type: string
+        ipconfig19:
+          type: string
+        ipconfig20:
+          type: string
+        ipconfig21:
+          type: string
+        ipconfig22:
+          type: string
+        ipconfig23:
+          type: string
+        ipconfig24:
+          type: string
+        ipconfig25:
+          type: string
+        ipconfig26:
+          type: string
+        ipconfig27:
+          type: string
+        ipconfig28:
+          type: string
+        ipconfig29:
+          type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11508,22 +12518,192 @@ components:
           type: string
         nameserver:
           type: string
-        net:
-          type: array
-          items:
-            type: string
+        net0:
+          type: string
+        net1:
+          type: string
+        net2:
+          type: string
+        net3:
+          type: string
+        net4:
+          type: string
+        net5:
+          type: string
+        net6:
+          type: string
+        net7:
+          type: string
+        net8:
+          type: string
+        net9:
+          type: string
+        net10:
+          type: string
+        net11:
+          type: string
+        net12:
+          type: string
+        net13:
+          type: string
+        net14:
+          type: string
+        net15:
+          type: string
+        net16:
+          type: string
+        net17:
+          type: string
+        net18:
+          type: string
+        net19:
+          type: string
+        net20:
+          type: string
+        net21:
+          type: string
+        net22:
+          type: string
+        net23:
+          type: string
+        net24:
+          type: string
+        net25:
+          type: string
+        net26:
+          type: string
+        net27:
+          type: string
+        net28:
+          type: string
+        net29:
+          type: string
         numa:
-          type: array
-          items:
-            type: string
+          type: boolean
+        numa0:
+          type: string
+        numa1:
+          type: string
+        numa2:
+          type: string
+        numa3:
+          type: string
+        numa4:
+          type: string
+        numa5:
+          type: string
+        numa6:
+          type: string
+        numa7:
+          type: string
+        numa8:
+          type: string
+        numa9:
+          type: string
+        numa10:
+          type: string
+        numa11:
+          type: string
+        numa12:
+          type: string
+        numa13:
+          type: string
+        numa14:
+          type: string
+        numa15:
+          type: string
+        numa16:
+          type: string
+        numa17:
+          type: string
+        numa18:
+          type: string
+        numa19:
+          type: string
+        numa20:
+          type: string
+        numa21:
+          type: string
+        numa22:
+          type: string
+        numa23:
+          type: string
+        numa24:
+          type: string
+        numa25:
+          type: string
+        numa26:
+          type: string
+        numa27:
+          type: string
+        numa28:
+          type: string
+        numa29:
+          type: string
         onboot:
           type: boolean
         ostype:
           type: string
-        parallel:
-          type: array
-          items:
-            type: string
+        parallel0:
+          type: string
+        parallel1:
+          type: string
+        parallel2:
+          type: string
+        parallel3:
+          type: string
+        parallel4:
+          type: string
+        parallel5:
+          type: string
+        parallel6:
+          type: string
+        parallel7:
+          type: string
+        parallel8:
+          type: string
+        parallel9:
+          type: string
+        parallel10:
+          type: string
+        parallel11:
+          type: string
+        parallel12:
+          type: string
+        parallel13:
+          type: string
+        parallel14:
+          type: string
+        parallel15:
+          type: string
+        parallel16:
+          type: string
+        parallel17:
+          type: string
+        parallel18:
+          type: string
+        parallel19:
+          type: string
+        parallel20:
+          type: string
+        parallel21:
+          type: string
+        parallel22:
+          type: string
+        parallel23:
+          type: string
+        parallel24:
+          type: string
+        parallel25:
+          type: string
+        parallel26:
+          type: string
+        parallel27:
+          type: string
+        parallel28:
+          type: string
+        parallel29:
+          type: string
         protection:
           type: boolean
         reboot:
@@ -11532,22 +12712,190 @@ components:
           type: string
         rng0:
           type: string
-        sata:
-          type: array
-          items:
-            type: string
-        scsi:
-          type: array
-          items:
-            type: string
+        sata0:
+          type: string
+        sata1:
+          type: string
+        sata2:
+          type: string
+        sata3:
+          type: string
+        sata4:
+          type: string
+        sata5:
+          type: string
+        sata6:
+          type: string
+        sata7:
+          type: string
+        sata8:
+          type: string
+        sata9:
+          type: string
+        sata10:
+          type: string
+        sata11:
+          type: string
+        sata12:
+          type: string
+        sata13:
+          type: string
+        sata14:
+          type: string
+        sata15:
+          type: string
+        sata16:
+          type: string
+        sata17:
+          type: string
+        sata18:
+          type: string
+        sata19:
+          type: string
+        sata20:
+          type: string
+        sata21:
+          type: string
+        sata22:
+          type: string
+        sata23:
+          type: string
+        sata24:
+          type: string
+        sata25:
+          type: string
+        sata26:
+          type: string
+        sata27:
+          type: string
+        sata28:
+          type: string
+        sata29:
+          type: string
+        scsi0:
+          type: string
+        scsi1:
+          type: string
+        scsi2:
+          type: string
+        scsi3:
+          type: string
+        scsi4:
+          type: string
+        scsi5:
+          type: string
+        scsi6:
+          type: string
+        scsi7:
+          type: string
+        scsi8:
+          type: string
+        scsi9:
+          type: string
+        scsi10:
+          type: string
+        scsi11:
+          type: string
+        scsi12:
+          type: string
+        scsi13:
+          type: string
+        scsi14:
+          type: string
+        scsi15:
+          type: string
+        scsi16:
+          type: string
+        scsi17:
+          type: string
+        scsi18:
+          type: string
+        scsi19:
+          type: string
+        scsi20:
+          type: string
+        scsi21:
+          type: string
+        scsi22:
+          type: string
+        scsi23:
+          type: string
+        scsi24:
+          type: string
+        scsi25:
+          type: string
+        scsi26:
+          type: string
+        scsi27:
+          type: string
+        scsi28:
+          type: string
+        scsi29:
+          type: string
         scsihw:
           type: string
         searchdomain:
           type: string
-        serial:
-          type: array
-          items:
-            type: string
+        serial0:
+          type: string
+        serial1:
+          type: string
+        serial2:
+          type: string
+        serial3:
+          type: string
+        serial4:
+          type: string
+        serial5:
+          type: string
+        serial6:
+          type: string
+        serial7:
+          type: string
+        serial8:
+          type: string
+        serial9:
+          type: string
+        serial10:
+          type: string
+        serial11:
+          type: string
+        serial12:
+          type: string
+        serial13:
+          type: string
+        serial14:
+          type: string
+        serial15:
+          type: string
+        serial16:
+          type: string
+        serial17:
+          type: string
+        serial18:
+          type: string
+        serial19:
+          type: string
+        serial20:
+          type: string
+        serial21:
+          type: string
+        serial22:
+          type: string
+        serial23:
+          type: string
+        serial24:
+          type: string
+        serial25:
+          type: string
+        serial26:
+          type: string
+        serial27:
+          type: string
+        serial28:
+          type: string
+        serial29:
+          type: string
         shares:
           type: integer
         skiplock:
@@ -11574,22 +12922,190 @@ components:
           type: boolean
         template:
           type: boolean
-        unused:
-          type: array
-          items:
-            type: string
-        usb:
-          type: array
-          items:
-            type: string
+        unused0:
+          type: string
+        unused1:
+          type: string
+        unused2:
+          type: string
+        unused3:
+          type: string
+        unused4:
+          type: string
+        unused5:
+          type: string
+        unused6:
+          type: string
+        unused7:
+          type: string
+        unused8:
+          type: string
+        unused9:
+          type: string
+        unused10:
+          type: string
+        unused11:
+          type: string
+        unused12:
+          type: string
+        unused13:
+          type: string
+        unused14:
+          type: string
+        unused15:
+          type: string
+        unused16:
+          type: string
+        unused17:
+          type: string
+        unused18:
+          type: string
+        unused19:
+          type: string
+        unused20:
+          type: string
+        unused21:
+          type: string
+        unused22:
+          type: string
+        unused23:
+          type: string
+        unused24:
+          type: string
+        unused25:
+          type: string
+        unused26:
+          type: string
+        unused27:
+          type: string
+        unused28:
+          type: string
+        unused29:
+          type: string
+        usb0:
+          type: string
+        usb1:
+          type: string
+        usb2:
+          type: string
+        usb3:
+          type: string
+        usb4:
+          type: string
+        usb5:
+          type: string
+        usb6:
+          type: string
+        usb7:
+          type: string
+        usb8:
+          type: string
+        usb9:
+          type: string
+        usb10:
+          type: string
+        usb11:
+          type: string
+        usb12:
+          type: string
+        usb13:
+          type: string
+        usb14:
+          type: string
+        usb15:
+          type: string
+        usb16:
+          type: string
+        usb17:
+          type: string
+        usb18:
+          type: string
+        usb19:
+          type: string
+        usb20:
+          type: string
+        usb21:
+          type: string
+        usb22:
+          type: string
+        usb23:
+          type: string
+        usb24:
+          type: string
+        usb25:
+          type: string
+        usb26:
+          type: string
+        usb27:
+          type: string
+        usb28:
+          type: string
+        usb29:
+          type: string
         vcpus:
           type: integer
         vga:
           type: string
-        virtio:
-          type: array
-          items:
-            type: string
+        virtio0:
+          type: string
+        virtio1:
+          type: string
+        virtio2:
+          type: string
+        virtio3:
+          type: string
+        virtio4:
+          type: string
+        virtio5:
+          type: string
+        virtio6:
+          type: string
+        virtio7:
+          type: string
+        virtio8:
+          type: string
+        virtio9:
+          type: string
+        virtio10:
+          type: string
+        virtio11:
+          type: string
+        virtio12:
+          type: string
+        virtio13:
+          type: string
+        virtio14:
+          type: string
+        virtio15:
+          type: string
+        virtio16:
+          type: string
+        virtio17:
+          type: string
+        virtio18:
+          type: string
+        virtio19:
+          type: string
+        virtio20:
+          type: string
+        virtio21:
+          type: string
+        virtio22:
+          type: string
+        virtio23:
+          type: string
+        virtio24:
+          type: string
+        virtio25:
+          type: string
+        virtio26:
+          type: string
+        virtio27:
+          type: string
+        virtio28:
+          type: string
+        virtio29:
+          type: string
         vmgenid:
           type: string
         vmstatestorage:
@@ -11652,22 +13168,190 @@ components:
           type: boolean
         hookscript:
           type: string
-        hostpci:
-          type: array
-          items:
-            type: string
+        hostpci0:
+          type: string
+        hostpci1:
+          type: string
+        hostpci2:
+          type: string
+        hostpci3:
+          type: string
+        hostpci4:
+          type: string
+        hostpci5:
+          type: string
+        hostpci6:
+          type: string
+        hostpci7:
+          type: string
+        hostpci8:
+          type: string
+        hostpci9:
+          type: string
+        hostpci10:
+          type: string
+        hostpci11:
+          type: string
+        hostpci12:
+          type: string
+        hostpci13:
+          type: string
+        hostpci14:
+          type: string
+        hostpci15:
+          type: string
+        hostpci16:
+          type: string
+        hostpci17:
+          type: string
+        hostpci18:
+          type: string
+        hostpci19:
+          type: string
+        hostpci20:
+          type: string
+        hostpci21:
+          type: string
+        hostpci22:
+          type: string
+        hostpci23:
+          type: string
+        hostpci24:
+          type: string
+        hostpci25:
+          type: string
+        hostpci26:
+          type: string
+        hostpci27:
+          type: string
+        hostpci28:
+          type: string
+        hostpci29:
+          type: string
         hotplug:
           type: string
         hugepages:
           type: string
-        ide:
-          type: array
-          items:
-            type: string
-        ipconfig:
-          type: array
-          items:
-            type: string
+        ide0:
+          type: string
+        ide1:
+          type: string
+        ide2:
+          type: string
+        ide3:
+          type: string
+        ide4:
+          type: string
+        ide5:
+          type: string
+        ide6:
+          type: string
+        ide7:
+          type: string
+        ide8:
+          type: string
+        ide9:
+          type: string
+        ide10:
+          type: string
+        ide11:
+          type: string
+        ide12:
+          type: string
+        ide13:
+          type: string
+        ide14:
+          type: string
+        ide15:
+          type: string
+        ide16:
+          type: string
+        ide17:
+          type: string
+        ide18:
+          type: string
+        ide19:
+          type: string
+        ide20:
+          type: string
+        ide21:
+          type: string
+        ide22:
+          type: string
+        ide23:
+          type: string
+        ide24:
+          type: string
+        ide25:
+          type: string
+        ide26:
+          type: string
+        ide27:
+          type: string
+        ide28:
+          type: string
+        ide29:
+          type: string
+        ipconfig0:
+          type: string
+        ipconfig1:
+          type: string
+        ipconfig2:
+          type: string
+        ipconfig3:
+          type: string
+        ipconfig4:
+          type: string
+        ipconfig5:
+          type: string
+        ipconfig6:
+          type: string
+        ipconfig7:
+          type: string
+        ipconfig8:
+          type: string
+        ipconfig9:
+          type: string
+        ipconfig10:
+          type: string
+        ipconfig11:
+          type: string
+        ipconfig12:
+          type: string
+        ipconfig13:
+          type: string
+        ipconfig14:
+          type: string
+        ipconfig15:
+          type: string
+        ipconfig16:
+          type: string
+        ipconfig17:
+          type: string
+        ipconfig18:
+          type: string
+        ipconfig19:
+          type: string
+        ipconfig20:
+          type: string
+        ipconfig21:
+          type: string
+        ipconfig22:
+          type: string
+        ipconfig23:
+          type: string
+        ipconfig24:
+          type: string
+        ipconfig25:
+          type: string
+        ipconfig26:
+          type: string
+        ipconfig27:
+          type: string
+        ipconfig28:
+          type: string
+        ipconfig29:
+          type: string
         ivshmem:
           type: string
         keephugepages:
@@ -11692,22 +13376,192 @@ components:
           type: string
         nameserver:
           type: string
-        net:
-          type: array
-          items:
-            type: string
+        net0:
+          type: string
+        net1:
+          type: string
+        net2:
+          type: string
+        net3:
+          type: string
+        net4:
+          type: string
+        net5:
+          type: string
+        net6:
+          type: string
+        net7:
+          type: string
+        net8:
+          type: string
+        net9:
+          type: string
+        net10:
+          type: string
+        net11:
+          type: string
+        net12:
+          type: string
+        net13:
+          type: string
+        net14:
+          type: string
+        net15:
+          type: string
+        net16:
+          type: string
+        net17:
+          type: string
+        net18:
+          type: string
+        net19:
+          type: string
+        net20:
+          type: string
+        net21:
+          type: string
+        net22:
+          type: string
+        net23:
+          type: string
+        net24:
+          type: string
+        net25:
+          type: string
+        net26:
+          type: string
+        net27:
+          type: string
+        net28:
+          type: string
+        net29:
+          type: string
         numa:
-          type: array
-          items:
-            type: string
+          type: boolean
+        numa0:
+          type: string
+        numa1:
+          type: string
+        numa2:
+          type: string
+        numa3:
+          type: string
+        numa4:
+          type: string
+        numa5:
+          type: string
+        numa6:
+          type: string
+        numa7:
+          type: string
+        numa8:
+          type: string
+        numa9:
+          type: string
+        numa10:
+          type: string
+        numa11:
+          type: string
+        numa12:
+          type: string
+        numa13:
+          type: string
+        numa14:
+          type: string
+        numa15:
+          type: string
+        numa16:
+          type: string
+        numa17:
+          type: string
+        numa18:
+          type: string
+        numa19:
+          type: string
+        numa20:
+          type: string
+        numa21:
+          type: string
+        numa22:
+          type: string
+        numa23:
+          type: string
+        numa24:
+          type: string
+        numa25:
+          type: string
+        numa26:
+          type: string
+        numa27:
+          type: string
+        numa28:
+          type: string
+        numa29:
+          type: string
         onboot:
           type: boolean
         ostype:
           type: string
-        parallel:
-          type: array
-          items:
-            type: string
+        parallel0:
+          type: string
+        parallel1:
+          type: string
+        parallel2:
+          type: string
+        parallel3:
+          type: string
+        parallel4:
+          type: string
+        parallel5:
+          type: string
+        parallel6:
+          type: string
+        parallel7:
+          type: string
+        parallel8:
+          type: string
+        parallel9:
+          type: string
+        parallel10:
+          type: string
+        parallel11:
+          type: string
+        parallel12:
+          type: string
+        parallel13:
+          type: string
+        parallel14:
+          type: string
+        parallel15:
+          type: string
+        parallel16:
+          type: string
+        parallel17:
+          type: string
+        parallel18:
+          type: string
+        parallel19:
+          type: string
+        parallel20:
+          type: string
+        parallel21:
+          type: string
+        parallel22:
+          type: string
+        parallel23:
+          type: string
+        parallel24:
+          type: string
+        parallel25:
+          type: string
+        parallel26:
+          type: string
+        parallel27:
+          type: string
+        parallel28:
+          type: string
+        parallel29:
+          type: string
         protection:
           type: boolean
         reboot:
@@ -11716,22 +13570,190 @@ components:
           type: string
         rng0:
           type: string
-        sata:
-          type: array
-          items:
-            type: string
-        scsi:
-          type: array
-          items:
-            type: string
+        sata0:
+          type: string
+        sata1:
+          type: string
+        sata2:
+          type: string
+        sata3:
+          type: string
+        sata4:
+          type: string
+        sata5:
+          type: string
+        sata6:
+          type: string
+        sata7:
+          type: string
+        sata8:
+          type: string
+        sata9:
+          type: string
+        sata10:
+          type: string
+        sata11:
+          type: string
+        sata12:
+          type: string
+        sata13:
+          type: string
+        sata14:
+          type: string
+        sata15:
+          type: string
+        sata16:
+          type: string
+        sata17:
+          type: string
+        sata18:
+          type: string
+        sata19:
+          type: string
+        sata20:
+          type: string
+        sata21:
+          type: string
+        sata22:
+          type: string
+        sata23:
+          type: string
+        sata24:
+          type: string
+        sata25:
+          type: string
+        sata26:
+          type: string
+        sata27:
+          type: string
+        sata28:
+          type: string
+        sata29:
+          type: string
+        scsi0:
+          type: string
+        scsi1:
+          type: string
+        scsi2:
+          type: string
+        scsi3:
+          type: string
+        scsi4:
+          type: string
+        scsi5:
+          type: string
+        scsi6:
+          type: string
+        scsi7:
+          type: string
+        scsi8:
+          type: string
+        scsi9:
+          type: string
+        scsi10:
+          type: string
+        scsi11:
+          type: string
+        scsi12:
+          type: string
+        scsi13:
+          type: string
+        scsi14:
+          type: string
+        scsi15:
+          type: string
+        scsi16:
+          type: string
+        scsi17:
+          type: string
+        scsi18:
+          type: string
+        scsi19:
+          type: string
+        scsi20:
+          type: string
+        scsi21:
+          type: string
+        scsi22:
+          type: string
+        scsi23:
+          type: string
+        scsi24:
+          type: string
+        scsi25:
+          type: string
+        scsi26:
+          type: string
+        scsi27:
+          type: string
+        scsi28:
+          type: string
+        scsi29:
+          type: string
         scsihw:
           type: string
         searchdomain:
           type: string
-        serial:
-          type: array
-          items:
-            type: string
+        serial0:
+          type: string
+        serial1:
+          type: string
+        serial2:
+          type: string
+        serial3:
+          type: string
+        serial4:
+          type: string
+        serial5:
+          type: string
+        serial6:
+          type: string
+        serial7:
+          type: string
+        serial8:
+          type: string
+        serial9:
+          type: string
+        serial10:
+          type: string
+        serial11:
+          type: string
+        serial12:
+          type: string
+        serial13:
+          type: string
+        serial14:
+          type: string
+        serial15:
+          type: string
+        serial16:
+          type: string
+        serial17:
+          type: string
+        serial18:
+          type: string
+        serial19:
+          type: string
+        serial20:
+          type: string
+        serial21:
+          type: string
+        serial22:
+          type: string
+        serial23:
+          type: string
+        serial24:
+          type: string
+        serial25:
+          type: string
+        serial26:
+          type: string
+        serial27:
+          type: string
+        serial28:
+          type: string
+        serial29:
+          type: string
         shares:
           type: integer
         skiplock:
@@ -11758,22 +13780,190 @@ components:
           type: boolean
         template:
           type: boolean
-        unused:
-          type: array
-          items:
-            type: string
-        usb:
-          type: array
-          items:
-            type: string
+        unused0:
+          type: string
+        unused1:
+          type: string
+        unused2:
+          type: string
+        unused3:
+          type: string
+        unused4:
+          type: string
+        unused5:
+          type: string
+        unused6:
+          type: string
+        unused7:
+          type: string
+        unused8:
+          type: string
+        unused9:
+          type: string
+        unused10:
+          type: string
+        unused11:
+          type: string
+        unused12:
+          type: string
+        unused13:
+          type: string
+        unused14:
+          type: string
+        unused15:
+          type: string
+        unused16:
+          type: string
+        unused17:
+          type: string
+        unused18:
+          type: string
+        unused19:
+          type: string
+        unused20:
+          type: string
+        unused21:
+          type: string
+        unused22:
+          type: string
+        unused23:
+          type: string
+        unused24:
+          type: string
+        unused25:
+          type: string
+        unused26:
+          type: string
+        unused27:
+          type: string
+        unused28:
+          type: string
+        unused29:
+          type: string
+        usb0:
+          type: string
+        usb1:
+          type: string
+        usb2:
+          type: string
+        usb3:
+          type: string
+        usb4:
+          type: string
+        usb5:
+          type: string
+        usb6:
+          type: string
+        usb7:
+          type: string
+        usb8:
+          type: string
+        usb9:
+          type: string
+        usb10:
+          type: string
+        usb11:
+          type: string
+        usb12:
+          type: string
+        usb13:
+          type: string
+        usb14:
+          type: string
+        usb15:
+          type: string
+        usb16:
+          type: string
+        usb17:
+          type: string
+        usb18:
+          type: string
+        usb19:
+          type: string
+        usb20:
+          type: string
+        usb21:
+          type: string
+        usb22:
+          type: string
+        usb23:
+          type: string
+        usb24:
+          type: string
+        usb25:
+          type: string
+        usb26:
+          type: string
+        usb27:
+          type: string
+        usb28:
+          type: string
+        usb29:
+          type: string
         vcpus:
           type: integer
         vga:
           type: string
-        virtio:
-          type: array
-          items:
-            type: string
+        virtio0:
+          type: string
+        virtio1:
+          type: string
+        virtio2:
+          type: string
+        virtio3:
+          type: string
+        virtio4:
+          type: string
+        virtio5:
+          type: string
+        virtio6:
+          type: string
+        virtio7:
+          type: string
+        virtio8:
+          type: string
+        virtio9:
+          type: string
+        virtio10:
+          type: string
+        virtio11:
+          type: string
+        virtio12:
+          type: string
+        virtio13:
+          type: string
+        virtio14:
+          type: string
+        virtio15:
+          type: string
+        virtio16:
+          type: string
+        virtio17:
+          type: string
+        virtio18:
+          type: string
+        virtio19:
+          type: string
+        virtio20:
+          type: string
+        virtio21:
+          type: string
+        virtio22:
+          type: string
+        virtio23:
+          type: string
+        virtio24:
+          type: string
+        virtio25:
+          type: string
+        virtio26:
+          type: string
+        virtio27:
+          type: string
+        virtio28:
+          type: string
+        virtio29:
+          type: string
         vmgenid:
           type: string
         vmstatestorage:
@@ -12050,16 +14240,128 @@ components:
           type: string
         memory:
           type: integer
-        mp:
-          type: array
-          items:
-            type: string
+        mp0:
+          type: string
+        mp1:
+          type: string
+        mp2:
+          type: string
+        mp3:
+          type: string
+        mp4:
+          type: string
+        mp5:
+          type: string
+        mp6:
+          type: string
+        mp7:
+          type: string
+        mp8:
+          type: string
+        mp9:
+          type: string
+        mp10:
+          type: string
+        mp11:
+          type: string
+        mp12:
+          type: string
+        mp13:
+          type: string
+        mp14:
+          type: string
+        mp15:
+          type: string
+        mp16:
+          type: string
+        mp17:
+          type: string
+        mp18:
+          type: string
+        mp19:
+          type: string
+        mp20:
+          type: string
+        mp21:
+          type: string
+        mp22:
+          type: string
+        mp23:
+          type: string
+        mp24:
+          type: string
+        mp25:
+          type: string
+        mp26:
+          type: string
+        mp27:
+          type: string
+        mp28:
+          type: string
+        mp29:
+          type: string
         nameserver:
           type: string
-        net:
-          type: array
-          items:
-            type: string
+        net0:
+          type: string
+        net1:
+          type: string
+        net2:
+          type: string
+        net3:
+          type: string
+        net4:
+          type: string
+        net5:
+          type: string
+        net6:
+          type: string
+        net7:
+          type: string
+        net8:
+          type: string
+        net9:
+          type: string
+        net10:
+          type: string
+        net11:
+          type: string
+        net12:
+          type: string
+        net13:
+          type: string
+        net14:
+          type: string
+        net15:
+          type: string
+        net16:
+          type: string
+        net17:
+          type: string
+        net18:
+          type: string
+        net19:
+          type: string
+        net20:
+          type: string
+        net21:
+          type: string
+        net22:
+          type: string
+        net23:
+          type: string
+        net24:
+          type: string
+        net25:
+          type: string
+        net26:
+          type: string
+        net27:
+          type: string
+        net28:
+          type: string
+        net29:
+          type: string
         onboot:
           type: boolean
         ostemplate:
@@ -12100,10 +14402,66 @@ components:
           type: boolean
         unprivileged:
           type: boolean
-        unused:
-          type: array
-          items:
-            type: string
+        unused0:
+          type: string
+        unused1:
+          type: string
+        unused2:
+          type: string
+        unused3:
+          type: string
+        unused4:
+          type: string
+        unused5:
+          type: string
+        unused6:
+          type: string
+        unused7:
+          type: string
+        unused8:
+          type: string
+        unused9:
+          type: string
+        unused10:
+          type: string
+        unused11:
+          type: string
+        unused12:
+          type: string
+        unused13:
+          type: string
+        unused14:
+          type: string
+        unused15:
+          type: string
+        unused16:
+          type: string
+        unused17:
+          type: string
+        unused18:
+          type: string
+        unused19:
+          type: string
+        unused20:
+          type: string
+        unused21:
+          type: string
+        unused22:
+          type: string
+        unused23:
+          type: string
+        unused24:
+          type: string
+        unused25:
+          type: string
+        unused26:
+          type: string
+        unused27:
+          type: string
+        unused28:
+          type: string
+        unused29:
+          type: string
         vmid:
           type: integer
       required:
@@ -12143,16 +14501,128 @@ components:
           type: string
         memory:
           type: integer
-        mp:
-          type: array
-          items:
-            type: string
+        mp0:
+          type: string
+        mp1:
+          type: string
+        mp2:
+          type: string
+        mp3:
+          type: string
+        mp4:
+          type: string
+        mp5:
+          type: string
+        mp6:
+          type: string
+        mp7:
+          type: string
+        mp8:
+          type: string
+        mp9:
+          type: string
+        mp10:
+          type: string
+        mp11:
+          type: string
+        mp12:
+          type: string
+        mp13:
+          type: string
+        mp14:
+          type: string
+        mp15:
+          type: string
+        mp16:
+          type: string
+        mp17:
+          type: string
+        mp18:
+          type: string
+        mp19:
+          type: string
+        mp20:
+          type: string
+        mp21:
+          type: string
+        mp22:
+          type: string
+        mp23:
+          type: string
+        mp24:
+          type: string
+        mp25:
+          type: string
+        mp26:
+          type: string
+        mp27:
+          type: string
+        mp28:
+          type: string
+        mp29:
+          type: string
         nameserver:
           type: string
-        net:
-          type: array
-          items:
-            type: string
+        net0:
+          type: string
+        net1:
+          type: string
+        net2:
+          type: string
+        net3:
+          type: string
+        net4:
+          type: string
+        net5:
+          type: string
+        net6:
+          type: string
+        net7:
+          type: string
+        net8:
+          type: string
+        net9:
+          type: string
+        net10:
+          type: string
+        net11:
+          type: string
+        net12:
+          type: string
+        net13:
+          type: string
+        net14:
+          type: string
+        net15:
+          type: string
+        net16:
+          type: string
+        net17:
+          type: string
+        net18:
+          type: string
+        net19:
+          type: string
+        net20:
+          type: string
+        net21:
+          type: string
+        net22:
+          type: string
+        net23:
+          type: string
+        net24:
+          type: string
+        net25:
+          type: string
+        net26:
+          type: string
+        net27:
+          type: string
+        net28:
+          type: string
+        net29:
+          type: string
         onboot:
           type: boolean
         ostype:
@@ -12179,10 +14649,66 @@ components:
           type: integer
         unprivileged:
           type: boolean
-        unused:
-          type: array
-          items:
-            type: string
+        unused0:
+          type: string
+        unused1:
+          type: string
+        unused2:
+          type: string
+        unused3:
+          type: string
+        unused4:
+          type: string
+        unused5:
+          type: string
+        unused6:
+          type: string
+        unused7:
+          type: string
+        unused8:
+          type: string
+        unused9:
+          type: string
+        unused10:
+          type: string
+        unused11:
+          type: string
+        unused12:
+          type: string
+        unused13:
+          type: string
+        unused14:
+          type: string
+        unused15:
+          type: string
+        unused16:
+          type: string
+        unused17:
+          type: string
+        unused18:
+          type: string
+        unused19:
+          type: string
+        unused20:
+          type: string
+        unused21:
+          type: string
+        unused22:
+          type: string
+        unused23:
+          type: string
+        unused24:
+          type: string
+        unused25:
+          type: string
+        unused26:
+          type: string
+        unused27:
+          type: string
+        unused28:
+          type: string
+        unused29:
+          type: string
     CreateNodesSingleLxcSingleStatusStartRequest:
       title: CreateNodesSingleLxcSingleStatusStartRequest
       type: object
@@ -13119,10 +15645,66 @@ components:
       properties:
         acme:
           type: string
-        acmedomain:
-          type: array
-          items:
-            type: string
+        acmedomain0:
+          type: string
+        acmedomain1:
+          type: string
+        acmedomain2:
+          type: string
+        acmedomain3:
+          type: string
+        acmedomain4:
+          type: string
+        acmedomain5:
+          type: string
+        acmedomain6:
+          type: string
+        acmedomain7:
+          type: string
+        acmedomain8:
+          type: string
+        acmedomain9:
+          type: string
+        acmedomain10:
+          type: string
+        acmedomain11:
+          type: string
+        acmedomain12:
+          type: string
+        acmedomain13:
+          type: string
+        acmedomain14:
+          type: string
+        acmedomain15:
+          type: string
+        acmedomain16:
+          type: string
+        acmedomain17:
+          type: string
+        acmedomain18:
+          type: string
+        acmedomain19:
+          type: string
+        acmedomain20:
+          type: string
+        acmedomain21:
+          type: string
+        acmedomain22:
+          type: string
+        acmedomain23:
+          type: string
+        acmedomain24:
+          type: string
+        acmedomain25:
+          type: string
+        acmedomain26:
+          type: string
+        acmedomain27:
+          type: string
+        acmedomain28:
+          type: string
+        acmedomain29:
+          type: string
         delete:
           type: string
         description:
