@@ -46,6 +46,8 @@ function filterSchema(p){
 
 function buildResponseSchema(source){
     const schema = { type: source.type || 'string', description: source.description || '' }
+    if(schema.type === 'boolean')
+        schema.type = 'integer'
     if(schema.type === 'null')
         schema.type = 'string'
     if(source.type === 'array' && source.items)

@@ -16513,7 +16513,7 @@ components:
                   description: ''
                   properties:
                     disable:
-                      type: boolean
+                      type: integer
                       description: Flag to disable the plugin.
                     id:
                       type: string
@@ -17196,7 +17196,7 @@ components:
                         different SHA1 digest. This can be used to prevent
                         concurrent modifications.
                     nomatch:
-                      type: boolean
+                      type: integer
                       description: ''
     AddClusterFirewallIPSetIPResponse:
       description: AddClusterFirewallIPSetIPResponse
@@ -17359,7 +17359,7 @@ components:
                 description: ''
                 properties:
                   ebtables:
-                    type: boolean
+                    type: integer
                     description: Enable ebtables rules cluster wide.
                   enable:
                     type: integer
@@ -17555,7 +17555,7 @@ components:
                                 type: string
                                 description: Configuration key of the volume.
                               included:
-                                type: boolean
+                                type: integer
                                 description: >-
                                   Whether the volume is included in the backup
                                   or not.
@@ -18245,7 +18245,7 @@ components:
                 items:
                   type: string
               data:
-                type: boolean
+                type: integer
                 description: ''
     UpdateClusterCephFlagsSingleResponse:
       description: UpdateClusterCephFlagsSingleResponse
@@ -18702,7 +18702,7 @@ components:
                         eligible for enterprise support as well as access to the
                         stable Proxmox VE Enterprise Repository.
                     local:
-                      type: boolean
+                      type: integer
                       description: '[node] Indicates if this is the responding node.'
                     name:
                       type: string
@@ -18714,10 +18714,10 @@ components:
                       type: integer
                       description: '[cluster] Nodes count, including offline nodes.'
                     online:
-                      type: boolean
+                      type: integer
                       description: '[node] Indicates if the node is online or offline.'
                     quorate:
-                      type: boolean
+                      type: integer
                       description: >-
                         [cluster] Indicates if there is a majority of nodes
                         online to make decisions
@@ -19228,7 +19228,7 @@ components:
                         different SHA1 digest. This can be used to prevent
                         concurrent modifications.
                     nomatch:
-                      type: boolean
+                      type: integer
                       description: ''
     AddVMFirewallIPSetIPResponse:
       description: AddVMFirewallIPSetIPResponse
@@ -19302,13 +19302,13 @@ components:
                 description: ''
                 properties:
                   dhcp:
-                    type: boolean
+                    type: integer
                     description: Enable DHCP.
                   enable:
-                    type: boolean
+                    type: integer
                     description: Enable/disable firewall rules.
                   ipfilter:
-                    type: boolean
+                    type: integer
                     description: >-
                       Enable default IP filters. This is equivalent to adding an
                       empty ipfilter-net<id> ipset for every interface. Such
@@ -19323,10 +19323,10 @@ components:
                     type: string
                     description: Log level for outgoing traffic.
                   macfilter:
-                    type: boolean
+                    type: integer
                     description: Enable/disable MAC address filter.
                   ndp:
-                    type: boolean
+                    type: integer
                     description: Enable NDP (Neighbor Discovery Protocol).
                   policy_in:
                     type: string
@@ -19335,7 +19335,7 @@ components:
                     type: string
                     description: Output policy.
                   radv:
-                    type: boolean
+                    type: integer
                     description: Allow sending Router Advertisement.
     UpdateVMFirewallOptionsResponse:
       description: UpdateVMFirewallOptionsResponse
@@ -19765,19 +19765,19 @@ components:
                     type: string
                     description: stderr of the process
                   err-truncated:
-                    type: boolean
+                    type: integer
                     description: true if stderr was not fully captured
                   exitcode:
                     type: integer
                     description: process exit code if it was normally terminated.
                   exited:
-                    type: boolean
+                    type: integer
                     description: Tells if the given command has exited yet.
                   out-data:
                     type: string
                     description: stdout of the process
                   out-truncated:
-                    type: boolean
+                    type: integer
                     description: true if stdout was not fully captured
                   signal:
                     type: integer
@@ -19803,7 +19803,7 @@ components:
                     type: string
                     description: 'The content of the file, maximum 16777216'
                   truncated:
-                    type: boolean
+                    type: integer
                     description: 'If set to 1, the output is truncated and not complete'
     CreateNodesSingleQemuSingleAgentFilewriteResponse:
       description: CreateNodesSingleQemuSingleAgentFilewriteResponse
@@ -19871,7 +19871,7 @@ components:
                 description: The VM configuration.
                 properties:
                   acpi:
-                    type: boolean
+                    type: integer
                     description: Enable/disable ACPI.
                   agent:
                     type: string
@@ -19888,7 +19888,7 @@ components:
                       Configure a audio device, useful in combination with
                       QXL/Spice.
                   autostart:
-                    type: boolean
+                    type: integer
                     description: Automatic restart after crash (currently ignored).
                   balloon:
                     type: integer
@@ -19962,7 +19962,7 @@ components:
                     type: string
                     description: Configure a Disk for storing EFI vars
                   freeze:
-                    type: boolean
+                    type: integer
                     description: >-
                       Freeze CPU at startup (use 'c' monitor command to start
                       execution).
@@ -20888,7 +20888,7 @@ components:
                       Inter-VM shared memory. Useful for direct communication
                       between VMs, or to the host.
                   keephugepages:
-                    type: boolean
+                    type: integer
                     description: >-
                       Use together with hugepages. If enabled, hugepages will
                       not not be deleted after VM shutdown and can be used for
@@ -20900,10 +20900,10 @@ components:
                       '/etc/pve/datacenter.cfg' configuration file.It should not
                       be necessary to set it.
                   kvm:
-                    type: boolean
+                    type: integer
                     description: Enable/disable KVM hardware virtualization.
                   localtime:
-                    type: boolean
+                    type: integer
                     description: >-
                       Set the real time clock to local time. This is enabled by
                       default if ostype indicates a Microsoft OS.
@@ -21027,7 +21027,7 @@ components:
                     type: string
                     description: Specify network devices.
                   numa:
-                    type: boolean
+                    type: integer
                     description: Enable/disable NUMA.
                   numa0:
                     type: string
@@ -21120,7 +21120,7 @@ components:
                     type: string
                     description: NUMA topology.
                   onboot:
-                    type: boolean
+                    type: integer
                     description: >-
                       Specifies whether a VM will be started during system
                       bootup.
@@ -21218,12 +21218,12 @@ components:
                     type: string
                     description: Map host parallel devices (n is 0 to 2).
                   protection:
-                    type: boolean
+                    type: integer
                     description: >-
                       Sets the protection flag of the VM. This will disable the
                       remove VM and remove disk operations.
                   reboot:
-                    type: boolean
+                    type: integer
                     description: Allow reboot. If set to '0' the VM exit on reboot.
                   rng0:
                     type: string
@@ -21544,16 +21544,16 @@ components:
                       'up' or 'down' delay in seconds, which specifies a delay
                       to wait before the next VM is started or stopped.
                   tablet:
-                    type: boolean
+                    type: integer
                     description: Enable/disable the USB tablet device.
                   tags:
                     type: string
                     description: Tags of the VM. This is only meta information.
                   tdf:
-                    type: boolean
+                    type: integer
                     description: Enable/disable time drift fix.
                   template:
-                    type: boolean
+                    type: integer
                     description: Enable/disable Template.
                   unused0:
                     type: string
@@ -22075,7 +22075,7 @@ components:
                 description: ''
                 properties:
                   agent:
-                    type: boolean
+                    type: integer
                     description: Qemu GuestAgent enabled in config.
                   cpus:
                     type: number
@@ -22102,7 +22102,7 @@ components:
                     type: string
                     description: Qemu QMP agent status.
                   spice:
-                    type: boolean
+                    type: integer
                     description: Qemu VGA configuration supports spice.
                   status:
                     type: string
@@ -22244,7 +22244,7 @@ components:
                 description: ''
                 properties:
                   hasFeature:
-                    type: boolean
+                    type: integer
                     description: ''
                   nodes:
                     type: array
@@ -22314,7 +22314,7 @@ components:
                       List not allowed nodes with additional informations, only
                       passed if VM is offline
                   running:
-                    type: boolean
+                    type: integer
                     description: ''
     CreateNodesSingleQemuSingleMigrateResponse:
       description: CreateNodesSingleQemuSingleMigrateResponse
@@ -22391,7 +22391,7 @@ components:
                       type: integer
                       description: Snapshot creation time
                     vmstate:
-                      type: boolean
+                      type: integer
                       description: Snapshot includes RAM.
     CreateVMSnapshotResponse:
       description: CreateVMSnapshotResponse
@@ -22528,7 +22528,7 @@ components:
                   description: ''
                   properties:
                     custom:
-                      type: boolean
+                      type: integer
                       description: True if this is a custom CPU model.
                     name:
                       type: string
@@ -22665,7 +22665,7 @@ components:
                       /dev/console instead. If you set cmode to 'shell', it
                       simply invokes a shell inside the container (no login).
                   console:
-                    type: boolean
+                    type: integer
                     description: Attach a console device (/dev/console) to the container.
                   cores:
                     type: integer
@@ -22692,7 +22692,7 @@ components:
                       NOTE: You can disable fair-scheduler configuration by
                       setting this to 0.
                   debug:
-                    type: boolean
+                    type: integer
                     description: >-
                       Try to be more verbose. For now this only enables debug
                       log-level on start.
@@ -22921,7 +22921,7 @@ components:
                     type: string
                     description: Specifies network interfaces for the container.
                   onboot:
-                    type: boolean
+                    type: integer
                     description: >-
                       Specifies whether a VM will be started during system
                       bootup.
@@ -22933,7 +22933,7 @@ components:
                       /usr/share/lxc/config/<ostype>.common.conf. Value
                       'unmanaged' can be used to skip and OS specific setup.
                   protection:
-                    type: boolean
+                    type: integer
                     description: >-
                       Sets the protection flag of the container. This will
                       prevent the CT or CT's disk remove/update operation.
@@ -22961,7 +22961,7 @@ components:
                     type: string
                     description: Tags of the Container. This is only meta information.
                   template:
-                    type: boolean
+                    type: integer
                     description: Enable/disable Template.
                   timezone:
                     type: string
@@ -22974,7 +22974,7 @@ components:
                     type: integer
                     description: Specify the number of tty available to the container
                   unprivileged:
-                    type: boolean
+                    type: integer
                     description: >-
                       Makes the container run as unprivileged user. (Should not
                       be modified manually.)
@@ -23734,7 +23734,7 @@ components:
                         different SHA1 digest. This can be used to prevent
                         concurrent modifications.
                     nomatch:
-                      type: boolean
+                      type: integer
                       description: ''
     CreateNodesSingleLxcSingleFirewallIpsetSingleResponse:
       description: CreateNodesSingleLxcSingleFirewallIpsetSingleResponse
@@ -23808,13 +23808,13 @@ components:
                 description: ''
                 properties:
                   dhcp:
-                    type: boolean
+                    type: integer
                     description: Enable DHCP.
                   enable:
-                    type: boolean
+                    type: integer
                     description: Enable/disable firewall rules.
                   ipfilter:
-                    type: boolean
+                    type: integer
                     description: >-
                       Enable default IP filters. This is equivalent to adding an
                       empty ipfilter-net<id> ipset for every interface. Such
@@ -23829,10 +23829,10 @@ components:
                     type: string
                     description: Log level for outgoing traffic.
                   macfilter:
-                    type: boolean
+                    type: integer
                     description: Enable/disable MAC address filter.
                   ndp:
-                    type: boolean
+                    type: integer
                     description: Enable NDP (Neighbor Discovery Protocol).
                   policy_in:
                     type: string
@@ -23841,7 +23841,7 @@ components:
                     type: string
                     description: Output policy.
                   radv:
-                    type: boolean
+                    type: integer
                     description: Allow sending Router Advertisement.
     UpdateNodesSingleLxcSingleFirewallOptionsResponse:
       description: UpdateNodesSingleLxcSingleFirewallOptionsResponse
@@ -24036,7 +24036,7 @@ components:
                 description: ''
                 properties:
                   hasFeature:
-                    type: boolean
+                    type: integer
                     description: ''
     CreateNodesSingleLxcSingleTemplateResponse:
       description: CreateNodesSingleLxcSingleTemplateResponse
@@ -24257,7 +24257,7 @@ components:
                       type: integer
                       description: ''
                     standby_replay:
-                      type: boolean
+                      type: integer
                       description: >-
                         If true, the standby MDS is polling the active MDS for
                         faster recovery (hot standby).
@@ -24468,7 +24468,7 @@ components:
                       type: string
                       description: ''
                     gpt:
-                      type: boolean
+                      type: integer
                       description: ''
                     model:
                       type: string
@@ -24521,7 +24521,7 @@ components:
                   description: ''
                   properties:
                     can_update_at_runtime:
-                      type: boolean
+                      type: integer
                       description: ''
                     level:
                       type: string
@@ -25511,7 +25511,7 @@ components:
                         The IOMMU group in which the device is in. If no IOMMU
                         group is detected, it is set to -1.
                     mdev:
-                      type: boolean
+                      type: integer
                       description: >-
                         If set, marks that the device is capable of creating
                         mediated devices.
@@ -25600,7 +25600,7 @@ components:
                   description: ''
                   properties:
                     active:
-                      type: boolean
+                      type: integer
                       description: Set when storage is accessible.
                     avail:
                       type: integer
@@ -25609,10 +25609,10 @@ components:
                       type: string
                       description: Allowed storage content types.
                     enabled:
-                      type: boolean
+                      type: integer
                       description: Set when storage is enabled (not disabled).
                     shared:
-                      type: boolean
+                      type: integer
                       description: Shared flag from storage configuration.
                     storage:
                       type: string
@@ -25967,7 +25967,7 @@ components:
                                 type: integer
                                 description: The free bytes in the physical volume
                               leaf:
-                                type: boolean
+                                type: integer
                                 description: ''
                               name:
                                 type: string
@@ -25979,7 +25979,7 @@ components:
                           type: integer
                           description: The free bytes in the volume group
                         leaf:
-                          type: boolean
+                          type: integer
                           description: ''
                         name:
                           type: string
@@ -25988,7 +25988,7 @@ components:
                           type: integer
                           description: The size of the volume group in bytes
                   leaf:
-                    type: boolean
+                    type: integer
                     description: ''
     CreateNodesSingleDisksLvmResponse:
       description: CreateNodesSingleDisksLvmResponse
@@ -26233,7 +26233,7 @@ components:
                       type: string
                       description: The device path
                     gpt:
-                      type: boolean
+                      type: integer
                       description: ''
                     health:
                       type: string
@@ -26542,7 +26542,7 @@ components:
                 description: ''
                 properties:
                   enable:
-                    type: boolean
+                    type: integer
                     description: Enable host firewall rules.
                   log_level_in:
                     type: string
@@ -26551,13 +26551,13 @@ components:
                     type: string
                     description: Log level for outgoing traffic.
                   log_nf_conntrack:
-                    type: boolean
+                    type: integer
                     description: Enable logging of conntrack information.
                   ndp:
-                    type: boolean
+                    type: integer
                     description: Enable NDP (Neighbor Discovery Protocol).
                   nf_conntrack_allow_invalid:
-                    type: boolean
+                    type: integer
                     description: Allow invalid packets on connection tracking.
                   nf_conntrack_max:
                     type: integer
@@ -26569,10 +26569,10 @@ components:
                     type: integer
                     description: Conntrack syn recv timeout.
                   nosmurfs:
-                    type: boolean
+                    type: integer
                     description: Enable SMURFS filter.
                   protection_synflood:
-                    type: boolean
+                    type: integer
                     description: Enable synflood protection
                   protection_synflood_burst:
                     type: integer
@@ -26587,7 +26587,7 @@ components:
                     type: string
                     description: Log level for illegal tcp flags filter.
                   tcpflags:
-                    type: boolean
+                    type: integer
                     description: Filter illegal combinations of TCP flags.
     UpdateNodeFirewallOptionsResponse:
       description: UpdateNodeFirewallOptionsResponse
@@ -27626,7 +27626,7 @@ components:
                       type: string
                       description: ''
                     enable:
-                      type: boolean
+                      type: integer
                       description: >-
                         Enable the account (default). You can set this to '0' to
                         disable the account
@@ -27663,7 +27663,7 @@ components:
                               API token expiration date (seconds since epoch).
                               '0' means no expiration date.
                           privsep:
-                            type: boolean
+                            type: integer
                             description: >-
                               Restrict API token privileges with separate ACLs
                               (default), or give full privileges of
@@ -27724,7 +27724,7 @@ components:
                     type: string
                     description: ''
                   enable:
-                    type: boolean
+                    type: integer
                     description: >-
                       Enable the account (default). You can set this to '0' to
                       disable the account
@@ -27813,7 +27813,7 @@ components:
                         API token expiration date (seconds since epoch). '0'
                         means no expiration date.
                     privsep:
-                      type: boolean
+                      type: integer
                       description: >-
                         Restrict API token privileges with separate ACLs
                         (default), or give full privileges of corresponding
@@ -27859,7 +27859,7 @@ components:
                       API token expiration date (seconds since epoch). '0' means
                       no expiration date.
                   privsep:
-                    type: boolean
+                    type: integer
                     description: >-
                       Restrict API token privileges with separate ACLs
                       (default), or give full privileges of corresponding user.
@@ -27894,7 +27894,7 @@ components:
                           API token expiration date (seconds since epoch). '0'
                           means no expiration date.
                       privsep:
-                        type: boolean
+                        type: integer
                         description: >-
                           Restrict API token privileges with separate ACLs
                           (default), or give full privileges of corresponding
@@ -27926,7 +27926,7 @@ components:
                       API token expiration date (seconds since epoch). '0' means
                       no expiration date.
                   privsep:
-                    type: boolean
+                    type: integer
                     description: >-
                       Restrict API token privileges with separate ACLs
                       (default), or give full privileges of corresponding user.
@@ -28048,7 +28048,7 @@ components:
                       type: string
                       description: ''
                     special:
-                      type: boolean
+                      type: integer
                       description: ''
     CreateAccessRolesResponse:
       description: CreateAccessRolesResponse
@@ -28094,109 +28094,109 @@ components:
                 description: ''
                 properties:
                   Datastore.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   Datastore.AllocateSpace:
-                    type: boolean
+                    type: integer
                     description: ''
                   Datastore.AllocateTemplate:
-                    type: boolean
+                    type: integer
                     description: ''
                   Datastore.Audit:
-                    type: boolean
+                    type: integer
                     description: ''
                   Group.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   Permissions.Modify:
-                    type: boolean
+                    type: integer
                     description: ''
                   Pool.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   Realm.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   Realm.AllocateUser:
-                    type: boolean
+                    type: integer
                     description: ''
                   SDN.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   SDN.Audit:
-                    type: boolean
+                    type: integer
                     description: ''
                   Sys.Audit:
-                    type: boolean
+                    type: integer
                     description: ''
                   Sys.Console:
-                    type: boolean
+                    type: integer
                     description: ''
                   Sys.Modify:
-                    type: boolean
+                    type: integer
                     description: ''
                   Sys.PowerMgmt:
-                    type: boolean
+                    type: integer
                     description: ''
                   Sys.Syslog:
-                    type: boolean
+                    type: integer
                     description: ''
                   User.Modify:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Allocate:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Audit:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Backup:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Clone:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.CDROM:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.CPU:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.Cloudinit:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.Disk:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.HWType:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.Memory:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.Network:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Config.Options:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Console:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Migrate:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Monitor:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.PowerMgmt:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Snapshot:
-                    type: boolean
+                    type: integer
                     description: ''
                   VM.Snapshot.Rollback:
-                    type: boolean
+                    type: integer
                     description: ''
     UpdateAccessRolesSingleResponse:
       description: UpdateAccessRolesSingleResponse
@@ -28234,7 +28234,7 @@ components:
                       type: string
                       description: Access control path
                     propagate:
-                      type: boolean
+                      type: integer
                       description: Allow to propagate (inherit) permissions.
                     roleid:
                       type: string
