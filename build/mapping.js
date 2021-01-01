@@ -103,5 +103,6 @@ module.exports = {
     getNodesSingleTasksSingle: 'getNodeTask',
     deleteNodesSingleTasksSingle: 'stopNodeTask',
     getNodesSingleTasksSingleLog: 'getNodeTaskLog',
-    getNodesSingleTasksSingleStatus: 'getNodeTaskStatus'
+    getNodesSingleTasksSingleStatus: 'getNodeTaskStatus',
+    updateNodesSingleQemuSingleResize: 'resizeVMDisk'
 }

@@ -4104,8 +4104,8 @@ paths:
               $ref: '#/components/schemas/CreateNodesSingleQemuSingleMonitorRequest'
   '/nodes/{node}/qemu/{vmid}/resize':
     put:
-      operationId: updateNodesSingleQemuSingleResize
-      summary: updateNodesSingleQemuSingleResize
+      operationId: resizeVMDisk
+      summary: resizeVMDisk
       description: Extend volume size.
       tags:
         - nodes
@@ -4124,12 +4124,12 @@ paths:
             type: integer
       responses:
         '200':
-          $ref: '#/components/responses/UpdateNodesSingleQemuSingleResizeResponse'
+          $ref: '#/components/responses/ResizeVMDiskResponse'
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/UpdateNodesSingleQemuSingleResizeRequest'
+              $ref: '#/components/schemas/ResizeVMDiskRequest'
   '/nodes/{node}/qemu/{vmid}/snapshot':
     get:
       operationId: getVMSnapshots
@@ -14161,8 +14161,8 @@ components:
           type: string
       required:
         - command
-    UpdateNodesSingleQemuSingleResizeRequest:
-      title: UpdateNodesSingleQemuSingleResizeRequest
+    ResizeVMDiskRequest:
+      title: ResizeVMDiskRequest
       type: object
       properties:
         digest:
@@ -22344,8 +22344,8 @@ components:
               data:
                 type: string
                 description: ''
-    UpdateNodesSingleQemuSingleResizeResponse:
-      description: UpdateNodesSingleQemuSingleResizeResponse
+    ResizeVMDiskResponse:
+      description: ResizeVMDiskResponse
       content:
         application/json:
           schema:
